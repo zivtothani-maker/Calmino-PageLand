@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Calmino — Smart baby tracking app. Sleep, feeding, WHO growth curves, babysitter marketplace. Free to start.">
+    <title>Calmino — מערכת ההפעלה להורות מודרנית</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800;900&family=Rubik:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- NAV -->
+    <nav>
+        <div class="nav-logo">
+            <img src="images/logo.jpg" alt="Calmino Logo">
+            Calmino
+        </div>
+        <div class="nav-links">
+            <a href="#features" data-i18n="nav_features">פיצ'רים</a>
+            <a href="#tools" data-i18n="nav_tools">כלים</a>
+            <a href="#security" data-i18n="nav_security">אבטחה</a>
+            <a href="#pricing" data-i18n="nav_pricing">תמחור</a>
+            <div class="lang-switch">
+                <button class="lang-btn active" data-lang="he">עב</button>
+                <button class="lang-btn" data-lang="en">EN</button>
+            </div>
+        </div>
+        <div class="hero-badge nav-badge"><span class="live-dot"></span> <span data-i18n="hero_badge">זמין עכשיו ב-App
+                Store</span></div>
+        <button type="button" class="nav-cta"><span data-i18n="nav_cta">הורדת האפליקציה</span></button>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-orb"></div>
+        <div class="container">
+            <div class="hero-layout">
+                <div class="hero-content">
+                    <h1 data-i18n-html="hero_h1a+hero_h1b">הורות מודרנית.<br><span>בלי העומס.</span></h1>
+                    <p class="hero-sub" data-i18n="hero_sub">כלים חכמים לניהול הורות יומיומית, תיעוד יומי חכם, מעקב
+                        התפתחותי מדויק וחיבור לבייביסיטרים איכותיים - שקט אמיתי מתחיל בשליטה.</p>
+                    <div class="hero-cta-group">
+                        <a href="#" class="btn-primary">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" />
+                            </svg>
+                            <span data-i18n="hero_btn">הורדה חינם</span>
+                        </a>
+                        <a href="#pricing" class="btn-secondary" data-i18n="hero_btn2">ראה תוכניות</a>
+                    </div>
+                    <p class="hero-note" data-i18n="hero_note">ללא כרטיס אשראי · התקנה תוך 30 שניות · iOS & Android</p>
+                </div>
+                <div class="hero-visual">
+                    <div class="phone-mockup">
+                        <div class="phone-notch"></div>
+                        <div class="phone-screen" style="padding:0;position:relative;">
+                            <div class="carousel-track">
+                                <img src="images/app1.jpg" alt="Calmino" class="carousel-img active">
+                                <img src="images/app2.jpg" alt="Calmino" class="carousel-img">
+                                <img src="images/app4.jpg" alt="Calmino" class="carousel-img">
+                            </div>
+                            <div class="carousel-indicators">
+                                <span class="indicator active" data-slide="0"></span>
+                                <span class="indicator" data-slide="1"></span>
+                                <span class="indicator" data-slide="2"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MARQUEE TRUST STRIP -->
+    <section class="trust-strip">
+        <div class="marquee-track">
+            <div class="marquee-item"><span class="material-symbols-rounded">verified</span>GDPR Compliant</div>
+            <div class="marquee-item"><span class="material-symbols-rounded">lock</span>AES-256 Encryption</div>
+            <div class="marquee-item"><span class="material-symbols-rounded">family_restroom</span>Family Sharing</div>
+            <div class="marquee-item"><span class="material-symbols-rounded">phone_iphone</span>Live Activities</div>
+            <div class="marquee-item"><span class="material-symbols-rounded">monitoring</span>WHO Growth Curves</div>
+            <div class="marquee-item"><span class="material-symbols-rounded">fingerprint</span>Biometric Auth</div>
+            <div class="marquee-item"><span class="material-symbols-rounded">cloud_sync</span>Real-Time Sync</div>
+            <div class="marquee-item"><span class="material-symbols-rounded">child_care</span>Smart Tracking</div>
+            <!-- Duplicate for seamless loop -->
+            <div class="marquee-item"><span class="material-symbols-rounded">verified</span>GDPR Compliant</div>
+            <div class="marquee-item"><span class="material-symbols-rounded">lock</span>AES-256 Encryption</div>
+            <div class="marquee-item"><span class="material-symbols-rounded">family_restroom</span>Family Sharing</div>
+            <div class="marquee-item"><span class="material-symbols-rounded">phone_iphone</span>Live Activities</div>
+            <div class="marquee-item"><span class="material-symbols-rounded">monitoring</span>WHO Growth Curves</div>
+            <div class="marquee-item"><span class="material-symbols-rounded">fingerprint</span>Biometric Auth</div>
+            <div class="marquee-item"><span class="material-symbols-rounded">cloud_sync</span>Real-Time Sync</div>
+            <div class="marquee-item"><span class="material-symbols-rounded">child_care</span>Smart Tracking</div>
+        </div>
+    </section>
+
+    <!-- STATS -->
+    <section class="stats-banner">
+        <div class="container">
+            <div class="stats-grid reveal">
+                <div class="stat-item reveal-child">
+                    <div class="stat-number" data-i18n="stat1_num">15+</div>
+                    <div class="stat-label" data-i18n="stat1_label">כלי מעקב מובנים</div>
+                </div>
+                <div class="stat-item reveal-child">
+                    <div class="stat-number" data-i18n="stat2_num">WHO</div>
+                    <div class="stat-label" data-i18n="stat2_label">עקומות גדילה מבוססות תקן</div>
+                </div>
+                <div class="stat-item reveal-child">
+                    <div class="stat-number" data-i18n="stat3_num">256</div>
+                    <div class="stat-label" data-i18n="stat3_label">הצפנת AES-bit</div>
+                </div>
+                <div class="stat-item reveal-child">
+                    <div class="stat-number" data-i18n="stat4_num">∞</div>
+                    <div class="stat-label" data-i18n="stat4_label">סנכרון משפחתי בזמן אמת</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROBLEM -->
+    <section class="problem-section" style="text-align:center;">
+        <div class="container">
+            <div class="reveal">
+                <p class="section-label" data-i18n="prob_label">הבעיה</p>
+                <h2 class="section-title" data-i18n="prob_title">הורות לא צריכה להרגיש ככה.</h2>
+                <p class="section-sub" style="margin:0 auto;" data-i18n="prob_sub">90% מההורים מנהלים את הכל דרך
+                    הזיכרון, העומס המנטלי הוא אמיתי.</p>
+            </div>
+            <div class="problem-grid">
+                <div class="problem-card reveal"><span class="emoji material-symbols-rounded">schedule</span>
+                    <p class="quote" data-i18n="prob1_q">מתי בפעם האחרונה...?</p>
+                    <p class="desc" data-i18n="prob1_d">כשהכל מתנהל בראש ובהודעות - קשה לעקוב, לזכור ולהיות בטוח/ה מה
+                        קרה ומה נדרש לעשות.</p>
+                </div>
+                <div class="problem-card reveal"><span class="emoji material-symbols-rounded">share</span>
+                    <p class="quote" data-i18n="prob2_q">בלי שיתוף מידע - אין תיאום אמיתי</p>
+                    <p class="desc" data-i18n="prob2_d">בלי מערכת משותפת, התיאום נשען על זיכרון ושיחות</p>
+                </div>
+                <div class="problem-card reveal"><span class="emoji material-symbols-rounded">trending_up</span>
+                    <p class="quote" data-i18n="prob3_q">חוסר בעקביות מוביל לחוסר בתובנות.</p>
+                    <p class="desc" data-i18n="prob3_d">ללא היסטוריה וחוסר בתובנות - קושי בקבלת החלטות</p>
+                </div>
+                <div class="problem-card reveal"><span class="emoji material-symbols-rounded">person_search</span>
+                    <p class="quote" data-i18n="prob4_q">על מי אני יכול/ה לסמוך?</p>
+                    <p class="desc" data-i18n="prob4_d">חיפוש אחר בייביסיטר הוא תהליך מתיש - בלי היצע ברור, בלי שקיפות
+                        ובלי ודאות אמיתית.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- POSITIONING -->
+    <section class="positioning">
+        <div class="container">
+            <div class="reveal" style="text-align:center;">
+                <p class="section-label" data-i18n="pos_label">הגישה שלנו</p>
+                <h2 class="section-title" data-i18n="pos_title">פלטפורמה אחת. שקט נפשי מוחלט.</h2>
+                <p class="section-sub" style="margin:0 auto;" data-i18n="pos_sub">Calmino מרכזת את כל מה שצריך — מעקב
+                    רפואי, ניהול משפחה, ושוק בייביסיטרים.</p>
+            </div>
+            <div class="pos-pillars reveal">
+                <div class="pos-pillar reveal-child">
+                    <p class="num material-symbols-rounded">timer</p>
+                    <h3 data-i18n="pos1_h">מעקב חכם</h3>
+                    <p data-i18n="pos1_p">טיימרים להאכלה, שינה, החתלה, תרופות וחיסונים.</p>
+                </div>
+                <div class="pos-pillar reveal-child">
+                    <p class="num material-symbols-rounded">insights</p>
+                    <h3 data-i18n="pos2_h">תובנות מבוססות נתונים</h3>
+                    <p data-i18n="pos2_p">גרפים, דוחות שבועיים, עקומות צמיחה לפי WHO.</p>
+                </div>
+                <div class="pos-pillar reveal-child">
+                    <p class="num material-symbols-rounded">storefront</p>
+                    <h3 data-i18n="pos3_h">שוק בייביסיטרים</h3>
+                    <p data-i18n="pos3_p">פרופילים מאומתים, ביקורות, צ'אט והזמנה ישירה.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURE 1: TIMERS -->
+    <section id="features" class="feature-section">
+        <div class="container">
+            <div class="feature-layout">
+                <div class="feature-content reveal">
+                    <p class="section-label" data-i18n="ft1_label">טיימרים חכמים</p>
+                    <h2 class="section-title" data-i18n-html="ft1_title_a+ft1_title_b">שליטה מלאה.<br>מהמסך הנעול.</h2>
+                    <p class="section-sub" data-i18n="ft1_sub">הפעילו טיימר — ותראו אותו על מסך הנעילה עם Live
+                        Activities של iOS.</p>
+                    <ul class="feature-list">
+                        <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="3">
+                                    <path d="M5 13l4 4L19 7" />
+                                </svg></span><span data-i18n="ft1_li1">טיימרים להאכלה (חזה / בקבוק / שאיבה), שינה,
+                                החתלה, תרופות</span></li>
+                        <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="3">
+                                    <path d="M5 13l4 4L19 7" />
+                                </svg></span><span data-i18n="ft1_li2">Live Activities — שליטה ממסך הנעילה ומ-Dynamic
+                                Island</span></li>
+                        <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="3">
+                                    <path d="M5 13l4 4L19 7" />
+                                </svg></span><span data-i18n="ft1_li3">סנכרון מיידי בין בני משפחה ומטפלים</span></li>
+                        <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="3">
+                                    <path d="M5 13l4 4L19 7" />
+                                </svg></span><span data-i18n="ft1_li4">היסטוריה מלאה עם Timeline יומי</span></li>
+                    </ul>
+                </div>
+                <div class="feature-visual reveal">
+                    <div class="live-activity-mock">
+                        <div class="la-header">
+                            <div class="la-app">
+                                <div class="la-icon">C</div><span class="la-name" data-i18n="la_name">Calmino</span>
+                            </div><span class="la-time" data-i18n="la_now">עכשיו</span>
+                        </div>
+                        <div class="la-body">
+                            <div class="la-info">
+                                <h4><span class="material-symbols-rounded"
+                                        style="vertical-align:middle;font-size:1.2rem;">baby_bottle</span> <span
+                                        data-i18n="la_title">האכלה פעילה</span></h4>
+                                <div class="la-timer">12:34</div>
+                                <p class="la-started" data-i18n="la_start">התחלה 14:22</p>
+                            </div>
+                            <div class="la-controls"><button type="button" class="la-btn pause"><span
+                                        class="material-symbols-rounded">pause</span></button><button type="button"
+                                    class="la-btn stop"><span class="material-symbols-rounded">stop</span></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURE 2: REPORTS -->
+    <section class="feature-section alt">
+        <div class="container">
+            <div class="feature-layout ltr-layout">
+                <div class="feature-visual reveal">
+                    <div class="reports-mock">
+                        <h4 data-i18n="rpt_title">סיכום שבועי</h4>
+                        <p class="period" data-i18n="rpt_period">19–25 ינואר 2026</p>
+                        <div class="chart-bars">
+                            <div class="chart-bar-group">
+                                <div class="chart-bar sleep" style="height:65px;"></div>
+                                <div class="chart-bar feed" style="height:40px;"></div><span class="day">א׳</span>
+                            </div>
+                            <div class="chart-bar-group">
+                                <div class="chart-bar sleep" style="height:80px;"></div>
+                                <div class="chart-bar feed" style="height:35px;"></div><span class="day">ב׳</span>
+                            </div>
+                            <div class="chart-bar-group">
+                                <div class="chart-bar sleep" style="height:55px;"></div>
+                                <div class="chart-bar feed" style="height:45px;"></div><span class="day">ג׳</span>
+                            </div>
+                            <div class="chart-bar-group">
+                                <div class="chart-bar sleep" style="height:90px;"></div>
+                                <div class="chart-bar feed" style="height:30px;"></div><span class="day">ד׳</span>
+                            </div>
+                            <div class="chart-bar-group">
+                                <div class="chart-bar sleep" style="height:70px;"></div>
+                                <div class="chart-bar feed" style="height:42px;"></div><span class="day">ה׳</span>
+                            </div>
+                            <div class="chart-bar-group">
+                                <div class="chart-bar sleep" style="height:85px;"></div>
+                                <div class="chart-bar feed" style="height:38px;"></div><span class="day">ו׳</span>
+                            </div>
+                            <div class="chart-bar-group">
+                                <div class="chart-bar sleep" style="height:95px;"></div>
+                                <div class="chart-bar feed" style="height:33px;"></div><span class="day">ש׳</span>
+                            </div>
+                        </div>
+                        <div class="chart-legend"><span><span class="legend-dot sleep"></span><span
+                                    data-i18n="rpt_legend_sleep">שינה</span></span><span><span
+                                    class="legend-dot feed"></span><span
+                                    data-i18n="rpt_legend_feed">האכלות</span></span></div>
+                        <div class="report-insight"><span class="tag"><span class="material-symbols-rounded"
+                                    style="font-size:1em;vertical-align:middle;">lightbulb</span> <span
+                                    data-i18n="rpt_insight_tag">תובנה</span></span>
+                            <p data-i18n="rpt_insight">ממוצע שינה השבוע: 13.2 שעות ליום — עלייה של 8%.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="feature-content reveal">
+                    <p class="section-label" data-i18n="ft2_label">דוחות ותובנות</p>
+                    <h2 class="section-title" data-i18n-html="ft2_title_a+ft2_title_b">לא סתם נתונים.<br>הבנה אמיתית.
+                    </h2>
+                    <p class="section-sub" data-i18n="ft2_sub">גרפים ויזואליים, עקומות גדילה WHO, וניתוח דפוסים.</p>
+                    <ul class="feature-list">
+                        <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="3">
+                                    <path d="M5 13l4 4L19 7" />
+                                </svg></span><span data-i18n="ft2_li1">דוחות שבועיים וחודשיים אוטומטיים</span></li>
+                        <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="3">
+                                    <path d="M5 13l4 4L19 7" />
+                                </svg></span><span data-i18n="ft2_li2">עקומות גדילה לפי תקני WHO</span></li>
+                        <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="3">
+                                    <path d="M5 13l4 4L19 7" />
+                                </svg></span><span data-i18n="ft2_li3">תובנות מבוססות נתונים</span></li>
+                        <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="3">
+                                    <path d="M5 13l4 4L19 7" />
+                                </svg></span><span data-i18n="ft2_li4">ייצוא PDF לרופא הילדים</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURE 3: SITTERS -->
+    <section class="feature-section">
+        <div class="container">
+            <div class="feature-layout">
+                <div class="feature-content reveal">
+                    <p class="section-label" data-i18n="ft3_label">שוק בייביסיטרים</p>
+                    <h2 class="section-title" data-i18n-html="ft3_title_a+ft3_title_b">למצוא מישהו/י<br>שאפשר לסמוך
+                        עליו.</h2>
+                    <p class="section-sub" data-i18n="ft3_sub">שוק בייביסיטרים מובנה — עם אימות, ביקורות, צ'אט ומעקב
+                        הזמנות.</p>
+                    <ul class="feature-list">
+                        <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="3">
+                                    <path d="M5 13l4 4L19 7" />
+                                </svg></span><span data-i18n="ft3_li1">פרופילים מאומתים</span></li>
+                        <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="3">
+                                    <path d="M5 13l4 4L19 7" />
+                                </svg></span><span data-i18n="ft3_li2">ביקורות ודירוגים</span></li>
+                        <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="3">
+                                    <path d="M5 13l4 4L19 7" />
+                                </svg></span><span data-i18n="ft3_li3">צ'אט, הזמנה ומעקב</span></li>
+                        <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="3">
+                                    <path d="M5 13l4 4L19 7" />
+                                </svg></span><span data-i18n="ft3_li4">התאמה לפי מיקום</span></li>
+                    </ul>
+                </div>
+                <div class="feature-visual reveal">
+                    <div class="sitter-mock">
+                        <div style="font-size:0.75rem;font-weight:600;color:var(--gray-400);margin-bottom:4px;padding:0 8px;"
+                            data-i18n="sitter_nearby">בייביסיטרים בקרבתך</div>
+                        <div class="sitter-card">
+                            <div class="sitter-avatar sa-1 material-symbols-rounded">face_3</div>
+                            <div class="sitter-info">
+                                <div class="name" data-i18n="sitter1">שירה כ.</div>
+                                <div class="meta"><span class="stars">★★★★★</span><span data-i18n="sitter1_meta">4.9 · 3
+                                        שנות ניסיון</span></div>
+                            </div><span class="verified-badge" data-i18n="sitter1_badge">מאומתת ✓</span>
+                        </div>
+                        <div class="sitter-card">
+                            <div class="sitter-avatar sa-2 material-symbols-rounded">face_6</div>
+                            <div class="sitter-info">
+                                <div class="name" data-i18n="sitter2">דניאל מ.</div>
+                                <div class="meta"><span class="stars">★★★★★</span><span data-i18n="sitter2_meta">4.8 · 5
+                                        שנות ניסיון</span></div>
+                            </div><span class="verified-badge" data-i18n="sitter2_badge">מאומת ✓</span>
+                        </div>
+                        <div class="sitter-card">
+                            <div class="sitter-avatar sa-3 material-symbols-rounded">face_4</div>
+                            <div class="sitter-info">
+                                <div class="name" data-i18n="sitter3">נועה ר.</div>
+                                <div class="meta"><span class="stars">★★★★☆</span><span data-i18n="sitter3_meta">4.7 · 2
+                                        שנות ניסיון</span></div>
+                            </div><span class="verified-badge" data-i18n="sitter3_badge">מאומתת ✓</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TOOLS -->
+    <section id="tools" class="tools-section">
+        <div class="container">
+            <div class="reveal" style="text-align:center;">
+                <p class="section-label" data-i18n="tools_label">ארגז כלים</p>
+                <h2 class="section-title" data-i18n-html="tools_title_a+tools_title_b">עוד 10+ כלים מובנים<br>שכל הורה
+                    צריך.</h2>
+                <p class="section-sub" style="margin:0 auto;" data-i18n="tools_sub">Calmino היא פלטפורמה שלמה שמניעה
+                    עומס.</p>
+            </div>
+            <div class="tools-grid reveal">
+                <div class="tool-card reveal-child">
+                    <div class="tool-icon" style="background:rgba(99,102,241,0.08);color:var(--primary);"><span
+                            class="material-symbols-rounded">vaccines</span></div>
+                    <h4 data-i18n="tool1_h">מעקב חיסונים</h4>
+                    <p data-i18n="tool1_p">רשימת חיסונים מלאה לפי גיל.</p>
+                </div>
+                <div class="tool-card reveal-child">
+                    <div class="tool-icon" style="background:rgba(52,211,153,0.08);color:var(--accent-green);"><span
+                            class="material-symbols-rounded">medication</span></div>
+                    <h4 data-i18n="tool2_h">תוספי תזונה</h4>
+                    <p data-i18n="tool2_p">מעקב ויטמין D, ברזל ועוד.</p>
+                </div>
+                <div class="tool-card reveal-child">
+                    <div class="tool-icon" style="background:rgba(56,189,248,0.08);color:var(--accent-blue);"><span
+                            class="material-symbols-rounded">dentistry</span></div>
+                    <h4 data-i18n="tool3_h">מעקב שיניים</h4>
+                    <p data-i18n="tool3_p">מפה ויזואלית של השיניים.</p>
+                </div>
+                <div class="tool-card reveal-child">
+                    <div class="tool-icon" style="background:rgba(251,146,60,0.08);color:var(--accent-orange);"><span
+                            class="material-symbols-rounded">music_note</span></div>
+                    <h4 data-i18n="tool4_h">רעש לבן</h4>
+                    <p data-i18n="tool4_p">צלילים מרגיעים מובנים.</p>
+                </div>
+                <div class="tool-card reveal-child">
+                    <div class="tool-icon" style="background:rgba(244,114,182,0.08);color:var(--accent-pink);"><span
+                            class="material-symbols-rounded">auto_awesome</span></div>
+                    <h4 data-i18n="tool5_h">רגעים קסומים</h4>
+                    <p data-i18n="tool5_p">אלבום דיגיטלי שגדל עם התינוק.</p>
+                </div>
+                <div class="tool-card reveal-child">
+                    <div class="tool-icon" style="background:rgba(167,139,250,0.08);color:var(--accent-purple);"><span
+                            class="material-symbols-rounded">nightlight</span></div>
+                    <h4 data-i18n="tool6_h">מנורת לילה</h4>
+                    <p data-i18n="tool6_p">צבעים מרגיעים ישירות מהמסך.</p>
+                </div>
+                <div class="tool-card reveal-child">
+                    <div class="tool-icon" style="background:rgba(248,113,113,0.08);color:var(--accent-red);"><span
+                            class="material-symbols-rounded">emergency</span></div>
+                    <h4 data-i18n="tool7_h">מצב חירום</h4>
+                    <p data-i18n="tool7_p">חיוג מהיר לשירותי חירום.</p>
+                </div>
+                <div class="tool-card reveal-child">
+                    <div class="tool-icon" style="background:rgba(99,102,241,0.08);color:var(--primary);"><span
+                            class="material-symbols-rounded">checklist</span></div>
+                    <h4 data-i18n="tool8_h">צ'קליסט</h4>
+                    <p data-i18n="tool8_p">רשימות מותאמות אישית.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECURITY -->
+    <section id="security" class="security-section">
+        <div class="container">
+            <div class="reveal" style="text-align:center;">
+                <p class="section-label" data-i18n="sec_label">אבטחה ופרטיות</p>
+                <h2 class="section-title" data-i18n="sec_title">המידע שלכם. רק שלכם.</h2>
+                <p class="section-sub" style="margin:0 auto;" data-i18n="sec_sub">פרטיות היא לא פיצ'ר — היא עיקרון
+                    עיצוב.</p>
+            </div>
+            <div class="security-grid reveal">
+                <div class="security-item reveal-child"><span
+                        class="sec-icon material-symbols-rounded">lock_person</span>
+                    <h4 data-i18n="sec1_h">נעילה ביומטרית</h4>
+                    <p data-i18n="sec1_p">Face ID ו-Touch ID מובנים.</p>
+                </div>
+                <div class="security-item reveal-child"><span class="sec-icon material-symbols-rounded">encrypted</span>
+                    <h4 data-i18n="sec2_h">הצפנה מקצה לקצה</h4>
+                    <p data-i18n="sec2_p">הצפנה בהעברה ובאחסון.</p>
+                </div>
+                <div class="security-item reveal-child"><span class="sec-icon material-symbols-rounded">block</span>
+                    <h4 data-i18n="sec3_h">אפס מכירת מידע</h4>
+                    <p data-i18n="sec3_p">אנחנו לא מוכרים מידע. אף פעם.</p>
+                </div>
+                <div class="security-item reveal-child"><span
+                        class="sec-icon material-symbols-rounded">verified_user</span>
+                    <h4 data-i18n="sec4_h">תאימות GDPR ו-COPPA</h4>
+                    <p data-i18n="sec4_p">עמידה בתקנים בינלאומיים.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="testimonial-section">
+        <div class="container">
+            <div class="reveal" style="text-align:center;">
+                <p class="section-label" data-i18n="test_label">מה הורים אומרים</p>
+                <h2 class="section-title" data-i18n="test_title">בנוי על ידי הורים. להורים.</h2>
+            </div>
+            <div class="testimonial-grid">
+                <div class="testimonial-card reveal">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text" data-i18n="test1_text">״מאז שהתחלנו להשתמש ב-Calmino, אני ובעלי סוף סוף
+                        מסונכרנים.״</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar" style="background:linear-gradient(135deg,#c084fc,#7c3aed);">👩
+                        </div>
+                        <div>
+                            <div class="name" data-i18n="test1_name">מור ש.</div>
+                            <div class="role" data-i18n="test1_role">אמא לתינוק בן 4 חודשים</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card reveal">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text" data-i18n="test2_text">״הגרפים של עקומות הגדילה הם מדהימים.״</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar" style="background:linear-gradient(135deg,#60a5fa,#2563eb);">👨
+                        </div>
+                        <div>
+                            <div class="name" data-i18n="test2_name">אלון ד.</div>
+                            <div class="role" data-i18n="test2_role">אבא לילדה בת שנה</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card reveal">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text" data-i18n="test3_text">״מצאתי בייביסיטר תוך 10 דקות.״</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar" style="background:linear-gradient(135deg,#34d399,#059669);">👩
+                        </div>
+                        <div>
+                            <div class="name" data-i18n="test3_name">דנה כ.</div>
+                            <div class="role" data-i18n="test3_role">אמא לשני ילדים</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRICING -->
+    <section id="pricing" class="premium-section">
+        <div class="container">
+            <div class="reveal" style="text-align:center;">
+                <p class="section-label" data-i18n="price_label">Premium</p>
+                <h2 class="section-title" data-i18n-html="price_title_a+price_title_b">חינם להתחיל.<br>פרימיום למי שרוצה
+                    הכל.</h2>
+                <p class="section-sub" style="margin:0 auto;" data-i18n="price_sub">הגרסה החינמית מכסה את הבסיס.
+                    הפרימיום פותח הכל.</p>
+            </div>
+            <div class="premium-tiers reveal">
+                <div class="tier-card">
+                    <p class="tier-name" data-i18n="free_name">חינם</p>
+                    <p class="tier-price" data-i18n="free_price">₪0</p>
+                    <p class="tier-desc" data-i18n="free_desc">לתמיד. בלי הגבלות.</p>
+                    <ul class="tier-features">
+                        <li data-i18n="free_f1">טיימרים חכמים</li>
+                        <li data-i18n="free_f2">Live Activities</li>
+                        <li data-i18n="free_f3">סנכרון בין הורים</li>
+                        <li data-i18n="free_f4">היסטוריית מעקב</li>
+                        <li data-i18n="free_f5">מעקב חיסונים</li>
+                    </ul>
+                </div>
+                <div class="tier-card featured" data-badge="הכי פופולרי">
+                    <p class="tier-name" data-i18n="plus_name">Calmino+</p>
+                    <p class="tier-price"><span data-i18n="plus_price_num">₪29</span> <span data-i18n="plus_price_per">/
+                            חודש</span></p>
+                    <p class="tier-desc" data-i18n="plus_desc">הכל ללא הגבלה. 7 ימי ניסיון.</p>
+                    <ul class="tier-features">
+                        <li data-i18n="plus_f1">כל הפיצ'רים של החינמי</li>
+                        <li data-i18n="plus_f2">דוחות מתקדמים</li>
+                        <li data-i18n="plus_f3">עקומות WHO מלאות</li>
+                        <li data-i18n="plus_f4">שוק בייביסיטרים + צ'אט</li>
+                        <li data-i18n="plus_f5">ייצוא PDF</li>
+                        <li data-i18n="plus_f6">נעילה ביומטרית</li>
+                        <li data-i18n="plus_f7">רגעים קסומים</li>
+                        <li data-i18n="plus_f8">תמיכה עדיפה</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="final-cta">
+        <div class="container">
+            <div class="reveal" style="text-align:center;">
+                <h2 class="section-title" data-i18n-html="cta_title_a+cta_title_b">פחות עומס.<br>יותר הורות.</h2>
+                <p class="section-sub" style="margin:0 auto 32px;" data-i18n="cta_sub">הצטרפו לאלפי הורים שכבר עברו
+                    לניהול חכם. חינם. פשוט. מיידי.</p>
+                <div class="hero-cta-group">
+                    <a href="#" class="btn-primary">
+                        <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+                            <path
+                                d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" />
+                        </svg>
+                        <span data-i18n="cta_btn">הורדה מ-App Store</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo"><img src="images/logo.jpg" alt="Calmino Logo"> Calmino</div>
+            <div class="footer-links">
+                <a href="terms.html" data-i18n="footer_terms">תנאי שימוש</a>
+                <a href="privacy.html" data-i18n="footer_privacy">מדיניות פרטיות</a>
+                <a href="mailto:calminogroup@gmail.com?subject=פנייה מאתר Calmino" data-i18n="footer_contact">צרו
+                    קשר</a>
+            </div>
+            <div class="footer-legal-bar" data-i18n="footer_copy">© 2026 Calmino. כל הזכויות שמורות.</div>
+        </div>
+    </footer>
+
+    <script src="js/i18n.js"></script>
+    <script src="js/main.js" defer></script>
+</body>
+
+</html>
