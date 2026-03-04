@@ -24,8 +24,8 @@
             Calmino
         </div>
         <div class="nav-links">
-            <a href="#features" data-i18n="nav_features">פיצ'רים</a>
-            <a href="#tools" data-i18n="nav_tools">כלים</a>
+            <a href="#problem" data-i18n="nav_features">הבעיה?</a>
+            <a href="#approach" data-i18n="nav_tools">הגישה שלנו</a>
             <a href="#security" data-i18n="nav_security">אבטחה</a>
             <a href="#pricing" data-i18n="nav_pricing">תמחור</a>
             <div class="lang-switch">
@@ -128,7 +128,7 @@
     </section>
 
     <!-- PROBLEM -->
-    <section class="problem-section" style="text-align:center;">
+    <section id="problem" class="problem-section" style="text-align:center;">
         <div class="container">
             <div class="reveal">
                 <p class="section-label" data-i18n="prob_label">הבעיה</p>
@@ -160,7 +160,7 @@
     </section>
 
     <!-- POSITIONING -->
-    <section class="positioning">
+    <section id="approach" class="positioning">
         <div class="container">
             <div class="reveal" style="text-align:center;">
                 <p class="section-label" data-i18n="pos_label">הגישה שלנו</p>
@@ -169,83 +169,85 @@
                     רפואי, ניהול משפחה, ושוק בייביסיטרים.</p>
             </div>
             <div class="pos-pillars reveal">
-                <div class="pos-pillar reveal-child">
+                <a href="#tools" class="pos-pillar reveal-child"
+                    style="text-decoration:none;color:inherit;cursor:pointer;">
                     <p class="num material-symbols-rounded">timer</p>
                     <h3 data-i18n="pos1_h">מעקב חכם</h3>
-                    <p data-i18n="pos1_p">טיימרים להאכלה, שינה, החתלה, תרופות וחיסונים.</p>
-                </div>
-                <div class="pos-pillar reveal-child">
+                    <p data-i18n="pos1_p">שינה, האכלה, החתלה, תרופות, חיסונים, מעקב שיניים ורגעים קסומים הכל במקום אחד
+                        עם סנכרון מיידי בין כל בני המשפחה.</p>
+                </a>
+                <a href="#reports" class="pos-pillar reveal-child"
+                    style="text-decoration:none;color:inherit;cursor:pointer;">
                     <p class="num material-symbols-rounded">insights</p>
                     <h3 data-i18n="pos2_h">תובנות מבוססות נתונים</h3>
-                    <p data-i18n="pos2_p">גרפים, דוחות שבועיים, עקומות צמיחה לפי WHO.</p>
-                </div>
-                <div class="pos-pillar reveal-child">
+                    <p data-i18n="pos2_p">גרפים, דוחות שבועיים, עקומות צמיחה לפי ארגון הבריאות העולמי (WHO).</p>
+                </a>
+                <a href="#sitters" class="pos-pillar reveal-child"
+                    style="text-decoration:none;color:inherit;cursor:pointer;">
                     <p class="num material-symbols-rounded">storefront</p>
                     <h3 data-i18n="pos3_h">שוק בייביסיטרים</h3>
                     <p data-i18n="pos3_p">פרופילים מאומתים, ביקורות, צ'אט והזמנה ישירה.</p>
-                </div>
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- FEATURE 1: TIMERS -->
-    <section id="features" class="feature-section">
+    <!-- TOOLS -->
+    <section id="tools" class="tools-section">
         <div class="container">
-            <div class="feature-layout">
-                <div class="feature-content reveal">
-                    <p class="section-label" data-i18n="ft1_label">טיימרים חכמים</p>
-                    <h2 class="section-title" data-i18n-html="ft1_title_a+ft1_title_b">שליטה מלאה.<br>מהמסך הנעול.</h2>
-                    <p class="section-sub" data-i18n="ft1_sub">הפעילו טיימר — ותראו אותו על מסך הנעילה עם Live
-                        Activities של iOS.</p>
-                    <ul class="feature-list">
-                        <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="3">
-                                    <path d="M5 13l4 4L19 7" />
-                                </svg></span><span data-i18n="ft1_li1">טיימרים להאכלה (חזה / בקבוק / שאיבה), שינה,
-                                החתלה, תרופות</span></li>
-                        <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="3">
-                                    <path d="M5 13l4 4L19 7" />
-                                </svg></span><span data-i18n="ft1_li2">Live Activities — שליטה ממסך הנעילה ומ-Dynamic
-                                Island</span></li>
-                        <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="3">
-                                    <path d="M5 13l4 4L19 7" />
-                                </svg></span><span data-i18n="ft1_li3">סנכרון מיידי בין בני משפחה ומטפלים</span></li>
-                        <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="3">
-                                    <path d="M5 13l4 4L19 7" />
-                                </svg></span><span data-i18n="ft1_li4">היסטוריה מלאה עם Timeline יומי</span></li>
-                    </ul>
+            <div class="reveal" style="text-align:center;">
+                <p class="section-label" data-i18n="tools_label">מעקב חכם</p>
+                <h2 class="section-title" data-i18n-html="tools_title_a">מעל 10 כלים מובנים שכל הורה צריך.</h2>
+
+            </div>
+            <div class="tools-grid reveal">
+                <div class="tool-card reveal-child">
+                    <div class="tool-icon"><span class="material-symbols-rounded">vaccines</span></div>
+                    <h4 data-i18n="tool1_h">מעקב חיסונים</h4>
+                    <p data-i18n="tool1_p">תיעוד חיסונים לפי גיל, תזכורות למועדים הקרובים והיסטוריה מלאה.</p>
                 </div>
-                <div class="feature-visual reveal">
-                    <div class="live-activity-mock">
-                        <div class="la-header">
-                            <div class="la-app">
-                                <div class="la-icon">C</div><span class="la-name" data-i18n="la_name">Calmino</span>
-                            </div><span class="la-time" data-i18n="la_now">עכשיו</span>
-                        </div>
-                        <div class="la-body">
-                            <div class="la-info">
-                                <h4><span class="material-symbols-rounded"
-                                        style="vertical-align:middle;font-size:1.2rem;">baby_bottle</span> <span
-                                        data-i18n="la_title">האכלה פעילה</span></h4>
-                                <div class="la-timer">12:34</div>
-                                <p class="la-started" data-i18n="la_start">התחלה 14:22</p>
-                            </div>
-                            <div class="la-controls"><button type="button" class="la-btn pause"><span
-                                        class="material-symbols-rounded">pause</span></button><button type="button"
-                                    class="la-btn stop"><span class="material-symbols-rounded">stop</span></button>
-                            </div>
-                        </div>
-                    </div>
+                <div class="tool-card reveal-child">
+                    <div class="tool-icon"><span class="material-symbols-rounded">medication</span></div>
+                    <h4 data-i18n="tool2_h">תוספי תזונה</h4>
+                    <p data-i18n="tool2_p">מעקב יומי אחר ויטמין D, ברזל ותוספים נוספים עם תזכורות מותאמות.</p>
+                </div>
+                <div class="tool-card reveal-child">
+                    <div class="tool-icon"><span class="material-symbols-rounded">dentistry</span></div>
+                    <h4 data-i18n="tool3_h">מעקב שיניים</h4>
+                    <p data-i18n="tool3_p">מפה ויזואלית אינטראקטיבית לתיעוד בקיעת שיניים לפי תאריך.</p>
+                </div>
+                <div class="tool-card reveal-child">
+                    <div class="tool-icon"><span class="material-symbols-rounded">music_note</span></div>
+                    <h4 data-i18n="tool4_h">רעש לבן</h4>
+                    <p data-i18n="tool4_p">מגוון צלילי רקע מרגיעים מובנים להירדמות קלה ושקטה יותר.</p>
+                </div>
+                <div class="tool-card reveal-child">
+                    <div class="tool-icon"><span class="material-symbols-rounded">auto_awesome</span></div>
+                    <h4 data-i18n="tool5_h">רגעים קסומים</h4>
+                    <p data-i18n="tool5_p">שמרו רגעים מיוחדים באלבום דיגיטלי מותאם אישית שגדל יחד עם התינוק.</p>
+                </div>
+                <div class="tool-card reveal-child">
+                    <div class="tool-icon"><span class="material-symbols-rounded">bedtime</span></div>
+                    <h4 data-i18n="tool6_h">שינה</h4>
+                    <p data-i18n="tool6_p">תיעוד שעות שינה ויקיצות, ניתוח דפוסי שינה וגרפים לזיהוי מגמות.</p>
+                </div>
+                <div class="tool-card reveal-child">
+                    <div class="tool-icon"><span class="material-symbols-rounded">restaurant</span></div>
+                    <h4 data-i18n="tool7_h">האכלה</h4>
+                    <p data-i18n="tool7_p">מעקב האכלות חזה, בקבוק ושאיבה עם טיימר חכם, היסטוריה וסיכום יומי.</p>
+                </div>
+                <div class="tool-card reveal-child">
+                    <div class="tool-icon"><span class="material-symbols-rounded">trending_up</span></div>
+                    <h4 data-i18n="tool8_h">מעקב גדילה</h4>
+                    <p data-i18n="tool8_p">מדידות משקל, גובה והיקף ראש עם עקומות גדילה לפי ארגון הבריאות העולמי (WHO).
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- FEATURE 2: REPORTS -->
-    <section class="feature-section alt">
+    <section id="reports" class="feature-section alt">
         <div class="container">
             <div class="feature-layout ltr-layout">
                 <div class="feature-visual reveal">
@@ -297,7 +299,8 @@
                     <p class="section-label" data-i18n="ft2_label">דוחות ותובנות</p>
                     <h2 class="section-title" data-i18n-html="ft2_title_a+ft2_title_b">לא סתם נתונים.<br>הבנה אמיתית.
                     </h2>
-                    <p class="section-sub" data-i18n="ft2_sub">גרפים ויזואליים, עקומות גדילה WHO, וניתוח דפוסים.</p>
+                    <p class="section-sub" data-i18n="ft2_sub">גרפים ויזואליים, עקומות גדילה לפי ארגון הבריאות העולמי
+                        (WHO), וניתוח דפוסים.</p>
                     <ul class="feature-list">
                         <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                     stroke-width="3">
@@ -306,7 +309,8 @@
                         <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                     stroke-width="3">
                                     <path d="M5 13l4 4L19 7" />
-                                </svg></span><span data-i18n="ft2_li2">עקומות גדילה לפי תקני WHO</span></li>
+                                </svg></span><span data-i18n="ft2_li2">עקומות גדילה לפי תקני ארגון הבריאות העולמי
+                                (WHO)</span></li>
                         <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                     stroke-width="3">
                                     <path d="M5 13l4 4L19 7" />
@@ -322,7 +326,7 @@
     </section>
 
     <!-- FEATURE 3: SITTERS -->
-    <section class="feature-section">
+    <section id="sitters" class="feature-section">
         <div class="container">
             <div class="feature-layout">
                 <div class="feature-content reveal">
@@ -384,68 +388,6 @@
         </div>
     </section>
 
-    <!-- TOOLS -->
-    <section id="tools" class="tools-section">
-        <div class="container">
-            <div class="reveal" style="text-align:center;">
-                <p class="section-label" data-i18n="tools_label">ארגז כלים</p>
-                <h2 class="section-title" data-i18n-html="tools_title_a+tools_title_b">עוד 10+ כלים מובנים<br>שכל הורה
-                    צריך.</h2>
-                <p class="section-sub" style="margin:0 auto;" data-i18n="tools_sub">Calmino היא פלטפורמה שלמה שמניעה
-                    עומס.</p>
-            </div>
-            <div class="tools-grid reveal">
-                <div class="tool-card reveal-child">
-                    <div class="tool-icon" style="background:rgba(99,102,241,0.08);color:var(--primary);"><span
-                            class="material-symbols-rounded">vaccines</span></div>
-                    <h4 data-i18n="tool1_h">מעקב חיסונים</h4>
-                    <p data-i18n="tool1_p">רשימת חיסונים מלאה לפי גיל.</p>
-                </div>
-                <div class="tool-card reveal-child">
-                    <div class="tool-icon" style="background:rgba(52,211,153,0.08);color:var(--accent-green);"><span
-                            class="material-symbols-rounded">medication</span></div>
-                    <h4 data-i18n="tool2_h">תוספי תזונה</h4>
-                    <p data-i18n="tool2_p">מעקב ויטמין D, ברזל ועוד.</p>
-                </div>
-                <div class="tool-card reveal-child">
-                    <div class="tool-icon" style="background:rgba(56,189,248,0.08);color:var(--accent-blue);"><span
-                            class="material-symbols-rounded">dentistry</span></div>
-                    <h4 data-i18n="tool3_h">מעקב שיניים</h4>
-                    <p data-i18n="tool3_p">מפה ויזואלית של השיניים.</p>
-                </div>
-                <div class="tool-card reveal-child">
-                    <div class="tool-icon" style="background:rgba(251,146,60,0.08);color:var(--accent-orange);"><span
-                            class="material-symbols-rounded">music_note</span></div>
-                    <h4 data-i18n="tool4_h">רעש לבן</h4>
-                    <p data-i18n="tool4_p">צלילים מרגיעים מובנים.</p>
-                </div>
-                <div class="tool-card reveal-child">
-                    <div class="tool-icon" style="background:rgba(244,114,182,0.08);color:var(--accent-pink);"><span
-                            class="material-symbols-rounded">auto_awesome</span></div>
-                    <h4 data-i18n="tool5_h">רגעים קסומים</h4>
-                    <p data-i18n="tool5_p">אלבום דיגיטלי שגדל עם התינוק.</p>
-                </div>
-                <div class="tool-card reveal-child">
-                    <div class="tool-icon" style="background:rgba(167,139,250,0.08);color:var(--accent-purple);"><span
-                            class="material-symbols-rounded">nightlight</span></div>
-                    <h4 data-i18n="tool6_h">מנורת לילה</h4>
-                    <p data-i18n="tool6_p">צבעים מרגיעים ישירות מהמסך.</p>
-                </div>
-                <div class="tool-card reveal-child">
-                    <div class="tool-icon" style="background:rgba(248,113,113,0.08);color:var(--accent-red);"><span
-                            class="material-symbols-rounded">emergency</span></div>
-                    <h4 data-i18n="tool7_h">מצב חירום</h4>
-                    <p data-i18n="tool7_p">חיוג מהיר לשירותי חירום.</p>
-                </div>
-                <div class="tool-card reveal-child">
-                    <div class="tool-icon" style="background:rgba(99,102,241,0.08);color:var(--primary);"><span
-                            class="material-symbols-rounded">checklist</span></div>
-                    <h4 data-i18n="tool8_h">צ'קליסט</h4>
-                    <p data-i18n="tool8_p">רשימות מותאמות אישית.</p>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- SECURITY -->
     <section id="security" class="security-section">
@@ -559,7 +501,7 @@
                     <ul class="tier-features">
                         <li data-i18n="plus_f1">כל הפיצ'רים של החינמי</li>
                         <li data-i18n="plus_f2">דוחות מתקדמים</li>
-                        <li data-i18n="plus_f3">עקומות WHO מלאות</li>
+                        <li data-i18n="plus_f3">עקומות ארגון הבריאות העולמי (WHO) מלאות</li>
                         <li data-i18n="plus_f4">שוק בייביסיטרים + צ'אט</li>
                         <li data-i18n="plus_f5">ייצוא PDF</li>
                         <li data-i18n="plus_f6">נעילה ביומטרית</li>
