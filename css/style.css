@@ -714,27 +714,19 @@ nav.scrolled {
 .phone-mockup {
   width: 280px;
   height: 580px;
-  background: var(--gray-950);
-  border-radius: 48px;
-  padding: 12px;
+  background: var(--white);
+  border-radius: 42px;
+  border: 6px solid var(--gray-100);
+  padding: 0;
   position: relative;
   box-shadow:
     var(--shadow-2xl),
-    0 0 0 1px rgba(255, 255, 255, 0.05) inset,
     0 0 60px rgba(99, 102, 241, 0.1);
   animation: gentleFloat 7s ease-in-out infinite;
 }
 
 .phone-notch {
-  position: absolute;
-  top: 12px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 105px;
-  height: 30px;
-  background: #000;
-  border-radius: 20px;
-  z-index: 5;
+  display: none;
 }
 
 .phone-screen {
@@ -1081,10 +1073,32 @@ nav.scrolled {
   opacity: 1;
 }
 
+@keyframes subtleShake {
+
+  0%,
+  100% {
+    transform: translateY(-6px) rotate(0deg);
+  }
+
+  25% {
+    transform: translateY(-6px) rotate(-1.5deg);
+  }
+
+  50% {
+    transform: translateY(-6px) rotate(1.5deg);
+  }
+
+  75% {
+    transform: translateY(-6px) rotate(-1.5deg);
+  }
+}
+
 .pos-pillar:hover {
   transform: translateY(-6px);
+  animation: subtleShake 0.6s ease-in-out infinite;
   box-shadow: var(--shadow-xl);
   border-color: rgba(99, 102, 241, 0.2);
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
 .pos-pillar .num {
@@ -1372,112 +1386,105 @@ nav.scrolled {
 }
 
 /* Reports Mock */
-.reports-mock {
-  background: var(--white);
-  border-radius: var(--radius-xl);
-  padding: 32px;
-  box-shadow: var(--shadow-xl);
-  border: 1px solid var(--gray-100);
-  transition: all 0.4s var(--ease-spring);
-}
-
-.reports-mock:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-2xl);
-}
-
-.reports-mock h4 {
-  font-weight: 700;
-  font-size: 1.1rem;
-  margin-bottom: 4px;
-}
-
-.reports-mock .period {
-  font-size: 0.82rem;
-  color: var(--gray-400);
-  margin-bottom: 28px;
-}
-
-.chart-bars {
-  display: flex;
-  gap: 8px;
-  align-items: flex-end;
-  height: 120px;
-  margin-bottom: 18px;
-}
-
-.chart-bar-group {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 3px;
-}
-
-.chart-bar {
+/* Screenshots Showcase */
+.screenshots-showcase {
+  position: relative;
   width: 100%;
-  border-radius: 6px 6px 2px 2px;
-}
-
-.chart-bar.sleep {
-  background: linear-gradient(to top, var(--primary), var(--primary-light));
-}
-
-.chart-bar.feed {
-  background: linear-gradient(to top, var(--accent-green), var(--accent-teal));
-}
-
-.day {
-  font-size: 0.7rem;
-  color: var(--gray-400);
-  font-weight: 500;
-  margin-top: 6px;
-}
-
-.chart-legend {
-  display: flex;
-  gap: 18px;
-  justify-content: center;
-  margin-bottom: 18px;
-}
-
-.chart-legend span {
-  font-size: 0.78rem;
-  color: var(--gray-500);
+  height: 450px;
   display: flex;
   align-items: center;
-  gap: 6px;
+  justify-content: center;
+  perspective: 1000px;
 }
 
-.legend-dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
+.screenshot-card {
+  position: absolute;
+  width: 160px;
+  border-radius: 20px;
+  overflow: visible;
+  cursor: pointer;
+  padding: 6px;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.legend-dot.sleep {
-  background: var(--primary);
-}
-
-.legend-dot.feed {
-  background: var(--accent-green);
-}
-
-.report-insight {
-  background: linear-gradient(135deg, rgba(99, 102, 241, 0.04), rgba(167, 139, 250, 0.04));
-  border-radius: var(--radius-md);
-  padding: 16px;
-  border: 1px solid rgba(99, 102, 241, 0.08);
-}
-
-.report-insight .tag {
-  font-size: 0.72rem;
-  font-weight: 700;
-  color: var(--primary);
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  margin-bottom: 8px;
+.screenshot-card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
   display: block;
+  border-radius: 18px;
+  border: 3px solid rgba(255, 255, 255, 0.8);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12), 0 2px 8px rgba(0, 0, 0, 0.06);
+  transition: box-shadow 0.4s ease, transform 0.4s ease;
+}
+
+/* Default fan layout */
+.sc-1 {
+  transform: rotate(-8deg) translateX(-155px);
+  z-index: 1;
+}
+
+.sc-2 {
+  transform: rotate(-3deg) translateX(-75px) translateY(-12px);
+  z-index: 3;
+  width: 170px;
+}
+
+.sc-3 {
+  transform: rotate(0deg) translateY(-20px);
+  z-index: 5;
+  width: 180px;
+}
+
+.sc-3 img {
+  box-shadow: 0 12px 40px rgba(99, 102, 241, 0.2), 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.sc-4 {
+  transform: rotate(3deg) translateX(75px) translateY(-12px);
+  z-index: 3;
+  width: 170px;
+}
+
+.sc-5 {
+  transform: rotate(8deg) translateX(155px);
+  z-index: 1;
+}
+
+/* When showcase is hovered — spread all cards apart */
+.screenshots-showcase:hover .sc-1 {
+  transform: rotate(-3deg) translateX(-220px);
+  z-index: 1;
+}
+
+.screenshots-showcase:hover .sc-2 {
+  transform: rotate(-1deg) translateX(-110px);
+  z-index: 2;
+}
+
+.screenshots-showcase:hover .sc-3 {
+  transform: rotate(0deg) translateY(0);
+  z-index: 3;
+}
+
+.screenshots-showcase:hover .sc-4 {
+  transform: rotate(1deg) translateX(110px);
+  z-index: 2;
+}
+
+.screenshots-showcase:hover .sc-5 {
+  transform: rotate(3deg) translateX(220px);
+  z-index: 1;
+}
+
+/* Individual card hover — scale up */
+.screenshot-card:hover {
+  z-index: 10 !important;
+}
+
+.screenshot-card:hover img {
+  transform: scale(1.08);
+  box-shadow: 0 20px 60px rgba(99, 102, 241, 0.3), 0 8px 24px rgba(0, 0, 0, 0.15);
 }
 
 .report-insight p {
