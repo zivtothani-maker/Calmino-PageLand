@@ -34,7 +34,16 @@
             </div>
         </div>
 
-        <button type="button" class="nav-cta"><span data-i18n="nav_cta">הורדת האפליקציה</span></button>
+        <div class="nav-badges" style="display:flex;flex-direction:row;flex-wrap:nowrap;gap:8px;align-items:center;">
+            <a href="#" class="nav-store-badge" style="display:inline-flex;flex-shrink:0;">
+                <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
+                    alt="Download on the App Store" style="height:32px;width:auto;">
+            </a>
+            <a href="#" class="nav-store-badge" style="display:inline-flex;flex-shrink:0;">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+                    alt="Get it on Google Play" style="height:32px;width:auto;">
+            </a>
+        </div>
     </nav>
 
     <!-- HERO -->
@@ -46,15 +55,16 @@
                     <h1 data-i18n-html="hero_h1a+hero_h1b">העולם של הילד.<br><span>בכף היד.</span></h1>
                     <p class="hero-sub" data-i18n="hero_sub">מעקב חכם, תובנות לאורך זמן ושיתוף פשוט בין הורים, מטפלים
                         ובייביסיטרים.</p>
-                    <div class="hero-cta-group">
-                        <a href="#" class="btn-primary">
-                            <svg viewBox="0 0 24 24" fill="currentColor">
-                                <path
-                                    d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" />
-                            </svg>
-                            <span data-i18n="hero_btn">הורדה חינם</span>
+                    <div class="hero-cta-group"
+                        style="display:flex;flex-direction:row;flex-wrap:nowrap;gap:12px;align-items:center;">
+                        <a href="#" class="app-store-badge">
+                            <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
+                                alt="Download on the App Store" style="height: 52px;">
                         </a>
-
+                        <a href="#" class="app-store-badge">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+                                alt="Get it on Google Play" style="height: 52px;">
+                        </a>
                     </div>
                     <p class="hero-note" data-i18n="hero_note">ללא כרטיס אשראי · התקנה תוך 30 שניות · iOS & Android</p>
                 </div>
@@ -102,29 +112,6 @@
         </div>
     </section>
 
-    <!-- STATS -->
-    <section class="stats-banner">
-        <div class="container">
-            <div class="stats-grid reveal">
-                <div class="stat-item reveal-child">
-                    <div class="stat-number" data-i18n="stat1_num">15+</div>
-                    <div class="stat-label" data-i18n="stat1_label">כלי מעקב מובנים</div>
-                </div>
-                <div class="stat-item reveal-child">
-                    <div class="stat-number" data-i18n="stat2_num">WHO</div>
-                    <div class="stat-label" data-i18n="stat2_label">עקומות גדילה מבוססות תקן</div>
-                </div>
-                <div class="stat-item reveal-child">
-                    <div class="stat-number" data-i18n="stat3_num">256</div>
-                    <div class="stat-label" data-i18n="stat3_label">הצפנת AES-bit</div>
-                </div>
-                <div class="stat-item reveal-child">
-                    <div class="stat-number" data-i18n="stat4_num">∞</div>
-                    <div class="stat-label" data-i18n="stat4_label">סנכרון משפחתי בזמן אמת</div>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- PROBLEM -->
     <section id="problem" class="problem-section" style="text-align:center;">
@@ -138,21 +125,24 @@
             <div class="problem-grid">
                 <div class="problem-card reveal"><span class="emoji material-symbols-rounded">schedule</span>
                     <p class="quote" data-i18n="prob1_q">מתי בפעם האחרונה...?</p>
-                    <p class="desc" data-i18n="prob1_d">כשהכל מתנהל בראש ובהודעות - קשה לעקוב, לזכור ולהיות בטוח/ה מה
-                        קרה ומה נדרש לעשות.</p>
+                    <p class="desc" data-i18n="prob1_d">כשהכל מתנהל בראש ובהודעות קשה לעקוב, לזכור ולהיות בטוח מה קרה
+                        ומה נדרש לעשות.</p>
                 </div>
                 <div class="problem-card reveal"><span class="emoji material-symbols-rounded">share</span>
-                    <p class="quote" data-i18n="prob2_q">בלי שיתוף מידע - אין תיאום אמיתי</p>
-                    <p class="desc" data-i18n="prob2_d">בלי מערכת משותפת, התיאום נשען על זיכרון ושיחות</p>
+                    <p class="quote" data-i18n="prob2_q">בלי שיתוף מידע אין תיאום אמיתי</p>
+                    <p class="desc" data-i18n="prob2_d">חוסר בשיתוף מידע מוביל לאיבוד נתונים, חוסר בתיאום ולאי שקיפות
+                        מלאה בין בני המשפחה וגורמים מקצועיים.</p>
                 </div>
                 <div class="problem-card reveal"><span class="emoji material-symbols-rounded">trending_up</span>
                     <p class="quote" data-i18n="prob3_q">חוסר בעקביות מוביל לחוסר בתובנות.</p>
-                    <p class="desc" data-i18n="prob3_d">ללא היסטוריה וחוסר בתובנות - קושי בקבלת החלטות</p>
+                    <p class="desc" data-i18n="prob3_d">היסטוריה ונתונים הם חלק בלתי נפרד מזיהוי מגמות וקבלת תובנות
+                        במיוחד שזה נוגע ליקר לנו מכל.</p>
                 </div>
                 <div class="problem-card reveal"><span class="emoji material-symbols-rounded">person_search</span>
                     <p class="quote" data-i18n="prob4_q">על מי אני יכול/ה לסמוך?</p>
-                    <p class="desc" data-i18n="prob4_d">חיפוש אחר בייביסיטר הוא תהליך מתיש - בלי היצע ברור, בלי שקיפות
-                        ובלי ודאות אמיתית.</p>
+                    <p class="desc" data-i18n="prob4_d">החיפוש אחר בייביסיטר רווי בחששות לגבי אמינות המועמדים ובקושי
+                        לסנכרן דרישות ולו"ז, ריכוז התהליך במקום אחד מאפשר סינון מקצועי והעברת מידע קריטי שמעניקים שקט
+                    </p>
                 </div>
             </div>
         </div>
@@ -456,6 +446,26 @@
                 <a href="mailto:calminogroup@gmail.com?subject=פנייה מאתר Calmino" data-i18n="footer_contact">צרו
                     קשר</a>
             </div>
+
+            <div class="footer-stats">
+                <div class="footer-stat">
+                    <span class="footer-stat-num" data-i18n="stat1_num">15+</span>
+                    <span class="footer-stat-label" data-i18n="stat1_label">כלי מעקב מובנים</span>
+                </div>
+                <div class="footer-stat">
+                    <span class="footer-stat-num" data-i18n="stat2_num">WHO</span>
+                    <span class="footer-stat-label" data-i18n="stat2_label">עקומות גדילה מבוססות תקן</span>
+                </div>
+                <div class="footer-stat">
+                    <span class="footer-stat-num"><span class="material-symbols-rounded">shield</span></span>
+                    <span class="footer-stat-label" data-i18n="stat3_label">הצפנה מקצה לקצה</span>
+                </div>
+                <div class="footer-stat">
+                    <span class="footer-stat-num" data-i18n="stat4_num">∞</span>
+                    <span class="footer-stat-label" data-i18n="stat4_label">סנכרון משפחתי בזמן אמת</span>
+                </div>
+            </div>
+
             <div class="footer-legal-bar" data-i18n="footer_copy">© 2026 Calmino. כל הזכויות שמורות.</div>
         </div>
     </footer>
