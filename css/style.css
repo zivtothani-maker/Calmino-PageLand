@@ -1492,6 +1492,129 @@ nav.scrolled {
   line-height: 1.65;
 }
 
+/* ════════════════════════════════════════
+   SITTERS SECTION (Unique Layout)
+   ════════════════════════════════════════ */
+
+.sitters-section {
+  padding: 120px 0;
+  background: var(--bg-page);
+}
+
+.sitters-header {
+  max-width: 640px;
+  margin: 0 auto 56px;
+}
+
+.sitters-visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 64px;
+  position: relative;
+}
+
+.sitters-visual::before {
+  content: '';
+  position: absolute;
+  width: 280px;
+  height: 280px;
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.12) 0%, transparent 70%);
+  border-radius: 50%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.sitters-features {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.sitter-feature-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  padding: 36px 24px 32px;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-radius: 24px;
+  border: 1px solid rgba(99, 102, 241, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.04), 0 1px 4px rgba(99, 102, 241, 0.06);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  text-align: center;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--gray-800);
+  position: relative;
+  overflow: hidden;
+}
+
+.sitter-feature-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--primary), var(--primary-light), transparent);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.sitter-feature-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 48px rgba(99, 102, 241, 0.15), 0 4px 12px rgba(99, 102, 241, 0.08);
+  border-color: rgba(99, 102, 241, 0.2);
+}
+
+.sitter-feature-card:hover::before {
+  opacity: 1;
+}
+
+.sitter-feature-icon {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(145deg, rgba(99, 102, 241, 0.1), rgba(139, 92, 246, 0.08));
+  border-radius: 50%;
+  color: var(--primary);
+  font-size: 28px;
+  border: 2px solid rgba(99, 102, 241, 0.15);
+  transition: all 0.4s ease;
+}
+
+.sitter-feature-card:hover .sitter-feature-icon {
+  background: linear-gradient(135deg, var(--primary), var(--primary-light));
+  color: var(--white);
+  border-color: transparent;
+  box-shadow: 0 6px 20px rgba(99, 102, 241, 0.35);
+  transform: scale(1.08);
+}
+
+@media (max-width: 768px) {
+  .sitters-features {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+
+  .sitter-feature-card {
+    padding: 24px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sitters-features {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* Sitter 3D Flip Card */
 .sitter-flip-container {
   perspective: 1200px;
