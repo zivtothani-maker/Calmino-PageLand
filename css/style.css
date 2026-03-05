@@ -808,10 +808,11 @@ nav.scrolled {
 
 .marquee-track {
   display: flex;
-  gap: 48px;
+  gap: 100px;
   align-items: center;
   animation: marquee 30s linear infinite;
   width: max-content;
+  direction: ltr;
 }
 
 .marquee-item {
@@ -1622,6 +1623,10 @@ nav.scrolled {
   transition: all 0.5s var(--ease-spring);
   position: relative;
   overflow: hidden;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .security-item::before {
