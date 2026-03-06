@@ -300,41 +300,64 @@
 
             </div>
 
-            <!-- Phone Mockup Centered -->
-            <div class="sitters-visual reveal">
-                <div class="sitter-flip-container">
-                    <div class="sitter-flip-card">
-                        <div class="sitter-flip-face sitter-flip-front">
-                            <img src="images/sitter_list.jpg" alt="מצא סיטר">
-                            <div class="flip-hint">
-                                <span class="material-symbols-rounded">swipe</span>
-                                רחף לפרופיל
+            <!-- Phone + Feature Cards Side Layout -->
+            <div class="sitters-showcase reveal">
+                <!-- Right side cards (appear on the right in RTL) -->
+                <div class="sitters-side-cards">
+                    <div class="sitter-feature-card reveal-child compact">
+                        <span class="sitter-feature-icon material-symbols-rounded">my_location</span>
+                        <span data-i18n="ft3_new1">מציאת בייביסיטר במהירות לפי מיקום וזמינות.</span>
+                    </div>
+                    <div class="sitter-feature-card reveal-child compact">
+                        <span class="sitter-feature-icon material-symbols-rounded">verified_user</span>
+                        <span data-i18n="ft3_new2">פרופילים מאומתים עם המלצות אמיתיות.</span>
+                    </div>
+                    <div class="sitter-feature-card reveal-child compact">
+                        <span class="sitter-feature-icon material-symbols-rounded">child_care</span>
+                        <span data-i18n="ft3_new3">התאמה טובה יותר לצרכי הילד.</span>
+                    </div>
+                    <div class="sitter-feature-card reveal-child compact">
+                        <span class="sitter-feature-icon material-symbols-rounded">handshake</span>
+                        <span data-i18n="ft3_new4">היכרות מוקדמת עם המטפלת לפני ההגעה.</span>
+                    </div>
+                </div>
+
+                <!-- Phone Mockup Center -->
+                <div class="sitters-visual">
+                    <div class="sitter-flip-container">
+                        <div class="sitter-flip-card">
+                            <div class="sitter-flip-face sitter-flip-front">
+                                <img src="images/sitter_list.jpg" alt="מצא סיטר">
+                                <div class="flip-hint">
+                                    <span class="material-symbols-rounded">swipe</span>
+                                    רחף לפרופיל
+                                </div>
                             </div>
-                        </div>
-                        <div class="sitter-flip-face sitter-flip-back">
-                            <img src="images/sitter_profile.jpg" alt="פרופיל בייביסיטר">
+                            <div class="sitter-flip-face sitter-flip-back">
+                                <img src="images/sitter_profile.jpg" alt="פרופיל בייביסיטר">
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Feature Highlight Cards -->
-            <div class="sitters-features reveal">
-                <div class="sitter-feature-card reveal-child">
-                    <span class="sitter-feature-icon material-symbols-rounded">verified_user</span>
-                    <span data-i18n="ft3_li1">פרופילים מאומתים</span>
-                </div>
-                <div class="sitter-feature-card reveal-child">
-                    <span class="sitter-feature-icon material-symbols-rounded">star_rate</span>
-                    <span data-i18n="ft3_li2">ביקורות ודירוגים</span>
-                </div>
-                <div class="sitter-feature-card reveal-child">
-                    <span class="sitter-feature-icon material-symbols-rounded">chat</span>
-                    <span data-i18n="ft3_li3">צ'אט, הזמנה ומעקב</span>
-                </div>
-                <div class="sitter-feature-card reveal-child">
-                    <span class="sitter-feature-icon material-symbols-rounded">location_on</span>
-                    <span data-i18n="ft3_li4">התאמה לפי מיקום</span>
+                <!-- Left side cards (appear on the left in RTL) -->
+                <div class="sitters-side-cards">
+                    <div class="sitter-feature-card reveal-child compact">
+                        <span class="sitter-feature-icon material-symbols-rounded">notifications_active</span>
+                        <span data-i18n="ft3_new5">עדכונים בזמן אמת במהלך השמירה.</span>
+                    </div>
+                    <div class="sitter-feature-card reveal-child compact">
+                        <span class="sitter-feature-icon material-symbols-rounded">group</span>
+                        <span data-i18n="ft3_new6">מאגר בייביסיטרים קבוע למשפחה.</span>
+                    </div>
+                    <div class="sitter-feature-card reveal-child compact">
+                        <span class="sitter-feature-icon material-symbols-rounded">visibility</span>
+                        <span data-i18n="ft3_new7">שקיפות מלאה בפרופילים, בדירוגים ובהמלצות.</span>
+                    </div>
+                    <div class="sitter-feature-card reveal-child compact">
+                        <span class="sitter-feature-icon material-symbols-rounded">hub</span>
+                        <span data-i18n="ft3_new8">חיבור הבייביסיטר לעולם המידע של הילד.</span>
+                    </div>
                 </div>
             </div>
         </div>
