@@ -2190,43 +2190,149 @@ footer {
 }
 
 @media (max-width: 600px) {
-  /* Scroll Snapping Container */
+  /* Scroll Snapping & Strict Viewport */
   html {
     scroll-snap-type: y mandatory;
     scroll-behavior: smooth;
   }
   
-  body {
-    overflow-x: hidden; /* Prevent horizontal scrolling */
+  body, html {
+    overflow-x: hidden; 
     width: 100%;
   }
 
   /* Full-Viewport Sections */
   .hero, .problem-section, .positioning, .tools-section, .feature-section, .sitters-section, .security-section {
+    height: 100dvh; /* STRICT 100dvh */
+    max-height: 100dvh;
     min-height: 100dvh;
+    overflow: hidden; /* NO VERTICAL OVERFLOW WITHIN SECTIONS */
     scroll-snap-align: start;
     scroll-snap-stop: always;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-top: calc(env(safe-area-inset-top, 0px) + 80px); /* Account for fixed nav */
-    padding-bottom: calc(env(safe-area-inset-bottom, 0px) + 40px);
+    align-items: center;
+    padding-top: calc(env(safe-area-inset-top, 0px) + 60px); 
+    padding-bottom: env(safe-area-inset-bottom, 0px);
     box-sizing: border-box;
   }
 
-  /* Specific overrides */
+  /* Trust Strip Anchor */
+  .trust-strip {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    padding: 12px 0; /* Smaller padding on mobile */
+  }
+
+  /* --- HERO SCALING --- */
   .hero {
-    padding-top: calc(env(safe-area-inset-top, 0px) + 90px);
+    padding-top: calc(env(safe-area-inset-top, 0px) + 70px);
+    justify-content: space-between; /* Spread elements */
   }
 
-  /* Section Title Scalings */
-  .section-title {
-    font-size: 1.8rem;
-    margin-bottom: 12px;
+  .hero-layout {
+    gap: 1vh; /* Tighten gap */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    justify-content: flex-start;
   }
 
-  /* Touch Sliders for Grids (to ensure they don't overflow vertically) */
-  .problem-grid,
+  .hero-content {
+    flex-shrink: 1; /* Allow shrinking */
+  }
+
+  .hero-content h1 {
+    font-size: clamp(1.8rem, 5vw, 2.4rem); /* Proportional scaling */
+    letter-spacing: -1px;
+    line-height: 1.1;
+    margin-bottom: 2vh;
+  }
+
+  .hero-sub {
+    font-size: clamp(0.9rem, 3vw, 1rem);
+    padding: 0 10px;
+    margin-bottom: 2vh;
+    line-height: 1.4;
+  }
+
+  .hero-cta-group {
+    transform: scale(0.85); /* Scale down CTAs proportionately */
+    margin-bottom: 1vh;
+  }
+
+  .phone-mockup {
+    width: clamp(180px, 45vw, 220px); /* Proportional phone size */
+    height: clamp(380px, 48vh, 450px);
+    margin: 0 auto;
+    flex-shrink: 1;
+  }
+  
+  .phone-screen img {
+    object-fit: contain; /* Ensure full image is visible */
+    background: #000; /* Fill empty space with black if needed */
+  }
+
+  /* --- PROBLEM SECTION (2x2 GRID) --- */
+  .problem-section {
+    padding: 0; /* Let flex handle centering */
+  }
+
+  .problem-section .section-title {
+    font-size: clamp(1.6rem, 4vw, 2rem);
+    margin-bottom: 2vh;
+  }
+  
+  .problem-section .section-sub {
+    font-size: clamp(0.85rem, 3vw, 0.95rem);
+    margin-bottom: 3vh;
+    line-height: 1.3;
+  }
+
+  .problem-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Strict 2x2 grid */
+    gap: 10px;
+    width: 100%;
+    margin-top: 0;
+    padding: 0 10px;
+  }
+
+  .problem-card {
+    padding: 12px 10px; /* Minimal padding */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .problem-card .emoji {
+    width: 32px;
+    height: 32px;
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+  }
+
+  .problem-card .quote {
+    font-size: clamp(0.75rem, 2.5vw, 0.9rem);
+    line-height: 1.2;
+    margin-bottom: 4px;
+    min-height: auto;
+  }
+
+  .problem-card .desc {
+    font-size: clamp(0.65rem, 2vw, 0.8rem);
+    line-height: 1.3;
+    display: none; /* Hide description to strictly fit 100dvh, keep quote only */
+  }
+
+  /* --- POS PILLARS & TOOLS STRIPS --- */
+  /* Fallback horizontal scroll for other content if it's too much for 100dvh */
   .pos-pillars,
   .tools-grid,
   .security-grid {
@@ -2235,26 +2341,18 @@ footer {
     overflow-x: auto;
     overflow-y: hidden;
     scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-    gap: 16px;
-    padding-bottom: 24px; /* Space for scrollbar/shadows */
-    margin-top: 24px;
+    gap: 12px;
+    padding-bottom: 10px; 
+    margin-top: 2vh;
     width: 100%;
     scrollbar-width: none; 
   }
 
-  .problem-grid::-webkit-scrollbar,
-  .pos-pillars::-webkit-scrollbar,
-  .tools-grid::-webkit-scrollbar,
-  .security-grid::-webkit-scrollbar {
-    display: none; /* Chrome/Safari */
-  }
-
-  .problem-card, .pos-pillar, .tool-card, .security-item {
-    flex: 0 0 85%; /* Take up 85% of width, leaving a peek for the next card */
+  .pos-pillar, .tool-card, .security-item {
+    flex: 0 0 80%; 
     scroll-snap-align: center;
-    max-width: 300px; /* Sensible max width */
-    margin: 0;
+    max-width: 250px; 
+    padding: 20px 16px;
   }
 
   /* Hide decorative orbs on mobile to prevent overflow/distraction */
@@ -2266,66 +2364,52 @@ footer {
     padding: 0 16px;
     max-width: 100%;
     width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
   nav {
-    padding: 12px 16px;
-    flex-wrap: wrap; /* Allow wrapping if needed */
+    padding: 10px 16px;
+    flex-wrap: nowrap;
+    height: 60px; /* Fixed height for nav */
   }
 
   .nav-badges {
-    display: none; /* Hide store badges in nav on mobile */
+    display: none;
   }
 
   .nav-logo {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
 
   .lang-switch {
-    margin-right: auto;
+    transform: scale(0.85); /* Shrink lang switch */
   }
 
-  /* Hero Adjustments */
-  .hero-content h1 {
-    font-size: 2.1rem;
-    letter-spacing: -1px;
-    line-height: 1.15;
-    margin-bottom: 16px;
+  /* General Resets */
+  .section-title {
+    font-size: clamp(1.8rem, 5vw, 2.2rem);
+    margin-bottom: 1vh;
   }
 
-  .hero-sub {
-    font-size: 1.05rem;
-    padding: 0 10px;
-    margin-bottom: 20px;
-  }
-
-  .phone-mockup {
-    width: 250px; /* Scaled to fit */
-    height: 500px;
-  }
-
-  /* Stats adjustments */
   .stats-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 12px;
   }
 
   .stat-number {
-    font-size: 2.2rem;
+    font-size: clamp(1.8rem, 5vw, 2.2rem);
   }
 
   .stat-item {
-    padding: 20px 14px;
+    padding: 16px 10px;
   }
 
-  .premium-tiers {
+  .premium-tiers, .testimonial-grid {
     grid-template-columns: 1fr;
-    gap: 20px;
-  }
-
-  .testimonial-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 16px;
   }
 
   .footer-links {
