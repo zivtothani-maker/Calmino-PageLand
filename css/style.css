@@ -808,7 +808,7 @@ nav.scrolled {
 
 .marquee-track {
   display: flex;
-  gap: 100px;
+  gap: 0;
   align-items: center;
   animation: marquee 30s linear infinite;
   width: max-content;
@@ -823,6 +823,7 @@ nav.scrolled {
   font-weight: 600;
   color: var(--gray-400);
   white-space: nowrap;
+  padding-right: 80px;
 }
 
 .marquee-item .material-symbols-rounded {
@@ -2184,7 +2185,7 @@ footer {
   background: rgba(0, 0, 0, 0.45);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
-  z-index: 998;
+  z-index: 1001;
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.3s var(--ease-smooth);
@@ -2206,7 +2207,7 @@ footer {
   width: 290px;
   height: 100%;
   background: var(--white);
-  z-index: 999;
+  z-index: 1002;
   display: flex;
   flex-direction: column;
   transform: translateX(320px);
