@@ -2190,12 +2190,74 @@ footer {
 }
 
 @media (max-width: 600px) {
-  body, html {
+  /* Scroll Snapping Container */
+  html {
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+  }
+  
+  body {
     overflow-x: hidden; /* Prevent horizontal scrolling */
     width: 100%;
   }
 
-  /* Hide decorative orbs on mobile to prevent overflow */
+  /* Full-Viewport Sections */
+  .hero, .problem-section, .positioning, .tools-section, .feature-section, .sitters-section, .security-section {
+    min-height: 100dvh;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: calc(env(safe-area-inset-top, 0px) + 80px); /* Account for fixed nav */
+    padding-bottom: calc(env(safe-area-inset-bottom, 0px) + 40px);
+    box-sizing: border-box;
+  }
+
+  /* Specific overrides */
+  .hero {
+    padding-top: calc(env(safe-area-inset-top, 0px) + 90px);
+  }
+
+  /* Section Title Scalings */
+  .section-title {
+    font-size: 1.8rem;
+    margin-bottom: 12px;
+  }
+
+  /* Touch Sliders for Grids (to ensure they don't overflow vertically) */
+  .problem-grid,
+  .pos-pillars,
+  .tools-grid,
+  .security-grid {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: 16px;
+    padding-bottom: 24px; /* Space for scrollbar/shadows */
+    margin-top: 24px;
+    width: 100%;
+    scrollbar-width: none; 
+  }
+
+  .problem-grid::-webkit-scrollbar,
+  .pos-pillars::-webkit-scrollbar,
+  .tools-grid::-webkit-scrollbar,
+  .security-grid::-webkit-scrollbar {
+    display: none; /* Chrome/Safari */
+  }
+
+  .problem-card, .pos-pillar, .tool-card, .security-item {
+    flex: 0 0 85%; /* Take up 85% of width, leaving a peek for the next card */
+    scroll-snap-align: center;
+    max-width: 300px; /* Sensible max width */
+    margin: 0;
+  }
+
+  /* Hide decorative orbs on mobile to prevent overflow/distraction */
   .hero-orb, .hero::before, .hero::after, .security-section::before {
     display: none;
   }
@@ -2203,6 +2265,7 @@ footer {
   .container {
     padding: 0 16px;
     max-width: 100%;
+    width: 100%;
   }
 
   nav {
@@ -2222,28 +2285,26 @@ footer {
     margin-right: auto;
   }
 
-  .hero {
-    padding-top: 90px;
-    min-height: auto;
-    padding-bottom: 60px;
-  }
-
+  /* Hero Adjustments */
   .hero-content h1 {
-    font-size: 2.2rem;
+    font-size: 2.1rem;
     letter-spacing: -1px;
     line-height: 1.15;
+    margin-bottom: 16px;
   }
 
   .hero-sub {
     font-size: 1.05rem;
     padding: 0 10px;
+    margin-bottom: 20px;
   }
 
   .phone-mockup {
-    width: 260px; /* Slightly larger for better visibility */
-    height: 540px;
+    width: 250px; /* Scaled to fit */
+    height: 500px;
   }
 
+  /* Stats adjustments */
   .stats-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 12px;
@@ -2255,12 +2316,6 @@ footer {
 
   .stat-item {
     padding: 20px 14px;
-  }
-
-  .problem-grid,
-  .tools-grid {
-    grid-template-columns: 1fr;
-    gap: 16px;
   }
 
   .premium-tiers {
