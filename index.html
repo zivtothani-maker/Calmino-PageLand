@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=1200">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
         content="Calmino — Smart baby tracking app. Sleep, feeding, WHO growth curves, babysitter marketplace. Free to start.">
     <title>Calmino — מערכת ההפעלה להורות מודרנית</title>
@@ -43,7 +43,44 @@
                     alt="Get it on Google Play" style="height:32px;width:auto;">
             </a>
         </div>
+        <button class="hamburger-btn" id="hamburgerBtn" aria-label="תפריט">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
     </nav>
+
+    <!-- Mobile Overlay -->
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+
+    <!-- Mobile Drawer -->
+    <aside class="mobile-drawer" id="mobileDrawer">
+        <div class="drawer-header">
+            <div class="drawer-logo">
+                <img src="images/logo.jpg" alt="Calmino Logo">
+                Calmino
+            </div>
+            <button class="drawer-close" id="drawerClose">
+                <span class="material-symbols-rounded">close</span>
+            </button>
+        </div>
+        <nav class="drawer-nav">
+            <a href="#problem" class="drawer-link" data-i18n="nav_features">הבעיה?</a>
+            <a href="#approach" class="drawer-link" data-i18n="nav_tools">הגישה שלנו</a>
+            <a href="#security" class="drawer-link" data-i18n="nav_security">אבטחה</a>
+        </nav>
+        <div class="drawer-divider"></div>
+        <div style="padding: 12px 24px;">
+            <div class="lang-switch">
+                <button class="lang-btn active" data-lang="he">עב</button>
+                <button class="lang-btn" data-lang="en">EN</button>
+            </div>
+        </div>
+        <div class="drawer-badges">
+            <a href="#"><img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="App Store" style="height:42px;width:auto;"></a>
+            <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play" style="height:42px;width:auto;"></a>
+        </div>
+    </aside>
 
     <!-- HERO -->
     <section class="hero">
