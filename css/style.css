@@ -1474,55 +1474,46 @@ nav.scrolled {
   z-index: 1;
 }
 
-/* When showcase is hovered — gently spread cards apart */
+/* When hovering the showcase — slightly reduce rotation for breathing room */
 .screenshots-showcase:hover .sc-1 {
-  transform: rotate(-4deg) translateX(-180px);
-  z-index: 1;
+  transform: rotate(-6deg) translateX(-160px);
 }
 
 .screenshots-showcase:hover .sc-2 {
-  transform: rotate(-1.5deg) translateX(-90px);
-  z-index: 2;
+  transform: rotate(-2deg) translateX(-78px) translateY(-12px);
 }
 
 .screenshots-showcase:hover .sc-3 {
-  transform: rotate(0deg) translateY(-5px);
-  z-index: 3;
+  transform: rotate(0deg) translateY(-20px);
 }
 
 .screenshots-showcase:hover .sc-4 {
-  transform: rotate(1.5deg) translateX(90px);
-  z-index: 2;
+  transform: rotate(2deg) translateX(78px) translateY(-12px);
 }
 
 .screenshots-showcase:hover .sc-5 {
-  transform: rotate(4deg) translateX(180px);
-  z-index: 1;
+  transform: rotate(6deg) translateX(160px);
 }
 
-/* Individual card hover — elegantly pop out above all others
-   Each card gets a custom scale so they all reach ~240px final width */
+/* Individual card hover — scale up IN PLACE without moving.
+   Uses CSS 'scale' property (separate from transform) so the card
+   keeps its fan position and just grows smoothly */
 .screenshots-showcase .screenshot-card:hover {
   z-index: 20 !important;
-  transition: all 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+  scale: 1.45;
+  transition: scale 0.4s cubic-bezier(0.25, 0.1, 0.25, 1),
+              z-index 0s,
+              box-shadow 0.4s ease;
 }
 
-.screenshots-showcase .sc-1:hover,
-.screenshots-showcase .sc-5:hover {
-  transform: scale(1.5) rotate(0deg) translate(0, -8px) !important;
-}
-
-.screenshots-showcase .sc-2:hover,
-.screenshots-showcase .sc-4:hover {
-  transform: scale(1.42) rotate(0deg) translate(0, -8px) !important;
-}
-
-.screenshots-showcase .sc-3:hover {
-  transform: scale(1.35) rotate(0deg) translate(0, -8px) !important;
+/* Non-hovered siblings gently fade back */
+.screenshots-showcase:hover .screenshot-card:not(:hover) {
+  opacity: 0.7;
+  transition: all 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
 .screenshots-showcase .screenshot-card:hover img {
-  box-shadow: 0 16px 48px rgba(99, 102, 241, 0.2), 0 6px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 16px 48px rgba(99, 102, 241, 0.25), 0 6px 20px rgba(0, 0, 0, 0.12);
 }
 
 .report-insight p {
