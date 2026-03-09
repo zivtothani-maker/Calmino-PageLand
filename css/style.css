@@ -554,11 +554,30 @@ nav.scrolled {
 .hero-layout {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
   gap: 60px;
   align-items: start;
   padding-top: 40px;
   position: relative;
   z-index: 1;
+}
+
+.hero-text-top {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.hero-cta-bottom {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.hero-visual {
+  grid-column: 2;
+  grid-row: 1 / 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .hero-badge {
@@ -585,7 +604,8 @@ nav.scrolled {
   animation: pulseGlow 2s infinite;
 }
 
-.hero-content h1 {
+.hero-content h1,
+.hero-text-top h1 {
   font-family: var(--font-heading);
   font-size: clamp(3rem, 5.5vw, 4.5rem);
   font-weight: 800;
@@ -595,7 +615,8 @@ nav.scrolled {
   margin-bottom: 24px;
 }
 
-.hero-content h1 span {
+.hero-content h1 span,
+.hero-text-top h1 span {
   background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 40%, var(--accent-purple) 80%, var(--accent-pink) 100%);
   background-size: 200% 200%;
   -webkit-background-clip: text;
@@ -2386,21 +2407,20 @@ footer {
   }
 
   .hero-layout {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
     text-align: center;
-    gap: 36px;
+    gap: 28px;
     padding-top: 16px;
   }
 
-  .hero-visual {
-    order: -1; /* Phone appears first on mobile */
-  }
+  /* Mobile order: text → phone → buttons */
+  .hero-text-top  { order: 1; }
+  .hero-visual    { order: 2; }
+  .hero-cta-bottom{ order: 3; }
 
-  .hero-content {
-    order: 1; /* Text appears below phone */
-  }
-
-  .hero-content h1 {
+  .hero-content h1,
+  .hero-text-top h1 {
     font-size: 2.4rem;
     letter-spacing: -1.2px;
     line-height: 1.12;
