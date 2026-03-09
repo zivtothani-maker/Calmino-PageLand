@@ -1500,11 +1500,25 @@ nav.scrolled {
   z-index: 1;
 }
 
-/* Individual card hover — pop out above all others */
+/* Individual card hover — pop out above all others
+   Each card gets a custom scale so they all reach ~280px final width */
 .screenshots-showcase .screenshot-card:hover {
   z-index: 20 !important;
-  transform: scale(1.6) rotate(0deg) translate(0, -10px) !important;
   transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.screenshots-showcase .sc-1:hover,
+.screenshots-showcase .sc-5:hover {
+  transform: scale(1.75) rotate(0deg) translate(0, -10px) !important;
+}
+
+.screenshots-showcase .sc-2:hover,
+.screenshots-showcase .sc-4:hover {
+  transform: scale(1.65) rotate(0deg) translate(0, -10px) !important;
+}
+
+.screenshots-showcase .sc-3:hover {
+  transform: scale(1.55) rotate(0deg) translate(0, -10px) !important;
 }
 
 .screenshots-showcase .screenshot-card:hover img {
@@ -2675,11 +2689,25 @@ footer {
     z-index: 1 !important;
   }
 
-  /* Individual card tap — pop out above all on mobile too */
+  /* Individual card tap — pop out above all on mobile too
+     Custom scales so all reach ~200px final width */
   .screenshots-showcase .screenshot-card:hover {
     z-index: 20 !important;
-    transform: scale(2.2) rotate(0deg) translate(0, -10px) !important;
     transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .screenshots-showcase .sc-1:hover,
+  .screenshots-showcase .sc-5:hover {
+    transform: scale(2.22) rotate(0deg) translate(0, -10px) !important;
+  }
+
+  .screenshots-showcase .sc-2:hover,
+  .screenshots-showcase .sc-4:hover {
+    transform: scale(2.0) rotate(0deg) translate(0, -10px) !important;
+  }
+
+  .screenshots-showcase .sc-3:hover {
+    transform: scale(1.82) rotate(0deg) translate(0, -10px) !important;
   }
 
   .feature-list li {
