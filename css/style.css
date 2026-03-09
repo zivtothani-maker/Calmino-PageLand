@@ -2566,16 +2566,15 @@ footer {
   }
 
   .screenshots-showcase {
-    height: auto;
+    height: 300px;        /* Fixed height to hold the fan */
     display: flex;
-    flex-direction: row;
-    overflow-x: auto;
-    justify-content: flex-start;
     align-items: center;
-    padding: 12px 4px 24px;
-    gap: 12px;
-    perspective: none;
-    -webkit-overflow-scrolling: touch;
+    justify-content: center;
+    flex-direction: row;
+    overflow: visible;    /* Allow cards to fan out */
+    padding: 12px 0 24px;
+    perspective: 1000px;
+    position: relative;
     scrollbar-width: none;
   }
 
@@ -2584,15 +2583,39 @@ footer {
   }
 
   .screenshot-card {
-    position: relative;
+    position: absolute;
     flex-shrink: 0;
-    width: 120px;
   }
 
-  .sc-1, .sc-2, .sc-3, .sc-4, .sc-5 {
-    transform: none !important;
+  /* Scaled-down fan layout for mobile */
+  .sc-1 {
+    transform: rotate(-8deg) translateX(-95px) !important;
     z-index: 1 !important;
-    width: 120px !important;
+    width: 90px !important;
+  }
+
+  .sc-2 {
+    transform: rotate(-3deg) translateX(-48px) translateY(-8px) !important;
+    z-index: 3 !important;
+    width: 100px !important;
+  }
+
+  .sc-3 {
+    transform: rotate(0deg) translateY(-14px) !important;
+    z-index: 5 !important;
+    width: 110px !important;
+  }
+
+  .sc-4 {
+    transform: rotate(3deg) translateX(48px) translateY(-8px) !important;
+    z-index: 3 !important;
+    width: 100px !important;
+  }
+
+  .sc-5 {
+    transform: rotate(8deg) translateX(95px) !important;
+    z-index: 1 !important;
+    width: 90px !important;
   }
 
   .screenshots-showcase:hover .sc-1,
