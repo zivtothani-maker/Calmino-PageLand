@@ -1417,6 +1417,7 @@ nav.scrolled {
   align-items: center;
   justify-content: center;
   perspective: 1000px;
+  overflow: visible;
 }
 
 .screenshot-card {
@@ -1500,13 +1501,13 @@ nav.scrolled {
 }
 
 /* Individual card hover — pop out above all others */
-.screenshot-card:hover {
+.screenshots-showcase .screenshot-card:hover {
   z-index: 20 !important;
-  transform: scale(1.6) rotate(0deg) translateX(0) translateY(-10px) !important;
+  transform: scale(1.6) rotate(0deg) translate(0, -10px) !important;
   transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.screenshot-card:hover img {
+.screenshots-showcase .screenshot-card:hover img {
   box-shadow: 0 20px 60px rgba(99, 102, 241, 0.3), 0 8px 24px rgba(0, 0, 0, 0.15);
 }
 
@@ -2675,9 +2676,9 @@ footer {
   }
 
   /* Individual card tap — pop out above all on mobile too */
-  .screenshot-card:hover {
+  .screenshots-showcase .screenshot-card:hover {
     z-index: 20 !important;
-    transform: scale(2.2) rotate(0deg) translateX(0) translateY(-10px) !important;
+    transform: scale(2.2) rotate(0deg) translate(0, -10px) !important;
     transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
