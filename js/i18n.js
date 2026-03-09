@@ -206,7 +206,7 @@ function setLang(lang) {
     if (el.tagName === 'H1' && keys.length === 2) {
       el.innerHTML = (t[keys[0].trim()] || keys[0]) + '<br><span>' + (t[keys[1].trim()] || keys[1]) + '</span>';
     } else {
-      el.innerHTML = keys.map(k => t[k.trim()] || k).join('<br>');
+      el.innerHTML = keys.map(k => k.trim() in t ? t[k.trim()] : k).join('<br>');
     }
   });
 

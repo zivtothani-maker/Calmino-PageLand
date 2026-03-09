@@ -96,13 +96,36 @@ document.addEventListener('DOMContentLoaded', () => {
     /* --- Smooth Scroll for Anchor Links --- */
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', (e) => {
+            if (anchor.classList.contains('app-store-badge') || anchor.classList.contains('nav-store-badge') || anchor.closest('.drawer-badges')) return;
             e.preventDefault();
-            const target = document.querySelector(anchor.getAttribute('href'));
+            const href = anchor.getAttribute('href');
+            if (href === '#') return;
+            const target = document.querySelector(href);
             if (target) {
                 target.scrollIntoView({ behavior: 'smooth', block: 'start' });
             }
         });
     });
+
+    /* --- Store Badge "Coming Soon" Popup --- */
+    const comingSoonPopup = document.createElement('div');
+    comingSoonPopup.id = 'coming-soon-popup';
+    comingSoonPopup.innerHTML = `<div class="cs-overlay"></div><div class="cs-box"><span class="cs-text">בקרוב!</span></div>`;
+    document.body.appendChild(comingSoonPopup);
+
+    function showComingSoon(e) {
+        e.preventDefault();
+        comingSoonPopup.classList.add('open');
+    }
+    function hideComingSoon() {
+        comingSoonPopup.classList.remove('open');
+    }
+
+    document.querySelectorAll('.app-store-badge, .nav-store-badge, .drawer-badges a').forEach(btn => {
+        btn.addEventListener('click', showComingSoon);
+    });
+    comingSoonPopup.querySelector('.cs-overlay').addEventListener('click', hideComingSoon);
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') hideComingSoon(); });
 
     /* --- Mobile Hamburger Drawer --- */
     const hamburgerBtn = document.getElementById('hamburgerBtn');
