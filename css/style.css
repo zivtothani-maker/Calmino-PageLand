@@ -2409,15 +2409,16 @@ footer {
   .hero-layout {
     display: flex;
     flex-direction: column;
+    align-items: center;
     text-align: center;
-    gap: 28px;
+    gap: 24px;
     padding-top: 16px;
   }
 
   /* Mobile order: text → phone → buttons */
-  .hero-text-top  { order: 1; }
-  .hero-visual    { order: 2; }
-  .hero-cta-bottom{ order: 3; }
+  .hero-text-top  { order: 1; width: 100%; }
+  .hero-visual    { order: 2; width: 100%; display: flex; justify-content: center; }
+  .hero-cta-bottom{ order: 3; width: 100%; display: flex; flex-direction: column; align-items: center; }
 
   .hero-content h1,
   .hero-text-top h1 {
