@@ -20,7 +20,7 @@
     <!-- NAV -->
     <nav>
         <div class="nav-logo">
-            <img src="images/logo.jpg" alt="Calmino Logo">
+            <img src="images/logo.svg" alt="Calmino Logo">
             Calmino
         </div>
         <div class="nav-links">
@@ -43,7 +43,44 @@
                     alt="Get it on Google Play" style="height:32px;width:auto;">
             </a>
         </div>
+        <button class="hamburger-btn" id="hamburgerBtn" aria-label="תפריט">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
     </nav>
+
+    <!-- Mobile Overlay -->
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+
+    <!-- Mobile Drawer -->
+    <aside class="mobile-drawer" id="mobileDrawer">
+        <div class="drawer-header">
+            <div class="drawer-logo">
+                <img src="images/logo.svg" alt="Calmino Logo">
+                Calmino
+            </div>
+            <button class="drawer-close" id="drawerClose">
+                <span class="material-symbols-rounded">close</span>
+            </button>
+        </div>
+        <div class="drawer-nav">
+            <a href="#problem" class="drawer-link" data-i18n="nav_features">הבעיה?</a>
+            <a href="#approach" class="drawer-link" data-i18n="nav_tools">הגישה שלנו</a>
+            <a href="#security" class="drawer-link" data-i18n="nav_security">אבטחה</a>
+        </div>
+        <div class="drawer-divider"></div>
+        <div style="padding: 12px 24px;">
+            <div class="lang-switch">
+                <button class="lang-btn active" data-lang="he">עב</button>
+                <button class="lang-btn" data-lang="en">EN</button>
+            </div>
+        </div>
+        <div class="drawer-badges">
+            <a href="#"><img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="App Store"></a>
+            <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play"></a>
+        </div>
+    </aside>
 
     <!-- HERO -->
     <section class="hero">
@@ -98,7 +135,20 @@
             <div class="marquee-item"><span class="material-symbols-rounded">fingerprint</span>אימות ביומטרי</div>
             <div class="marquee-item"><span class="material-symbols-rounded">cloud_sync</span>סנכרון בזמן אמת</div>
             <div class="marquee-item"><span class="material-symbols-rounded">child_care</span>מעקב חכם</div>
-            <!-- Duplicate for seamless loop -->
+            <div class="marquee-item"><span class="material-symbols-rounded">verified</span>תואם GDPR</div>
+            <div class="marquee-item"><span class="material-symbols-rounded">family_restroom</span>שיתוף משפחתי</div>
+            <div class="marquee-item"><span class="material-symbols-rounded">phone_iphone</span>פעילויות חיות</div>
+            <div class="marquee-item"><span class="material-symbols-rounded">monitoring</span>עקומות גדילה WHO</div>
+            <div class="marquee-item"><span class="material-symbols-rounded">fingerprint</span>אימות ביומטרי</div>
+            <div class="marquee-item"><span class="material-symbols-rounded">cloud_sync</span>סנכרון בזמן אמת</div>
+            <div class="marquee-item"><span class="material-symbols-rounded">child_care</span>מעקב חכם</div>
+            <div class="marquee-item"><span class="material-symbols-rounded">verified</span>תואם GDPR</div>
+            <div class="marquee-item"><span class="material-symbols-rounded">family_restroom</span>שיתוף משפחתי</div>
+            <div class="marquee-item"><span class="material-symbols-rounded">phone_iphone</span>פעילויות חיות</div>
+            <div class="marquee-item"><span class="material-symbols-rounded">monitoring</span>עקומות גדילה WHO</div>
+            <div class="marquee-item"><span class="material-symbols-rounded">fingerprint</span>אימות ביומטרי</div>
+            <div class="marquee-item"><span class="material-symbols-rounded">cloud_sync</span>סנכרון בזמן אמת</div>
+            <div class="marquee-item"><span class="material-symbols-rounded">child_care</span>מעקב חכם</div>
             <div class="marquee-item"><span class="material-symbols-rounded">verified</span>תואם GDPR</div>
             <div class="marquee-item"><span class="material-symbols-rounded">family_restroom</span>שיתוף משפחתי</div>
             <div class="marquee-item"><span class="material-symbols-rounded">phone_iphone</span>פעילויות חיות</div>
@@ -172,7 +222,7 @@
                 <a href="#sitters" class="pos-pillar reveal-child"
                     style="text-decoration:none;color:inherit;cursor:pointer;">
                     <p class="num material-symbols-rounded">storefront</p>
-                    <h3 data-i18n="pos3_h">שוק בייביסיטרים</h3>
+                    <h3 data-i18n="pos3_h">מאגר בייביסיטרים</h3>
                     <p data-i18n="pos3_p">מצאו בייביסיטרים לפי מיקום וזמינות, עיינו בפרופילים עם ניסיון והמלצות מהורים,
                         ובחרו את הבייביסיטר המתאימה ביותר.</p>
                 </a>
@@ -293,7 +343,7 @@
         <div class="container">
             <!-- Centered Header -->
             <div class="sitters-header reveal" style="text-align:center;">
-                <p class="section-label" data-i18n="ft3_label">שוק בייביסיטרים</p>
+                <p class="section-label" data-i18n="ft3_label">מאגר בייביסיטרים</p>
                 <h2 class="section-title" data-i18n-html="ft3_title_a+ft3_title_b">למצוא מישהו/י<br>שאפשר לסמוך עליו.
                 </h2>
 
@@ -380,7 +430,7 @@
                         מאפשרים פתיחה מהירה תוך שמירה על פרטיות מלאה.</p>
                 </div>
                 <div class="security-item reveal-child"><span class="sec-icon material-symbols-rounded">encrypted</span>
-                    <h4 data-i18n="sec2_h">הצפנה מקצה לקצה</h4>
+                    <h4 data-i18n="sec2_h">הצפנה מלאה</h4>
                     <p data-i18n="sec2_p">כל המידע מוצפן מקצה לקצה ונגיש רק לכם ולמי שבחרתם להעניק לו גישה</p>
                 </div>
                 <div class="security-item reveal-child"><span class="sec-icon material-symbols-rounded">block</span>
@@ -405,7 +455,7 @@
     <!-- FOOTER -->
     <footer>
         <div class="footer-content">
-            <div class="footer-logo"><img src="images/logo.jpg" alt="Calmino Logo"> Calmino</div>
+            <div class="footer-logo"><img src="images/logo.svg" alt="Calmino Logo"> Calmino</div>
             <div class="footer-links">
                 <a href="terms.html" data-i18n="footer_terms">תנאי שימוש</a>
                 <a href="privacy.html" data-i18n="footer_privacy">מדיניות פרטיות</a>
