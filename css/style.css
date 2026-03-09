@@ -2626,12 +2626,36 @@ footer {
     width: 90px !important;
   }
 
-  .screenshots-showcase:hover .sc-1,
-  .screenshots-showcase:hover .sc-2,
-  .screenshots-showcase:hover .sc-3,
-  .screenshots-showcase:hover .sc-4,
+  /* On mobile touch, keep fan positions - do NOT collapse to center */
+  .screenshots-showcase:hover .sc-1 {
+    transform: rotate(-8deg) translateX(-95px) !important;
+    z-index: 1 !important;
+  }
+
+  .screenshots-showcase:hover .sc-2 {
+    transform: rotate(-3deg) translateX(-48px) translateY(-8px) !important;
+    z-index: 3 !important;
+  }
+
+  .screenshots-showcase:hover .sc-3 {
+    transform: rotate(0deg) translateY(-14px) !important;
+    z-index: 5 !important;
+  }
+
+  .screenshots-showcase:hover .sc-4 {
+    transform: rotate(3deg) translateX(48px) translateY(-8px) !important;
+    z-index: 3 !important;
+  }
+
   .screenshots-showcase:hover .sc-5 {
-    transform: none !important;
+    transform: rotate(8deg) translateX(95px) !important;
+    z-index: 1 !important;
+  }
+
+  /* Disable individual card hover zoom on mobile */
+  .screenshot-card:hover {
+    z-index: inherit !important;
+    transform: inherit !important;
   }
 
   .feature-list li {
