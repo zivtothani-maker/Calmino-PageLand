@@ -2303,19 +2303,22 @@ footer {
 
 .drawer-badges {
   display: flex;
-  flex-direction: column;
+  flex-direction: row; /* Side by side instead of stacked */
   gap: 10px;
-  padding: 20px 24px;
+  padding: 16px 24px;
   margin-top: auto;
   border-top: 1px solid var(--gray-100);
+  align-items: center;
+  justify-content: center;
 }
 
 .drawer-badges a {
   display: flex;
+  flex: 1;
 }
 
 .drawer-badges img {
-  height: 40px !important;
+  height: 36px !important;
   width: auto !important;
   max-width: 100% !important;
 }
@@ -2357,6 +2360,7 @@ footer {
 
   .hamburger-btn {
     display: flex;
+    order: -1; /* Move to the right side in RTL layout */
   }
 
   .nav-badges {
