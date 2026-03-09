@@ -1427,7 +1427,7 @@ nav.scrolled {
   overflow: visible;
   cursor: pointer;
   padding: 6px;
-  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.6s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
 .screenshot-card img {
@@ -1438,7 +1438,7 @@ nav.scrolled {
   border-radius: 18px;
   border: 3px solid rgba(255, 255, 255, 0.8);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12), 0 2px 8px rgba(0, 0, 0, 0.06);
-  transition: box-shadow 0.4s ease, transform 0.4s ease;
+  transition: box-shadow 0.6s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
 /* Default fan layout */
@@ -1474,55 +1474,55 @@ nav.scrolled {
   z-index: 1;
 }
 
-/* When showcase is hovered — spread all cards apart */
+/* When showcase is hovered — gently spread cards apart */
 .screenshots-showcase:hover .sc-1 {
-  transform: rotate(-3deg) translateX(-220px);
+  transform: rotate(-4deg) translateX(-180px);
   z-index: 1;
 }
 
 .screenshots-showcase:hover .sc-2 {
-  transform: rotate(-1deg) translateX(-110px);
+  transform: rotate(-1.5deg) translateX(-90px);
   z-index: 2;
 }
 
 .screenshots-showcase:hover .sc-3 {
-  transform: rotate(0deg) translateY(0);
+  transform: rotate(0deg) translateY(-5px);
   z-index: 3;
 }
 
 .screenshots-showcase:hover .sc-4 {
-  transform: rotate(1deg) translateX(110px);
+  transform: rotate(1.5deg) translateX(90px);
   z-index: 2;
 }
 
 .screenshots-showcase:hover .sc-5 {
-  transform: rotate(3deg) translateX(220px);
+  transform: rotate(4deg) translateX(180px);
   z-index: 1;
 }
 
-/* Individual card hover — pop out above all others
-   Each card gets a custom scale so they all reach ~280px final width */
+/* Individual card hover — elegantly pop out above all others
+   Each card gets a custom scale so they all reach ~240px final width */
 .screenshots-showcase .screenshot-card:hover {
   z-index: 20 !important;
-  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
 .screenshots-showcase .sc-1:hover,
 .screenshots-showcase .sc-5:hover {
-  transform: scale(1.75) rotate(0deg) translate(0, -10px) !important;
+  transform: scale(1.5) rotate(0deg) translate(0, -8px) !important;
 }
 
 .screenshots-showcase .sc-2:hover,
 .screenshots-showcase .sc-4:hover {
-  transform: scale(1.65) rotate(0deg) translate(0, -10px) !important;
+  transform: scale(1.42) rotate(0deg) translate(0, -8px) !important;
 }
 
 .screenshots-showcase .sc-3:hover {
-  transform: scale(1.55) rotate(0deg) translate(0, -10px) !important;
+  transform: scale(1.35) rotate(0deg) translate(0, -8px) !important;
 }
 
 .screenshots-showcase .screenshot-card:hover img {
-  box-shadow: 0 20px 60px rgba(99, 102, 241, 0.3), 0 8px 24px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 16px 48px rgba(99, 102, 241, 0.2), 0 6px 20px rgba(0, 0, 0, 0.1);
 }
 
 .report-insight p {
