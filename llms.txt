@@ -1,0 +1,28 @@
+# Calmino — AI Access Policy
+
+Calmino is a baby tracking app that helps parents manage feeding, sleep, diapers, growth, and more.
+
+## Permissions
+
+User-agent: *
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+## About This Site
+
+- Name: Calmino
+- Description: Smart baby tracking app for parents — timers, insights, growth tracking, and babysitter marketplace.
+- Language: Hebrew (primary), English
+- URL: https://baby-app-42b3b.web.app/
+
+## Contact
+
+For questions about AI access or data usage, contact us via the website.
