@@ -21,7 +21,7 @@ Allow: /
 - Name: Calmino
 - Description: Smart baby tracking app for parents — timers, insights, growth tracking, and babysitter marketplace.
 - Language: Hebrew (primary), English
-- URL: https://baby-app-42b3b.web.app/
+- URL: https://calmino.co.il/
 
 ## Contact
 

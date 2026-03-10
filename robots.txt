@@ -13,4 +13,4 @@ Allow: /
 User-agent: Googlebot
 Allow: /
 
-Sitemap: https://baby-app-42b3b.web.app/sitemap.xml
+Sitemap: https://calmino.co.il/sitemap.xml
