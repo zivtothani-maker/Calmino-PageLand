@@ -2878,3 +2878,143 @@ footer {
     font-size: 1.6rem;
   }
 }
+
+/* ════════════════════════════════════════
+   CONTACT MODAL
+   ════════════════════════════════════════ */
+
+.modal-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 10, 20, 0.55);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  z-index: 2000;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.modal-overlay.is-open {
+  display: flex;
+}
+
+.modal-box {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 40px 36px 36px;
+  width: 100%;
+  max-width: 460px;
+  position: relative;
+  direction: rtl;
+}
+
+.modal-close {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  background: none;
+  border: none;
+  font-size: 18px;
+  color: #aaa;
+  cursor: pointer;
+  line-height: 1;
+  padding: 4px 8px;
+  border-radius: 6px;
+  transition: color 0.2s, background 0.2s;
+}
+
+.modal-close:hover {
+  color: #333;
+  background: #f0f0f0;
+}
+
+.modal-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--gray-950);
+  margin: 0 0 28px;
+  line-height: 1.4;
+}
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.modal-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.modal-field label {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #888;
+  letter-spacing: 0.03em;
+}
+
+.modal-field input,
+.modal-field textarea {
+  background: none;
+  border: none;
+  border-bottom: 1.5px solid #e0e0e8;
+  border-radius: 0;
+  padding: 8px 2px;
+  font-size: 0.95rem;
+  color: var(--gray-950);
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.2s;
+  resize: none;
+  direction: rtl;
+}
+
+.modal-field input:focus,
+.modal-field textarea:focus {
+  border-bottom-color: #8b7cf8;
+}
+
+.modal-field input::placeholder,
+.modal-field textarea::placeholder {
+  color: #ccc;
+}
+
+.modal-submit {
+  margin-top: 8px;
+  background: linear-gradient(135deg, #8b7cf8 0%, #a78bfa 100%);
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  padding: 14px 32px;
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.15s;
+  align-self: stretch;
+}
+
+.modal-submit:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+@media (max-width: 480px) {
+  .modal-overlay {
+    padding: 0;
+    align-items: flex-end;
+  }
+  .modal-box {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 20px 20px 0 0;
+    padding: 28px 20px 32px;
+  }
+  .modal-title {
+    font-size: 1.1rem;
+  }
+}

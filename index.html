@@ -464,8 +464,7 @@
             <div class="footer-links">
                 <a href="terms.html" data-i18n="footer_terms">תנאי שימוש</a>
                 <a href="privacy.html" data-i18n="footer_privacy">מדיניות פרטיות</a>
-                <a href="mailto:calminogroup@gmail.com?subject=פנייה מאתר Calmino" data-i18n="footer_contact">צרו
-                    קשר</a>
+                <a href="#" id="contactTrigger" data-i18n="footer_contact">צרו קשר</a>
             </div>
 
 
@@ -481,8 +480,31 @@
         </div>
     </footer>
 
+    <!-- CONTACT MODAL -->
+    <div id="contactModal" class="modal-overlay" aria-hidden="true" style="display:none">
+        <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+            <button class="modal-close" id="modalClose" aria-label="סגור">&#x2715;</button>
+            <h2 id="modalTitle" class="modal-title">יש לכם שאלה? נשמח לשמוע מכם</h2>
+            <form class="modal-form" id="contactForm" action="mailto:calminogroup@gmail.com" method="get" enctype="text/plain">
+                <div class="modal-field">
+                    <label for="contactName">שם מלא</label>
+                    <input type="text" id="contactName" name="name" placeholder="ישראל ישראלי" required autocomplete="name">
+                </div>
+                <div class="modal-field">
+                    <label for="contactEmail">כתובת אימייל</label>
+                    <input type="email" id="contactEmail" name="email" placeholder="email@example.com" required autocomplete="email">
+                </div>
+                <div class="modal-field">
+                    <label for="contactMessage">איך נוכל לעזור?</label>
+                    <textarea id="contactMessage" name="body" placeholder="כתבו לנו כאן..." rows="4" required></textarea>
+                </div>
+                <button type="submit" class="modal-submit">שליחה</button>
+            </form>
+        </div>
+    </div>
+
     <script src="js/i18n.js?v=2"></script>
-    <script src="js/main.js" defer></script>
+    <script src="js/main.js?v=2" defer></script>
 </body>
 
 </html>

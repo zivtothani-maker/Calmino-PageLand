@@ -157,3 +157,34 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 });
+
+/* --- Contact Modal --- */
+(function () {
+    const trigger = document.getElementById('contactTrigger');
+    const modal   = document.getElementById('contactModal');
+    const closeBtn = document.getElementById('modalClose');
+
+    if (!trigger || !modal) return;
+
+    function openModal(e) {
+        e.preventDefault();
+        modal.style.display = 'flex';
+        modal.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+        modal.style.display = 'none';
+        modal.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+    }
+
+    trigger.addEventListener('click', openModal);
+    closeBtn.addEventListener('click', closeModal);
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) closeModal();
+    });
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closeModal();
+    });
+})();
