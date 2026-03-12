@@ -12,7 +12,7 @@
         rel="stylesheet">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css?v=25">
 
     <!-- Icons & PWA -->
     <link rel="icon" href="/favicon.ico" sizes="any">
@@ -422,6 +422,184 @@
     </section>
 
 
+    <!-- BLOG / ARTICLES -->
+    <section id="blog" class="blog-section">
+        <div class="container">
+            <div class="reveal" style="text-align:center;">
+                <p class="section-label" data-i18n="blog_label">המדריך להורים</p>
+                <h2 class="section-title" data-i18n="blog_title">תובנות, טיפים ומידע מקצועי</h2>
+            </div>
+            <div class="blog-grid reveal">
+                <!-- Card 1 — Accordion Trigger -->
+                <button class="blog-card blog-card--trigger reveal-child" id="blog-trigger-1" aria-expanded="false" aria-controls="blog-accordion-1">
+                    <div class="blog-icon"><span class="material-symbols-rounded">menu_book</span></div>
+                    <div class="blog-card-content-col">
+                        <h4 class="blog-card-title" data-i18n="blog1_h">שינה, האכלה והתפתחות התינוק</h4>
+                        <p class="blog-card-excerpt" data-i18n="blog1_p">מרגישים את העומס המנטלי? כל התשובות לשאלות על חלונות שינה, כמויות אוכל, חיסונים והתפתחות...</p>
+                        <span class="blog-read-more blog-toggle-label">
+                            <span class="toggle-closed">קראו עוד <span class="material-symbols-rounded" style="font-size:16px;vertical-align:middle;">expand_more</span></span>
+                            <span class="toggle-open">סגרו <span class="material-symbols-rounded" style="font-size:16px;vertical-align:middle;">expand_less</span></span>
+                        </span>
+                    </div>
+                </button>
+                <!-- Card 2 — Accordion Trigger -->
+                <button class="blog-card blog-card--trigger reveal-child" id="blog-trigger-2" aria-expanded="false" aria-controls="blog-accordion-2">
+                    <div class="blog-icon"><span class="material-symbols-rounded">supervisor_account</span></div>
+                    <div class="blog-card-content-col">
+                        <h4 class="blog-card-title" data-i18n="blog2_h">איך למצוא בייביסיטר אמינה?</h4>
+                        <p class="blog-card-excerpt" data-i18n="blog2_p">המדריך המלא למציאת בייביסיטר, מניעת שחיקה הורית, ואיך לצאת מהבית בראש שקט באמת...</p>
+                        <span class="blog-read-more blog-toggle-label">
+                            <span class="toggle-closed">קראו עוד <span class="material-symbols-rounded" style="font-size:16px;vertical-align:middle;">expand_more</span></span>
+                            <span class="toggle-open">סגרו <span class="material-symbols-rounded" style="font-size:16px;vertical-align:middle;">expand_less</span></span>
+                        </span>
+                    </div>
+                </button>
+                <!-- Card 3 — Accordion Trigger -->
+                <button class="blog-card blog-card--trigger reveal-child" id="blog-trigger-3" aria-expanded="false" aria-controls="blog-accordion-3">
+                    <div class="blog-icon"><span class="material-symbols-rounded">dashboard</span></div>
+                    <div class="blog-card-content-col">
+                        <h4 class="blog-card-title" data-i18n="blog3_h">איך לחסוך זמן ואנרגיה בניהול השגרה?</h4>
+                        <p class="blog-card-excerpt" data-i18n="blog3_p">ניהול שגרה, עומס מנטלי, חלוקת הנטל בבית והיתרון במרחב מסונכרן...</p>
+                        <span class="blog-read-more blog-toggle-label">
+                            <span class="toggle-closed">קראו עוד <span class="material-symbols-rounded" style="font-size:16px;vertical-align:middle;">expand_more</span></span>
+                            <span class="toggle-open">סגרו <span class="material-symbols-rounded" style="font-size:16px;vertical-align:middle;">expand_less</span></span>
+                        </span>
+                    </div>
+                </button>
+
+                <!-- Accordion 1 — inside grid, spans full width -->
+                <div class="blog-accordion" id="blog-accordion-1" role="region" aria-labelledby="blog-trigger-1" aria-hidden="true">
+                <article class="blog-article">
+                    <h2>העומס המנטלי בהורות: התשובות ל-6 השאלות שהכי מטרידות אתכם בשנה הראשונה</h2>
+                    <p class="blog-article-intro">השנה הראשונה לחייו של התינוק היא מסע מופלא, אבל בואו נודה באמת, היא גם מלווה בעומס מנטלי אדיר. החל מהלילה הראשון בבית, הורים מוצאים את עצמם מוצפים במידע, ספקות ושאלות בלתי פוסקות. האם הוא אוכל מספיק? למה היא לא נרדמת? מתי השן הזו כבר תבקע? הניסיון לזכור הכל, לנהל שגרת יום ולהשוות נתונים הופך מהר מאוד למתיש, ושולח אותנו לחיפושים נואשים בגוגל באמצע הלילה. במקום ללכת לאיבוד בים של מידע, ריכזנו עבורכם את התשובות ל-6 השאלות הנפוצות ביותר של הורים טריים, יחד עם הדרכים המעשיות להחזיר את השליטה, הסדר והשקט הנפשי לחיים שלכם.</p>
+
+                    <section class="blog-section-item">
+                        <h3>1. חלונות שינה לפי גיל (או: למה התינוק לא נרדם?)</h3>
+                        <p>יועצות שינה ורופאי ילדים מסכימים שאחת הסיבות המרכזיות לקושי בהירדמות היא "עייפות יתר". לתינוקות יש "חלונות שינה" מדויקים (זמן הערות המקסימלי בין תנומות). כשהורים מפספסים את החלון הזה, גוף התינוק מפריש קורטיזול ואדרנלין שמקשים עליו להירגע, ומובילים לבכי מתסכל ולשינה מקוטעת. Calmino מאפשרת לכם לנהל יומן שינה חכם. על ידי תיעוד פשוט של שעות ההירדמות והיקיצה, Calmino מנתחת את דפוסי השינה ומאפשרת לכם לעקוב אחרי חלונות הערות. בנוסף, Calmino כוללת כלי מובנה של "רעש לבן" עם צלילים מרגיעים שעוזרים לתינוק להיכנס לשינה עמוקה ורציפה יותר.</p>
+                    </section>
+
+                    <section class="blog-section-item">
+                        <h3>2. כמה התינוק צריך לאכול? (לפי משקל וגיל)</h3>
+                        <p>החשש המרכזי של כל הורה טרי הוא האם התינוק אוכל מספיק. בעוד שההנחיות הרפואיות משתנות לפי גיל, משקל וסוג התזונה (הנקה או תמ"ל), מומחים מדגישים שהמעקב היומי הכולל חשוב יותר מאשר כמות של ארוחה בודדת. בלילה, כשהעייפות מצטברת, קשה לזכור מתי הייתה הארוחה האחרונה או מאיזה צד התינוק ינק. פיתחנו יומן האכלות מדויק שמוריד מכם את העומס לזכור הכל. בלחיצת כפתור תוכלו לתעד זמני הנקה (כולל צדדים וטיימר), שאיבות או כמויות של בקבוקי תמ"ל. המידע מסתנכרן בזמן אמת עם בן/בת הזוג או הבייביסיטר, כך שכולם יודעים בדיוק מתי וכמה התינוק אכל.</p>
+                    </section>
+
+                    <section class="blog-section-item">
+                        <h3>3. טבלת אחוזוני גדילה לתינוקות</h3>
+                        <p>אחרי כל ביקור בטיפת חלב, הורים מחפשים מיד את אחוזוני הגדילה של הילד שלהם. ארגון הבריאות העולמי (WHO) קבע תקנים ברורים לבדיקת התפתחות תקינה של משקל, גובה והיקף ראש. עם זאת, קבלת הנתונים על דף נייר מהאחות מקשה על ההורים לראות את "התמונה הגדולה" ולהבין את מגמת הגדילה של הילד לאורך חודשים. Calmino כוללת מעקב גדילה דיגיטלי המבוסס ישירות על תקני ה-WHO. אתם מזינים את המדדים, ו-Calmino משרטטת עבורכם עקומות גדילה ויזואליות וברורות. בלחיצת כפתור אחת, תוכלו לייצא את הנתונים כדוח PDF מקצועי ולשתף אותו עם רופא הילדים שלכם.</p>
+                    </section>
+
+                    <section class="blog-section-item">
+                        <h3>4. תופעות לוואי אחרי חיסון אצל תינוקות</h3>
+                        <p>חיסוני השגרה מלווים לא פעם בתופעות לוואי טבעיות כמו חום, אי-שקט וכאבים מקומיים. ההמלצה הרפואית היא לעקוב בקפידה אחרי עליית החום ולתת תרופות להורדת חום בדיוק במינון ובמרווחי הזמן המותרים. טעויות במינון או שכיחה של מתן התרופה הם מצבים שכיחים שעלולים להיות מסוכנים. Calmino מציעה כלים משולבים לבריאות התינוק: מעקב חיסונים שמתעד את היסטוריית החיסונים ומתזכר על תורים קרובים, ומערכת חכמה לניהול תרופות. תוכלו להזין את שם התרופה (למשל תרופה להורדת חום), את המינון המדויק ואת שעות הנטילה, ולשתף את המידע עם כל מי שמטפל בילד כדי למנוע כפילויות.</p>
+                    </section>
+
+                    <section class="blog-section-item">
+                        <h3>5. איך להקל על כאבי שיניים אצל תינוקות?</h3>
+                        <p>בקיעת שיניים היא תהליך כואב שמתחיל לרוב סביב חצי שנה ויכול לשבש את כל שגרת הבית. רופאי שיניים לילדים ממליצים לעקוב אחר סדר בקיעת השיניים כדי להבדיל בין חוסר שקט שנובע משיניים לבין מחלה אחרת. הורים מתקשים לזכור מתי יצאה כל שן ומתי הופיעו הסימפטומים. כדי לעשות סדר, Calmino יצרה את מעקב השיניים האינטראקטיבי. זוהי מפה ויזואלית של פה התינוק המאפשרת לכם לתעד במדויק מתי כל שן בקעה. יחד עם מעקב התרופות והתזונה ב-Calmino, קל הרבה יותר לזהות דפוסים ולהעניק לתינוק את ההקלה המדויקת שהוא צריך בזמן בקיעת שיניים.</p>
+                    </section>
+
+                    <section class="blog-section-item">
+                        <h3>6. אבני דרך התפתחותיות (מתי תינוק מתהפך?)</h3>
+                        <p>הורים מוצאים את עצמים משווים את הילד שלהם לתינוקות אחרים, מה שמוביל ללחץ רב. מומחי התפתחות שבים ומדגישים שטווח הנורמה הוא רחב מאוד, תינוק יכול להתהפך בגיל 4 חודשים ואחר בגיל 6 חודשים, ושניהם מתפתחים באופן תקין לחלוטין. במקום להילחץ, ההמלצה היא לתעד את קצב ההתפתחות האישי של הילד. במקום לחפש צ'קליסטים מלחיצים ברשת, Calmino מציעה את פיצ'ר רגעים קסומים. זהו אלבום התפתחות דיגיטלי ופרטי שמאפשר לכם לצלם, לתעד ולשמור כל אבן דרך (התהפכות, זחילה, צעד ראשון). המערכת בונה ציר זמן אישי של התינוק שלכם, שאותו תוכלו לשתף בבטחה עם סבא, סבתא והמשפחה הקרובה.</p>
+                    </section>
+
+                    <div class="blog-article-outro">
+                        <h3>שחררו את העומס המנטלי, הכל במקום אחד</h3>
+                        <p>הורות היא משרה מלאה, והניסיון לנהל את כל המידע הרפואי, התזונתי וההתפתחותי של התינוק שלכם רק בתוך הראש הוא בדיוק מה שמייצר את העומס המנטלי והשחיקה. הניסיון לזכור לבד מתי הייתה ההאכלה האחרונה, מתי יצאה שן או מי נתן את התרופה, יוצר מתח מיותר. כאן בדיוק Calmino נכנסת לתמונה, לא רק כאפליקציה, אלא כמרחב שיתופי שמחבר אתכם, את בני הזוג ואת הבייביסיטר לסביבת מידע אחת בזמן אמת. כשכולם רואים את אותם נתונים, הלחץ יורד, השותפות מתחזקת ואתם יכולים פשוט להיות הורים.</p>
+                        <p class="blog-article-cta-text">מוכנים להוציא את הרשימות מהראש, לעשות סדר בנתונים ולישון קצת יותר טוב בלילה? הורידו את Calmino עכשיו והתחילו לנהל את הטיפול בתינוק שלכם ברוגע אמיתי.</p>
+                        <div class="blog-article-badges">
+                            <a href="#" class="app-store-badge">
+                                <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" style="height:48px;">
+                            </a>
+                            <a href="#" class="app-store-badge">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play" style="height:48px;">
+                            </a>
+                        </div>
+                    </div>
+                </article>
+                </div>
+
+                <!-- Accordion 2 — inside grid, spans full width -->
+                <div class="blog-accordion" id="blog-accordion-2" role="region" aria-labelledby="blog-trigger-2" aria-hidden="true">
+                <article class="blog-article">
+                    <h2>בייביסיטר בראש שקט: כך תבנו רשת ביטחון ליציאה הבאה שלכם</h2>
+
+                    <section class="blog-section-item">
+                        <h3>שחיקה הורית והצורך ברשת תמיכה</h3>
+                        <p>מחקרים עדכניים שנערכו בישראל, ביניהם מחקרים מקיפים של חוקרות מהאוניברסיטה העברית ואוניברסיטת בר-אילן, מצביעים על תופעה מדאיגה של "שחיקה הורית" (Parental Burnout) הולכת וגוברת. במציאות הישראלית האינטנסיבית, היעדר רשת תמיכה זמינה וקושי למצוא מסגרות השגחה אמינות לשעות הערב גובים מחיר נפשי כבד. תהליך החיפוש אחר בייביסיטר, שאמור להיות הצעד הראשון בדרך לקצת אוויר לנשימה וזמן זוגי, הופך לרוב לעוד משימה מלחיצה ששואבת אנרגיות ומעלה את מפלס החרדה.</p>
+                    </section>
+
+                    <section class="blog-section-item">
+                        <h3>הסוף לחיפושים בוואטסאפ: מאגר אמין ושקוף</h3>
+                        <p>האתגר המרכזי של הורים בישראל אינו רק לאתר מישהי פנויה, אלא למצוא דמות שאפשר לסמוך עליה באמת. נבירה אינסופית בקבוצות פייסבוק מקומיות או קבוצות וואטסאפ של השכונה חושפת את ההורים למדגם מקרי של מועמדות, ללא דרך אמיתית לאמת ניסיון או לקבל המלצות שקופות ומוכחות. בדיוק אל תוך הוואקום הזה נכנס מאגר הבייביסיטרים של Calmino. המאגר נבנה מתוך הבנה שהורים זקוקים לוודאות, ומאפשר לסנן ולבחור את ההתאמה המדויקת ביותר על בסיס פרופילים מאומתים וחוות דעת אמיתיות של קהילת ההורים, כך שאתם יודעים בדיוק מי נכנסת אליכם הביתה.</p>
+                    </section>
+
+                    <section class="blog-section-item">
+                        <h3>טקס החפיפה: סנכרון נתונים בלחיצת כפתור</h3>
+                        <p>אך מציאת הבייביסיטר היא רק השלב הראשון. רגע לפני שיוצאים מהדלת, מתחיל "טקס החפיפה" שמחזיר את העומס המנטלי לשיאו. שאלות כמו "מתי הוא אכל בפעם האחרונה?", "כמה מ"ל להכין בבקבוק הבא?" או "מתי נפתח חלון השינה שלו?" הופכות לפתקים דביקים על המקרר או להודעות ארוכות ומסורבלות. במקום לנהל את המידע בראש ולהסתמך על הזיכרון, Calmino מאפשרת לכם לסנכרן את הבייביסיטר ישירות לאפליקציה. עם הגעתה, היא מקבלת גישה ליומן הטיפול של התינוק, ורואה באופן ברור את סדר היום, זמני ההאכלה והנחיות השינה.</p>
+                    </section>
+
+                    <section class="blog-section-item">
+                        <h3>שקט נפשי מרחוק: עדכונים בזמן אמת</h3>
+                        <p>המטרה הסופית של המהלך הזה היא להחזיר לכם את השקט הנפשי כשאתם סוף סוף בחוץ. במקום לסמס כל חצי שעה "הוא נרדם כבר?" ולהיות במתח, המערכת של Calmino מספקת לכם עדכונים בזמן אמת. ברגע שהבייביסיטר מתעדת באפליקציה שהתינוק סיים את הבקבוק או נכנס לישון, המידע קופץ אצלכם בנייד. כך אתם יכולים באמת להתנתק, לשבת במסעדה או לנוח, בידיעה מוחלטת שהכל מתנהל כשורה, ושהשליטה והמידע נשארים בידיים שלכם, גם כשאתם רחוקים מהבית.</p>
+                    </section>
+
+                    <div class="blog-article-outro">
+                        <p class="blog-article-cta-text">מוכנים לצאת מהבית בראש שקט? הורידו את Calmino עכשיו ותנו לבייביסיטר הבאה שלכם גישה לכל המידע שהיא צריכה.</p>
+                        <div class="blog-article-badges">
+                            <a href="#" class="app-store-badge">
+                                <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" style="height:48px;">
+                            </a>
+                            <a href="#" class="app-store-badge">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play" style="height:48px;">
+                            </a>
+                        </div>
+                    </div>
+                </article>
+                </div>
+
+                <!-- Accordion 3 — inside grid, spans full width -->
+                <div class="blog-accordion" id="blog-accordion-3" role="region" aria-labelledby="blog-trigger-3" aria-hidden="true">
+                <article class="blog-article">
+                    <h2>איך לחסוך זמן ואנרגיה בניהול השגרה?</h2>
+
+                    <section class="blog-section-item">
+                        <h3>שגרת רוגע במשפחה</h3>
+                        <p>מחקרים מתחום הפסיכולוגיה של המרחב הדיגיטלי מצביעים על תופעה המכונה "עומס קוגניטיבי דיגיטלי". הורים נוטים להוריד בממוצע ארבע עד חמש אפליקציות שונות כדי לנהל את שגרת הילדים, אחת לשינה, שנייה לתזונה, פתקים לחיסונים וקבוצות וואטסאפ לחיפוש בייביסיטר. במקום להקל, הפיצול הזה מייצר עייפות טכנולוגית ומגביר את העומס המנטלי. הניסיון לזכור איפה תועד כל נתון גורם לבלבול, חוסר סנכרון, ולתחושת תסכול גוברת בקרב הורים שמג'נגלים בין חיי המשפחה לעבודה.</p>
+                    </section>
+
+                    <section class="blog-section-item">
+                        <h3>מעקב התפתחות, שינה ותזונה: הכל באפליקציה לניהול שגרת ילדים</h3>
+                        <p>כדי לפתור את פרדוקס הפיצול, Calmino פותחה מתוך תפיסה הוליסטית של הכל במקום אחד. הרעיון הוא פשוט וברור, הורה עייף לא צריך לזגזג בין מסכים לאורך היום או הלילה. הפתרון הכולל מאגד את יומן השינה, מעקב התזונה המדויק, אחוזוני הגדילה של ארגון הבריאות העולמי, ניהול התרופות ואבני הדרך ההתפתחותיות תחת קורת גג אחת, חכמה וקלה מאוד לשימוש.</p>
+                    </section>
+
+                    <section class="blog-section-item">
+                        <h3>חלוקת הנטל בבית: סנכרון נתונים בזמן אמת בין בני הזוג</h3>
+                        <p>אחד הממצאים הבולטים במחקרי משפחה עדכניים הוא הפער בחלוקת העבודה השקופה בבית. כשהמידע מפוזר או נמצא רק בראשו של הורה אחד, נוצר פתח לחיכוכים ואי הבנות. הפתרון הכולל של Calmino מציע סנכרון נתונים מלא ובזמן אמת בין המכשירים של שני בני הזוג. כששני ההורים רואים בדיוק מתי הילד אכל, כמה זמן הוא ישן ומתי צריך לתת לו תרופה, האחריות מתחלקת באופן טבעי ושוויוני הרבה יותר, והשאלות המתישות נעלמות.</p>
+                    </section>
+
+                    <section class="blog-section-item">
+                        <h3>מציאת בייביסיטר וניהול טיפול: רשת הביטחון שלכם במקום אחד</h3>
+                        <p>הכוח האמיתי של פתרון מקיף טמון בחיבור של כל הנקודות יחד. Calmino לא עוצרת רק בניהול השוטף, אלא מחברת את הנתונים ישירות למאגר הבייביסיטרים המובנה שלה. התיעוד הרציף שלכם מאפשר לבייביסיטר להיכנס לעניינים בצורה חלקה, להמשיך את השגרה במדויק, ולעדכן אתכם בזמן אמת. כך נוצר רצף טיפולי חכם שמקיף את הילדים שלכם מכל עבר, ומעניק לכם שקט נפשי אולטימטיבי באפליקציה אחת.</p>
+                    </section>
+
+                    <div class="blog-article-outro">
+                        <p class="blog-article-cta-text">מוכנים לסגור את כל האפליקציות ולפתוח אחת? הורידו את Calmino עכשיו וחוו את ההבדל.</p>
+                        <div class="blog-article-badges">
+                            <a href="#" class="app-store-badge">
+                                <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" style="height:48px;">
+                            </a>
+                            <a href="#" class="app-store-badge">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play" style="height:48px;">
+                            </a>
+                        </div>
+                    </div>
+                </article>
+                </div>
+            </div><!-- /blog-grid -->
+        </div>
+    </section>
+
     <!-- SECURITY -->
     <section id="security" class="security-section">
         <div class="container">
@@ -510,8 +688,41 @@
         </div>
     </div>
 
-    <script src="js/i18n.js?v=2"></script>
+    <script src="js/i18n.js?v=11"></script>
     <script src="js/main.js?v=2" defer></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        var pairs = [
+          { trigger: document.getElementById('blog-trigger-1'), accordion: document.getElementById('blog-accordion-1') },
+          { trigger: document.getElementById('blog-trigger-2'), accordion: document.getElementById('blog-accordion-2') },
+          { trigger: document.getElementById('blog-trigger-3'), accordion: document.getElementById('blog-accordion-3') }
+        ];
+
+        pairs.forEach(function (pair) {
+          if (!pair.trigger || !pair.accordion) return;
+          pair.trigger.addEventListener('click', function () {
+            var isOpen = pair.trigger.getAttribute('aria-expanded') === 'true';
+
+            // Close all accordions first
+            pairs.forEach(function (p) {
+              if (!p.trigger || !p.accordion) return;
+              p.trigger.setAttribute('aria-expanded', 'false');
+              p.accordion.setAttribute('aria-hidden', 'true');
+              p.accordion.style.maxHeight = '0';
+              p.accordion.classList.remove('open');
+            });
+
+            // Open the clicked one if it was closed
+            if (!isOpen) {
+              pair.trigger.setAttribute('aria-expanded', 'true');
+              pair.accordion.setAttribute('aria-hidden', 'false');
+              pair.accordion.classList.add('open');
+              pair.accordion.style.maxHeight = pair.accordion.scrollHeight + 'px';
+            }
+          });
+        });
+      });
+    </script>
 </body>
 
 </html>
