@@ -168,7 +168,7 @@ const translations = {
     tool8_h: "Growth Tracker", tool8_p: "Monitor weight, height, and head circumference based on WHO international standards.",
     blog_label: "Parent's Guide", blog_title: "Insights, Tips & Expert Advice",
     blog1_h: "Sleep Windows by Age", blog1_p: "Why won't your baby sleep? The complete guide to spotting sleep cues and managing infant sleep.",
-    blog2_h: "How Much Should a Baby Eat?", blog2_p: "By weight and age: everything you need to know about breastfeeding and formula amounts in the first year.",
+    blog2_h: "Babysitting with Peace of Mind: Building a Safety Net for Your Next Night Out", blog2_p: "The complete guide to finding a reliable babysitter, preventing burnout, and leaving home with true confidence...",
     blog3_h: "How to Save Time and Energy in Your Daily Routine?", blog3_p: "Managing routines, mental load, and the power of a synced space...",
     blog_read: "Read More →",
     sec_label: "SECURITY & PRIVACY", sec_title: "Your Privacy. Our Priority.",
