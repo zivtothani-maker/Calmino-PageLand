@@ -104,7 +104,7 @@ const translations = {
   },
   en: {
     mq_gdpr: "GDPR Compliant", mq_family: "Family Sharing", mq_live: "Live Activities", mq_growth: "WHO Growth Curves", mq_bio: "Biometric Security", mq_sync: "Real-time Sync", mq_track: "Smart Tracking",
-    nav_features: "Features", nav_tools: "Tools", nav_security: "Security", nav_pricing: "Pricing", nav_cta: "Download App",
+    nav_features: "The Problem", nav_tools: "Parenting Guide", nav_security: "Privacy & Security", nav_pricing: "Pricing", nav_cta: "Download App",
     hero_badge: "Available now on the App Store",
     hero_h1a: "Your Child's World.", hero_h1b: "In the Palm of Your Hand.",
     hero_sub: "Smart tracking, long-term insights, and seamless sharing between parents, caregivers, and babysitters.",
