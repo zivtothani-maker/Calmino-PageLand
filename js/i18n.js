@@ -1,6 +1,7 @@
 // Calmino i18n — Hebrew / English
 const translations = {
   he: {
+    mq_gdpr: "תואם GDPR", mq_family: "שיתוף משפחתי", mq_live: "פעילויות חיות", mq_growth: "עקומות גדילה WHO", mq_bio: "אימות ביומטרי", mq_sync: "סנכרון בזמן אמת", mq_track: "מעקב חכם",
     nav_features: "הבעיה?", nav_tools: "הגישה שלנו", nav_security: "אבטחה", nav_pricing: "תמחור", nav_cta: "הורדת האפליקציה",
     hero_badge: "זמין עכשיו ב-App Store",
     hero_h1a: "העולם של הילד.", hero_h1b: "בכף היד.",
@@ -102,6 +103,7 @@ const translations = {
     footer_copy: "© 2026 Calmino. כל הזכויות שמורות."
   },
   en: {
+    mq_gdpr: "GDPR Compliant", mq_family: "Family Sharing", mq_live: "Live Activities", mq_growth: "WHO Growth Curves", mq_bio: "Biometric Security", mq_sync: "Real-time Sync", mq_track: "Smart Tracking",
     nav_features: "Features", nav_tools: "Tools", nav_security: "Security", nav_pricing: "Pricing", nav_cta: "Download App",
     hero_badge: "Available now on the App Store",
     hero_h1a: "Your Child's World.", hero_h1b: "In the Palm of Your Hand.",
