@@ -100,7 +100,10 @@ const translations = {
     cta_sub: "הצטרפו לאלפי הורים שכבר עברו לניהול חכם. חינם. פשוט. מיידי.",
     cta_btn: "הורדה מ-App Store",
     footer_terms: "תנאי שימוש", footer_privacy: "מדיניות פרטיות", footer_contact: "צרו קשר",
-    footer_copy: "© 2026 Calmino. כל הזכויות שמורות."
+    footer_copy: "© 2026 Calmino. כל הזכויות שמורות.",
+    seo_title: "Calmino - אפליקציה לניהול שגרת התינוק, בייביסיטר ומעקב התפתחות",
+    seo_desc: "הפתרון המלא להורים: ניהול חלונות שינה, מעקב האכלות, אחוזוני גדילה ומציאת בייביסיטר - הכל באפליקציה אחת שמורידה את העומס המנטלי.",
+    seo_locale: "he_IL"
   },
   en: {
     mq_gdpr: "GDPR Compliant", mq_family: "Family Sharing", mq_live: "Live Activities", mq_growth: "WHO Growth Curves", mq_bio: "Biometric Security", mq_sync: "Real-time Sync", mq_track: "Smart Tracking",
@@ -202,7 +205,10 @@ const translations = {
     cta_sub: "Join thousands of parents who switched to smart management. Free. Simple. Instant.",
     cta_btn: "Download from App Store",
     footer_terms: "Terms of Service", footer_privacy: "Privacy Policy", footer_contact: "Contact Us",
-    footer_copy: "© 2026 Calmino. All rights reserved."
+    footer_copy: "© 2026 Calmino. All rights reserved.",
+    seo_title: "Calmino - Smart Baby Tracker, Sleep Windows & Babysitter Network",
+    seo_desc: "The ultimate parenting app to manage sleep windows, feeding logs, WHO growth charts, and find trusted babysitters. Reduce your mental load today.",
+    seo_locale: "en_US"
   }
 };
 
@@ -242,6 +248,18 @@ function setLang(lang) {
   });
 
   localStorage.setItem('calmino-lang', lang);
+
+  // Update SEO meta tags
+  if (t.seo_title) {
+    document.title = t.seo_title;
+    var setMeta = function(id, val) { var el = document.getElementById(id); if (el) el.setAttribute('content', val); };
+    setMeta('seo-description', t.seo_desc);
+    setMeta('og-title', t.seo_title);
+    setMeta('og-description', t.seo_desc);
+    setMeta('og-locale', t.seo_locale);
+    setMeta('tw-title', t.seo_title);
+    setMeta('tw-description', t.seo_desc);
+  }
 
   // Refresh maxHeight for any open accordions (content height may change with language)
   document.querySelectorAll('.blog-accordion.open').forEach(function(acc) {
