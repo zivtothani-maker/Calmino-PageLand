@@ -3335,6 +3335,10 @@ footer {
   font-size: 1rem !important;
 }
 
+/* Language-based article visibility */
+html[lang="he"] [data-lang-content="en"] { display: none; }
+html[lang="en"] [data-lang-content="he"] { display: none; }
+
 .blog-article-badges {
   display: flex;
   flex-direction: row;

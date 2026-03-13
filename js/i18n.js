@@ -169,7 +169,7 @@ const translations = {
     blog_label: "Parent's Guide", blog_title: "Insights, Tips & Expert Advice",
     blog1_h: "Sleep Windows by Age", blog1_p: "Why won't your baby sleep? The complete guide to spotting sleep cues and managing infant sleep.",
     blog2_h: "How Much Should a Baby Eat?", blog2_p: "By weight and age: everything you need to know about breastfeeding and formula amounts in the first year.",
-    blog3_h: "Developmental Milestones", blog3_p: "When does baby roll over? Experts break down expectations and individual growth timelines.",
+    blog3_h: "How to Save Time and Energy in Your Daily Routine?", blog3_p: "Managing routines, mental load, and the power of a synced space...",
     blog_read: "Read More →",
     sec_label: "SECURITY & PRIVACY", sec_title: "Your Privacy. Our Priority.",
     sec_sub: "Military-grade encryption for total protection. Your family's information belongs to you—and no one else.",
@@ -238,6 +238,11 @@ function setLang(lang) {
   });
 
   localStorage.setItem('calmino-lang', lang);
+
+  // Refresh maxHeight for any open accordions (content height may change with language)
+  document.querySelectorAll('.blog-accordion.open').forEach(function(acc) {
+    acc.style.maxHeight = acc.scrollHeight + 'px';
+  });
 }
 
 document.addEventListener('DOMContentLoaded', () => {
