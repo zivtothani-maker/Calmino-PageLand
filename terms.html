@@ -58,7 +58,7 @@
             margin-bottom: 24px;
         }
 
-        .lang-switch {
+        .legal-content .lang-switch {
             display: inline-flex;
             gap: 16px;
             margin-bottom: 40px;
@@ -67,14 +67,14 @@
             border-radius: 100px;
         }
 
-        .lang-switch a {
+        .legal-content .lang-switch a {
             text-decoration: none;
             color: var(--text-secondary);
             font-weight: 600;
             font-size: 0.9rem;
         }
 
-        .lang-switch a.active {
+        .legal-content .lang-switch a.active {
             color: var(--accent);
         }
 
@@ -101,19 +101,30 @@
 
 <body>
     <!-- NAV -->
-    <nav class="liquid-glass">
-        <a href="index.html" style="text-decoration: none;">
-            <div class="nav-logo">
-                <img src="images/logo.svg" alt="Calmino Logo" width="48" height="48">
-                Calmino
-            </div>
-        </a>
-        <div class="nav-links">
-            <a href="index.html#features">פיצ'רים</a>
-            <a href="index.html#security">אבטחה</a>
-            <a href="index.html#pricing">תמחור</a>
+    <nav>
+        <div class="nav-logo">
+            <img src="images/logo-icon.svg" alt="Calmino Logo" width="38" height="38">
+            Calmino
         </div>
-        <a href="index.html" class="nav-cta" style="text-decoration: none;">חזרה לאתר</a>
+        <div class="nav-links">
+            <a href="index.html#problem">הבעיה?</a>
+            <a href="index.html#approach">הגישה שלנו</a>
+            <a href="index.html#security">אבטחה</a>
+            <div class="lang-switch">
+                <button class="lang-btn active" data-lang="he">עב</button>
+                <button class="lang-btn" data-lang="en">EN</button>
+            </div>
+        </div>
+        <div class="nav-badges">
+            <a href="#" class="nav-store-badge">
+                <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
+                    alt="Download on the App Store">
+            </a>
+            <a href="#" class="nav-store-badge">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+                    alt="Get it on Google Play">
+            </a>
+        </div>
     </nav>
 
     <!-- CONTENT -->
@@ -125,32 +136,29 @@
 
         <section id="hebrew">
             <h1>תנאי שימוש — Calmino</h1>
-            <span class="last-updated">גרסה 1.0 | עדכון אחרון: 20 בינואר 2026</span>
+            <span class="last-updated">גרסה 1.1 | עדכון אחרון: 15 במרץ 2026</span>
 
             <h3>1. הסכמה לתנאים</h3>
-            <p>בהורדה, התקנה, או שימוש באפליקציית Calmino ("האפליקציה" / "השירות"), הנך מסכים לתנאי שימוש אלה
-                ("התנאים"). אם אינך מסכים, הפסק את השימוש לאלתר ומחק את האפליקציה.<br>
-                תנאים אלה מהווים הסכם משפטי מחייב בינך לבין Calmino. השימוש באפליקציה מהווה אישור שקראת, הבנת ומסכים לכל
-                התנאים המפורטים להלן.</p>
+            <p>בהורדה, התקנה, או שימוש באפליקציית Calmino ("האפליקציה" / "השירות"), הנך מסכים לתנאי שימוש אלה ("התנאים"). אם אינך מסכים, הפסק את השימוש לאלתר ומחק את האפליקציה.</p>
+            <p>תנאים אלה מהווים הסכם משפטי מחייב בינך לבין Calmino. השימוש באפליקציה מהווה אישור שקראת, הבנת ומסכים לכל התנאים המפורטים להלן.</p>
 
             <h3>2. תיאור השירות</h3>
             <p>Calmino היא אפליקציית מעקב ובריאות לתינוקות וילדים, המאפשרת:</p>
             <ul>
-                <li>מעקב אחר האכלה, שינה, חיתולים, תוספי תזונה וחיסונים</li>
+                <li>מעקב אחר האכלה, שינה, חיתולים, תוספי תזונה, חיסונים ותרופות</li>
                 <li>מדידת מדדי גדילה ועקומות צמיחה</li>
                 <li>שיתוף נתונים עם בני / בנות משפחה ובייביסיטרים</li>
                 <li>יצירת סטטיסטיקות, דוחות ותובנות</li>
                 <li>תיעוד רגעים קסומים ואבני דרך</li>
                 <li>ניהול תזכורות והתראות מותאמות אישית</li>
-                <li>שירותי איתור בייביסיטרים ותיאום הזמנות</li>
+                <li>שירותי איתור בייביסיטרים, תיאום הזמנות ותקשורת בצ'אט</li>
             </ul>
-            <p><strong>הגיל המינימלי לשימוש: 18.</strong> השירות אינו מיועד לקטינים.</p>
+            <p><strong>הגיל המינימלי לשימוש: 16.</strong> השירות אינו מיועד למשתמשים מתחת לגיל 16.</p>
 
             <h3>3. חשבון משתמש</h3>
             <ul>
                 <li><strong>רישום:</strong> עליך לספק פרטים אמיתיים, מדויקים ועדכניים.</li>
-                <li><strong>אבטחה:</strong> אתה אחראי לשמירת סודיות סיסמתך ואמצעי הכניסה לחשבונך. הודע לנו מיד על כל
-                    שימוש לא מורשה.</li>
+                <li><strong>אבטחה:</strong> אתה אחראי לשמירת סודיות סיסמתך ואמצעי הכניסה לחשבונך. הודע לנו מיד על כל שימוש לא מורשה.</li>
                 <li><strong>חשבון יחיד:</strong> כל אדם רשאי להחזיק חשבון אישי אחד בלבד.</li>
                 <li><strong>אחריות:</strong> אתה האחראי הבלעדי לכל פעילות שמתבצעת בחשבונך.</li>
                 <li><strong>מחיקה:</strong> תוכל למחוק את חשבונך בכל עת דרך מסך ההגדרות.</li>
@@ -174,156 +182,168 @@
             </ul>
 
             <h3>5. תוכן המשתמש</h3>
-            <p>המידע שתזין לאפליקציה (תמונות, הערות, רשומות) נשאר שלך. על ידי העלאתו, אתה מעניק לנו רישיון מוגבל, לא
-                בלעדי, לאחסן, לגבות ולהציג אותו לצורכי מתן השירות בלבד.<br>
-                אתה מתחייב שהתוכן שתעלה: אינו מפר זכויות יוצרים או קניין רוחני; אינו בלתי חוקי, פוגעני, או מטעה; ואינו
-                מכיל מידע רגיש של אחרים ללא הסכמתם.</p>
+            <p>המידע שתזין לאפליקציה (תמונות, הערות, רשומות) נשאר שלך. על ידי העלאתו, אתה מעניק לנו רישיון מוגבל, לא בלעדי, לאחסן, לגבות ולהציג אותו לצורכי מתן השירות בלבד.</p>
+            <p>אתה מתחייב שהתוכן שתעלה: אינו מפר זכויות יוצרים או קניין רוחני; אינו בלתי חוקי, פוגעני, או מטעה; ואינו מכיל מידע רגיש של אחרים ללא הסכמתם.</p>
 
             <h3>6. שירות פרמיום</h3>
             <ul>
                 <li>Calmino מציעה תוכניות מנוי בתשלום ("פרמיום") עם תכונות מורחבות.</li>
-                <li>תשלומים מעובדים דרך <strong>Apple App Store</strong> או <strong>Google Play Store</strong> בלבד —
-                    Calmino אינה מחזיקה את פרטי כרטיס האשראי שלך.</li>
+                <li>תשלומים מעובדים דרך <strong>Apple App Store</strong> או <strong>Google Play Store</strong> בלבד — Calmino אינה מחזיקה את פרטי כרטיס האשראי שלך.</li>
                 <li>מנויים <strong>מתחדשים אוטומטית</strong> בתום כל תקופה; ניתן לבטל בכל עת דרך הגדרות החנות.</li>
                 <li>לא יינתנו החזרים כספיים לתקופות שבהן בוצע שימוש, אלא אם נדרש על פי חוק.</li>
-                <li>שמורה לנו הזכות לשנות תמחור עם הודעה מוקדמת של 30 יום.</li>
+                <li>שמורה לנו הזכות לשנות תמחור עם הודעה מוקדמת של <strong>30 יום</strong>.</li>
             </ul>
 
             <h3>7. שירותים של צדדים שלישיים</h3>
-            <p>האפליקציה מסתמכת על שירותים חיצוניים (Google Firebase, Apple, Expo). שימושך בשירותים אלה כפוף גם למדיניות
-                ותנאי השימוש שלהם. Calmino אינה אחראית לזמינות, ביצועים, או שינויים בשירותי צד שלישי.</p>
-
-            <h3>8. הגבלת אחריות ואחריות רפואית</h3>
+            <p>האפליקציה מסתמכת על שירותים חיצוניים:</p>
             <ul>
-                <li>השירות מסופק <strong>"כפי שהוא" (AS IS)</strong> ו-"כפי שהוא זמין" (AS AVAILABLE) ללא אחריות מכל
-                    סוג.</li>
-                <li><strong>האפליקציה אינה מחליפה ייעוץ רפואי מקצועי.</strong> המידע המוצג הוא לצרכי תיעוד ומעקב בלבד.
-                    תמיד התייעץ עם רופא ילדים מוסמך בכל שאלה רפואית.</li>
-                <li>Calmino אינה נושאת באחריות לנזקים ישירים, עקיפים, נסיבתיים, מיוחדים, עונשיים, או תוצאתיים הנובעים
-                    משימוש באפליקציה.</li>
+                <li><strong>Google Firebase</strong> — אחסון נתונים, אימות ותשתית</li>
+                <li><strong>Apple</strong> — אימות ו-Push Notifications</li>
+                <li><strong>Expo</strong> — פלטפורמת פיתוח ועדכונים</li>
+                <li><strong>RevenueCat</strong> — ניהול מנויים ורכישות</li>
+                <li><strong>Apple WeatherKit</strong> — נתוני מזג אוויר</li>
+            </ul>
+            <p>שימושך בשירותים אלה כפוף גם למדיניות ותנאי השימוש שלהם. Calmino אינה אחראית לזמינות, ביצועים, או שינויים בשירותי צד שלישי.</p>
+
+            <h3>8. הגבלת אחריות, אחריות רפואית ושירותי בייביסיטר</h3>
+            <ul>
+                <li>השירות מסופק <strong>"כפי שהוא" (AS IS)</strong> ו-"כפי שהוא זמין" (AS AVAILABLE) ללא אחריות מכל סוג.</li>
+                <li><strong>האפליקציה אינה מחליפה ייעוץ רפואי מקצועי.</strong> המידע המוצג הוא לצרכי תיעוד ומעקב בלבד. תמיד התייעץ עם רופא ילדים מוסמך בכל שאלה רפואית.</li>
+                <li><strong>שירותי בייביסיטר — פלטפורמת חיבור בלבד:</strong> Calmino משמשת כפלטפורמת חיבור בלבד בין הורים לבייביסיטרים. Calmino <strong>אינה מעסיקה, ממליצה, מאשרת, מאמתת, ערבה, או אחראית על</strong> כל בייביסיטר/ת המופיע/ה באפליקציה. פרופילי הבייביסיטרים מבוססים על מידע שמסרו הבייביסיטרים עצמם ולא אומת על ידי Calmino. <strong>האחריות הבלעדית</strong> על הערכת התאמה, אימות זהות, בדיקת רקע, הערכת כישורים וקבלת החלטות לגבי פגישות או העסקה — מוטלת כולה על ההורה. Calmino לא תישא באחריות כלשהי לכל נזק, אובדן, פגיעה, או תוצאה הנובעת מכל פגישה, העסקה, או אינטראקציה בין הורה לבייביסיטר שנוצרה באמצעות האפליקציה.</li>
+                <li>Calmino אינה נושאת באחריות לנזקים ישירים, עקיפים, נסיבתיים, מיוחדים, עונשיים, או תוצאתיים הנובעים משימוש באפליקציה.</li>
                 <li>אחריותנו הכוללת לא תעלה על הסכום שאתה שילמת בשנת הרישום האחרונה, או 200 ₪ — הנמוך מביניהם.</li>
             </ul>
 
             <h3>9. קניין רוחני</h3>
-            <p>כל הזכויות באפליקציה — לרבות קוד מקור, עיצוב, ממשק משתמש, לוגו, שם "Calmino", וכל תוכן שיצרנו — הינן
-                קניינה הבלעדי של Calmino ומוגנות בחוק זכויות יוצרים, סימני מסחר ופטנטים.<br>
-                חל איסור מוחלט על שכפול, הפצה, שינוי, יצירת נגזרות, הצגה ציבורית, או שימוש מסחרי — ללא אישור מפורש בכתב.
-            </p>
+            <p>כל הזכויות באפליקציה — לרבות קוד מקור, עיצוב, ממשק משתמש, לוגו, שם "Calmino", וכל תוכן שיצרנו — הינן קניינה הבלעדי של Calmino ומוגנות בחוק זכויות יוצרים, סימני מסחר ופטנטים.</p>
+            <p>חל איסור מוחלט על שכפול, הפצה, שינוי, יצירת נגזרות, הצגה ציבורית, או שימוש מסחרי — ללא אישור מפורש בכתב. הפרה תגרור תביעות אזרחיות ו/או פליליות.</p>
 
             <h3>10. ביטול חשבון והשעיה</h3>
-            <p>שמורה לנו הזכות להשעות או לסגור חשבון שהפר את התנאים, עם הודעה מוקדמת במידת האפשר. בסגירה מרצון: תוכל
-                לייצא את נתוניך תוך 30 יום לפני המחיקה הסופית.</p>
+            <p>שמורה לנו הזכות להשעות או לסגור חשבון שהפר את התנאים, עם הודעה מוקדמת במידת האפשר. בסגירה מרצון: תוכל לייצא את נתוניך לפני המחיקה הסופית באמצעות כפתור "הורד את המידע שלי" בהגדרות.</p>
 
             <h3>11. פיצוי</h3>
-            <p>הנך מסכים לשפות ולהגן על Calmino, עובדיה, מנהליה, בעלי מניותיה ושותפיה מפני כל תביעה או נזק הנובעים
-                משימושך בשירות או מהפרת תנאים אלה.</p>
+            <p>הנך מסכים לשפות ולהגן על Calmino, עובדיה, מנהליה, בעלי מניותיה ושותפיה מפני כל תביעה, נזק, אחריות, הפסד, עלות ושכר טרחת עורך דין הנובעים משימושך בשירות, הפרת תנאים אלה, הפרת זכויות צד שלישי, או כל תוכן שהעלית.</p>
 
             <h3>12. שינויים בתנאים</h3>
-            <p>נודיע על שינויים מהותיים בתנאים דרך האפליקציה ו/או בדוא"ל לפחות <strong>30 יום</strong> מראש. המשך שימוש
-                לאחר קבלת ההודעה מהווה הסכמה לתנאים המעודכנים.</p>
+            <p>נודיע על שינויים מהותיים בתנאים דרך האפליקציה ו/או בדוא"ל לפחות <strong>30 יום</strong> מראש. המשך שימוש לאחר קבלת ההודעה מהווה הסכמה לתנאים המעודכנים. אם אינך מסכים — עליך להפסיק את השימוש ולמחוק את חשבונך.</p>
 
             <h3>13. התנתקות סעיפים</h3>
-            <p>אם סעיף כלשהו בתנאים אלה יימצא בלתי תקף או לא ניתן לאכיפה, הוא ייפרד מהתנאים ויוחלף בסעיף תקף עם כוונה
-                דומה — בעוד שאר התנאים יישארו בתוקף מלא.</p>
+            <p>אם סעיף כלשהו בתנאים אלה יימצא בלתי תקף או לא ניתן לאכיפה, הוא ייפרד מהתנאים ויוחלף בסעיף תקף עם כוונה דומה — בעוד שאר התנאים יישארו בתוקף מלא.</p>
 
             <h3>14. דין חל ויישוב סכסוכים</h3>
-            <p>תנאים אלה כפופים לחוקי מדינת ישראל. כל מחלוקת תידון בבתי המשפט המוסמכים <strong>במחוז תל אביב-יפו
-                    בלבד</strong>. הצדדים מתחייבים לנסות להגיע להסכמה ידידותית תוך 30 יום טרם פנייה לבית משפט.</p>
+            <p>תנאים אלה כפופים לחוקי מדינת ישראל. כל מחלוקת תידון בבתי המשפט המוסמכים <strong>במחוז תל אביב-יפו בלבד</strong>. הצדדים מתחייבים לנסות להגיע להסכמה ידידותית תוך 30 יום טרם פנייה לבית משפט.</p>
 
             <h3>15. יצירת קשר</h3>
             <p>לשאלות, תלונות או בקשות משפטיות:<br>
-                אימייל: <a href="mailto:calminogroup@gmail.com"
-                    style="color: var(--accent);">calminogroup@gmail.com</a><br>
+                אימייל: <a href="mailto:calminogroup@gmail.com" style="color: var(--accent);">calminogroup@gmail.com</a><br>
                 אתר: www.calminogroup.co.il</p>
         </section>
 
         <hr style="margin: 64px 0; border: 0; border-top: 1px solid var(--gray-200);">
 
         <section id="english" style="direction: ltr; text-align: left;">
-            <h1>Terms of Service — CalmParent</h1>
-            <span class="last-updated">Last Updated: January 18, 2026</span>
+            <h1>Terms of Service — Calmino</h1>
+            <span class="last-updated" style="display: block; margin-bottom: 48px; color: var(--text-secondary); font-size: 0.9rem;">Version 1.1 | Last Updated: March 15, 2026</span>
 
             <h3>1. Acceptance of Terms</h3>
-            <p>By using CalmParent, you agree to these terms. If you don't agree, please don't use the app.</p>
+            <p>By downloading, installing, or using the Calmino application ("the App" / "the Service"), you agree to these Terms of Service ("the Terms"). If you do not agree, discontinue use immediately and delete the app.</p>
+            <p>These Terms constitute a binding legal agreement between you and Calmino. Using the app confirms that you have read, understood, and agree to all Terms outlined below.</p>
 
-            <h3>2. Description of Service</h3>
-            <p>CalmParent provides:</p>
+            <h3>2. Service Description</h3>
+            <p>Calmino is a baby and child health tracking application that enables:</p>
             <ul>
-                <li>Baby activity tracking</li>
-                <li>Growth monitoring with WHO standards</li>
-                <li>Family sharing features</li>
-                <li>Babysitter marketplace</li>
-                <li>Real-time chat and booking</li>
+                <li>Tracking feeding, sleep, diapers, nutritional supplements, vaccinations, and medications</li>
+                <li>Measuring growth metrics and growth curves</li>
+                <li>Sharing data with family members and babysitters</li>
+                <li>Creating statistics, reports, and insights</li>
+                <li>Recording magic moments and milestones</li>
+                <li>Managing customized reminders and notifications</li>
+                <li>Babysitter discovery, booking coordination, and chat messaging</li>
+            </ul>
+            <p><strong>Minimum age for use: 16.</strong> The service is not intended for users under the age of 16.</p>
+
+            <h3>3. User Account</h3>
+            <ul>
+                <li><strong>Registration:</strong> You must provide truthful, accurate, and current information.</li>
+                <li><strong>Security:</strong> You are responsible for maintaining the confidentiality of your password and login credentials. Notify us immediately of any unauthorized use.</li>
+                <li><strong>Single Account:</strong> Each person may hold only one personal account.</li>
+                <li><strong>Responsibility:</strong> You are solely responsible for all activity conducted through your account.</li>
+                <li><strong>Deletion:</strong> You may delete your account at any time through the Settings screen.</li>
             </ul>
 
-            <h3>3. User Accounts</h3>
+            <h3>4. Permitted and Prohibited Use</h3>
+            <p><strong>Permitted:</strong></p>
             <ul>
-                <li>You must provide accurate information</li>
-                <li>You are responsible for account security</li>
-                <li>One account per user</li>
-                <li>You must be 18+ or have parental consent</li>
+                <li>Personal and family use for managing care of your children</li>
+                <li>Sharing data with family members and babysitters you have authorized</li>
+            </ul>
+            <p><strong>Strictly prohibited:</strong></p>
+            <ul>
+                <li>Commercial use without a written license from us</li>
+                <li>Uploading illegal, offensive, misleading, or rights-infringing content</li>
+                <li>Attempting to access other users' data without authorization</li>
+                <li>Reverse engineering, disassembly, or code duplication of the app</li>
+                <li>Use of bots, scripts, or automated tools</li>
+                <li>Distribution of spam, malware, or malicious content</li>
+                <li>Use for stalking, harassment, or violating others' privacy</li>
             </ul>
 
-            <h3>4. User Content</h3>
+            <h3>5. User Content</h3>
+            <p>Information you enter into the app (photos, notes, records) remains yours. By uploading it, you grant us a limited, non-exclusive license to store, back up, and display it solely for the purpose of providing the service.</p>
+            <p>You warrant that content you upload: does not infringe copyright or intellectual property rights; is not illegal, offensive, or misleading; and does not contain sensitive information of others without their consent.</p>
+
+            <h3>6. Premium Service</h3>
             <ul>
-                <li>You own your data</li>
-                <li>You grant us license to store and display your data</li>
-                <li>Don't upload illegal, harmful, or offensive content</li>
-                <li>We may remove content that violates these terms</li>
+                <li>Calmino offers paid subscription plans ("Premium") with enhanced features.</li>
+                <li>Payments are processed through <strong>Apple App Store</strong> or <strong>Google Play Store</strong> only — Calmino does not hold your credit card details.</li>
+                <li>Subscriptions <strong>renew automatically</strong> at the end of each period; you may cancel at any time through store settings.</li>
+                <li>No refunds will be issued for periods during which the service was used, unless required by law.</li>
+                <li>We reserve the right to change pricing with <strong>30 days</strong> advance notice.</li>
             </ul>
 
-            <h3>5. Babysitter Services</h3>
+            <h3>7. Third-Party Services</h3>
+            <p>The app relies on external services:</p>
             <ul>
-                <li>Babysitters are independent contractors</li>
-                <li>We don't employ or vet babysitters</li>
-                <li>All arrangements are between you and the babysitter</li>
-                <li>We're not responsible for babysitter services</li>
-                <li>Payments are arranged directly between parties</li>
+                <li><strong>Google Firebase</strong> — data storage, authentication, and infrastructure</li>
+                <li><strong>Apple</strong> — authentication and Push Notifications</li>
+                <li><strong>Expo</strong> — development platform and updates</li>
+                <li><strong>RevenueCat</strong> — subscription and purchase management</li>
+                <li><strong>Apple WeatherKit</strong> — weather data</li>
+            </ul>
+            <p>Your use of these services is also subject to their respective policies and terms of service. Calmino is not responsible for the availability, performance, or changes in third-party services.</p>
+
+            <h3>8. Limitation of Liability, Medical Disclaimer, and Babysitter Services</h3>
+            <ul>
+                <li>The service is provided <strong>"AS IS"</strong> and "AS AVAILABLE" without warranty of any kind.</li>
+                <li><strong>The app does not replace professional medical advice.</strong> The information displayed is for documentation and tracking purposes only. Always consult a qualified pediatrician for any medical questions.</li>
+                <li><strong>Babysitter Services — Connection Platform Only:</strong> Calmino serves solely as a connection platform between parents and babysitters. Calmino <strong>does not employ, recommend, endorse, verify, vouch for, or assume responsibility</strong> for any babysitter listed on the application. Babysitter profiles are based on information provided by the babysitters themselves and have not been verified by Calmino. <strong>The sole responsibility</strong> for evaluating suitability, verifying identity, conducting background checks, assessing qualifications, and making decisions regarding meetings or employment lies entirely with the parent. Calmino shall bear no liability whatsoever for any damage, loss, injury, or consequence arising from any meeting, employment, or interaction between a parent and a babysitter facilitated through the application.</li>
+                <li>Calmino is not liable for direct, indirect, incidental, special, punitive, or consequential damages arising from use or inability to use the service.</li>
+                <li>Our total liability shall not exceed the amount you paid in the last year of subscription, or &#8362;200 — whichever is less.</li>
             </ul>
 
-            <h3>6. Privacy</h3>
-            <ul>
-                <li>See our Privacy Policy</li>
-                <li>We don't sell your data</li>
-                <li>We use industry-standard security</li>
-            </ul>
+            <h3>9. Intellectual Property</h3>
+            <p>All rights in the app — including source code, design, user interface, logo, the name "Calmino", and all content we created — are the exclusive property of Calmino and are protected by copyright, trademark, and patent laws.</p>
+            <p>Strictly prohibited: duplication, distribution, modification, creation of derivatives, public display, or commercial use — without express written permission. Violation will result in civil and/or criminal action.</p>
 
-            <h3>7. Prohibited Uses</h3>
-            <p>Don't use CalmParent to:</p>
-            <ul>
-                <li>Violate laws</li>
-                <li>Harm children</li>
-                <li>Harass others</li>
-                <li>Spam or scam</li>
-                <li>Distribute malware</li>
-            </ul>
+            <h3>10. Account Termination and Suspension</h3>
+            <p>We reserve the right to suspend or close accounts that violate the Terms, with prior notice where possible. For voluntary closure: you may export your data before final deletion using the "Download My Data" button in Settings.</p>
 
-            <h3>8. Disclaimer</h3>
-            <ul>
-                <li>App provided "as is"</li>
-                <li>No warranties</li>
-                <li>Not medical advice</li>
-                <li>Consult professionals for health concerns</li>
-            </ul>
+            <h3>11. Indemnification</h3>
+            <p>You agree to indemnify and hold harmless Calmino, its employees, directors, shareholders, and partners from any claim, damage, liability, loss, cost, and legal fees arising from: your use of the service; violation of these Terms; infringement of third-party rights; or any content you uploaded.</p>
 
-            <h3>9. Limitation of Liability</h3>
-            <p>We're not liable for:</p>
-            <ul>
-                <li>Data loss</li>
-                <li>Service interruptions</li>
-                <li>Third-party actions (babysitters)</li>
-                <li>Indirect damages</li>
-            </ul>
+            <h3>12. Changes to Terms</h3>
+            <p>We will notify you of material changes to the Terms via the app and/or email at least <strong>30 days</strong> in advance. Continued use after receiving notice constitutes acceptance of the updated Terms. If you do not agree — you must discontinue use and delete your account.</p>
 
-            <h3>10. Changes to Terms</h3>
-            <p>We may update these terms. Continued use means acceptance.</p>
+            <h3>13. Severability</h3>
+            <p>If any provision of these Terms is found to be invalid or unenforceable, it shall be severed from the Terms and replaced with a valid provision with similar intent — while the remaining Terms shall remain in full force and effect.</p>
 
-            <h3>12. Governing Law</h3>
-            <p>These terms are governed by Israeli law.</p>
+            <h3>14. Governing Law and Dispute Resolution</h3>
+            <p>These Terms are governed by the laws of the State of Israel. Any dispute shall be heard in the competent courts <strong>in the Tel Aviv-Jaffa district only</strong>. The parties commit to attempting to reach an amicable resolution within 30 days before filing a court action.</p>
 
-            <h3>13. Contact</h3>
-            <p>Email: <a href="mailto:support@calmparent.app" style="color: var(--accent);">support@calmparent.app</a>
-            </p>
+            <h3>15. Contact Us</h3>
+            <p>For questions, complaints, or legal requests:<br>
+                Email: <a href="mailto:calminogroup@gmail.com" style="color: var(--accent);">calminogroup@gmail.com</a><br>
+                Website: www.calminogroup.co.il</p>
         </section>
     </main>
 

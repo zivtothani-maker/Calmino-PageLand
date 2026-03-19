@@ -51,7 +51,7 @@
             margin-bottom: 24px;
         }
 
-        .lang-switch {
+        .legal-content .lang-switch {
             display: inline-flex;
             gap: 16px;
             margin-bottom: 40px;
@@ -60,14 +60,14 @@
             border-radius: 100px;
         }
 
-        .lang-switch a {
+        .legal-content .lang-switch a {
             text-decoration: none;
             color: var(--text-secondary);
             font-weight: 600;
             font-size: 0.9rem;
         }
 
-        .lang-switch a.active {
+        .legal-content .lang-switch a.active {
             color: var(--accent);
         }
 
@@ -94,19 +94,30 @@
 
 <body>
     <!-- NAV -->
-    <nav class="liquid-glass">
-        <a href="index.html" style="text-decoration: none;">
-            <div class="nav-logo">
-                <img src="images/logo.svg" alt="Calmino Logo" width="48" height="48">
-                Calmino
-            </div>
-        </a>
-        <div class="nav-links">
-            <a href="index.html#features">פיצ'רים</a>
-            <a href="index.html#security">אבטחה</a>
-            <a href="index.html#pricing">תמחור</a>
+    <nav>
+        <div class="nav-logo">
+            <img src="images/logo-icon.svg" alt="Calmino Logo" width="38" height="38">
+            Calmino
         </div>
-        <a href="index.html" class="nav-cta" style="text-decoration: none;">חזרה לאתר</a>
+        <div class="nav-links">
+            <a href="index.html#problem">הבעיה?</a>
+            <a href="index.html#approach">הגישה שלנו</a>
+            <a href="index.html#security">אבטחה</a>
+            <div class="lang-switch">
+                <button class="lang-btn active" data-lang="he">עב</button>
+                <button class="lang-btn" data-lang="en">EN</button>
+            </div>
+        </div>
+        <div class="nav-badges">
+            <a href="#" class="nav-store-badge">
+                <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
+                    alt="Download on the App Store">
+            </a>
+            <a href="#" class="nav-store-badge">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+                    alt="Get it on Google Play">
+            </a>
+        </div>
     </nav>
 
     <!-- CONTENT -->
@@ -117,30 +128,32 @@
         </div>
 
         <section id="hebrew">
-            <h1>מדיניות פרטיות — CalmParent</h1>
+            <h1>מדיניות פרטיות — Calmino</h1>
             <span class="last-updated"
-                style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 48px; display: block;">גרסה 1.0 |
-                עדכון אחרון: 20 בינואר 2026</span>
+                style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 48px; display: block;">גרסה 1.1 |
+                עדכון אחרון: 15 במרץ 2026</span>
 
             <h3>1. מבוא</h3>
-            <p>Calmino ("אנחנו", "אנו", "החברה") מחויבת להגן על פרטיות המשתמשים שלה. מדיניות פרטיות זו ("המדיניות")
-                מסבירה אילו נתונים אישיים אנחנו אוספים, כיצד אנחנו משתמשים בהם, ואילו זכויות יש לך עליהם.<br>
-                מדיניות זו עומדת בדרישות:<br>
-                • חוק הגנת הפרטיות, תשמ"א-1981 ותקנות הגנת הפרטיות (אבטחת מידע), תשע"ז-2017<br>
-                • תקנות הגנת המידע הכלליות של האיחוד האירופי (GDPR) 2016/679<br>
-                • חוק הגנת פרטיות ילדים מקוונים האמריקאי (COPPA)</p>
+            <p>Calmino ("אנחנו", "אנו", "החברה") מחויבת להגן על פרטיות המשתמשים שלה. מדיניות פרטיות זו ("המדיניות") מסבירה אילו נתונים אישיים אנחנו אוספים, כיצד אנחנו משתמשים בהם, ואילו זכויות יש לך עליהם.</p>
+            <p>מדיניות זו עומדת בדרישות:</p>
+            <ul>
+                <li>חוק הגנת הפרטיות, תשמ"א-1981 ותקנות הגנת הפרטיות (אבטחת מידע), תשע"ז-2017</li>
+                <li>תקנות הגנת המידע הכלליות של האיחוד האירופי (GDPR) 2016/679</li>
+                <li>חוק הגנת פרטיות ילדים מקוונים האמריקאי (COPPA)</li>
+            </ul>
 
             <h3>2. מי אנחנו</h3>
             <p>Calmino היא אפליקציית מעקב ובריאות לתינוקות וילדים, המופעלת ומפותחת על ידי קבוצת Calmino.<br>
-                לפניות בנושאי פרטיות: calminogroup@gmail.com</p>
+                לפניות בנושאי פרטיות: <a href="mailto:calminogroup@gmail.com" style="color: var(--accent);">calminogroup@gmail.com</a></p>
 
             <h3>3. מידע שאנחנו אוספים</h3>
             <p><strong>א. מידע שאתה מספק ישירות:</strong></p>
             <ul>
                 <li>פרטי חשבון: שם מלא, כתובת אימייל, סיסמה מוצפנת</li>
                 <li>פרופיל ילד: שם, תאריך לידה, מגדר, תמונת פרופיל</li>
-                <li>נתוני מעקב: האכלה (שעה, כמות, סוג), שינה (שעות כניסה ויציאה), החלפת חיתול, תוספי תזונה, חיסונים,
-                    מדדי גדילה (משקל, גובה, היקף ראש)</li>
+                <li>נתוני מעקב: האכלה (שעה, כמות, סוג), שינה (שעות כניסה ויציאה), החלפת חיתול, תוספי תזונה, חיסונים, תרופות, מדדי גדילה (משקל, גובה, היקף ראש)</li>
+                <li>נתוני מיקום (GPS) — אך ורק לצורך שירותי איתור בייביסיטרים באזורך, עם הסכמתך המפורשת</li>
+                <li>הודעות צ'אט שנשלחות בין הורים לבייביסיטרים דרך האפליקציה</li>
                 <li>הערות ותיעוד שתזין ידנית</li>
                 <li>תמונות ורגעים קסומים שתבחר לשמור</li>
             </ul>
@@ -169,23 +182,21 @@
                 <li>מתן תמיכה טכנית ועמידה בחובות חוקיות</li>
                 <li>שיפור השירות באמצעות נתונים מצטברים ואנונימיים בלבד</li>
             </ul>
-            <p><strong>אנחנו לא משתמשים במידע שלך לפרסום ממוקד, ולא מוכרים נתונים לגורמים מסחריים.</strong></p>
+            <p>אנחנו <strong>לא</strong> משתמשים במידע שלך לפרסום ממוקד, ולא מוכרים נתונים לגורמים מסחריים.</p>
 
             <h3>5. שיתוף מידע עם צדדים שלישיים</h3>
             <p><strong>ספקי שירות חיוניים (מעבדי מידע מאושרים):</strong></p>
             <ul>
-                <li><strong>Google Firebase</strong> (Firestore, Authentication, Cloud Storage, Cloud Functions) — אחסון
-                    נתונים, אימות משתמשים ועיבוד בק-אנד. Firebase עומד ב-GDPR ובמסגרת EU-US Data Privacy Framework.</li>
+                <li><strong>Google Firebase</strong> (Firestore, Authentication, Cloud Storage, Cloud Functions) — אחסון נתונים, אימות משתמשים ועיבוד בק-אנד. Firebase עומד ב-GDPR ובמסגרת EU-US Data Privacy Framework. חתמנו על הסכם עיבוד נתונים (DPA) עם Google בהתאם ל-GDPR Article 28. מדיניות Firebase: firebase.google.com/support/privacy</li>
                 <li><strong>Apple</strong> (Sign in with Apple, APNs) — אימות משתמשים ושליחת התראות ל-iOS</li>
                 <li><strong>Expo (Expo Go / EAS)</strong> — פלטפורמת פיתוח ושליחת התראות Push חוצות-פלטפורמות</li>
+                <li><strong>RevenueCat</strong> — ניהול מנויים ורכישות In-App. מעבד מזהה משתמש והיסטוריית רכישות בלבד. מדיניות: revenuecat.com/privacy</li>
+                <li><strong>Apple WeatherKit</strong> — נתוני מזג אוויר. עשוי להשתמש בנתוני מיקום כלליים לצורך תצוגת תחזית</li>
             </ul>
-            <p>כל ספקי השירות כפופים להסכמי עיבוד נתונים (DPA) ולסטנדרטים גבוהים של אבטחה. אנחנו <strong>לא</strong>
-                מוכרים, משכירים, מחליפים, או מסחרים במידע שלך בשום אופן. נחשוף מידע לגורם חיצוני רק אם נדרשנו לכך בצו
-                שיפוטי תקף או כדין.</p>
+            <p>אנחנו <strong>לא</strong> מוכרים, משכירים, מחליפים, או מסחרים במידע שלך בשום אופן. נחשוף מידע לגורם חיצוני רק אם: (1) נדרשנו לכך בצו שיפוטי תקף; (2) נדרש על פי חוק; (3) נדרש להגנה על בטחון הציבור.</p>
 
             <h3>6. העברת מידע בינלאומית</h3>
-            <p>נתוניך מאוחסנים בשרתי Google Firebase שיכולים להיות ממוקמים בארה"ב ו/או באירופה. Firebase עומד בדרישות
-                GDPR ומספק הגנות מתאימות. בשימושך בשירות, אתה מסכים להעברה זו.</p>
+            <p>נתוניך מאוחסנים בשרתי Google Firebase שיכולים להיות ממוקמים בארה"ב ו/או באירופה. Firebase עומד בדרישות GDPR ומספק הגנות מתאימות. בשימושך בשירות, אתה מסכים להעברה זו.</p>
 
             <h3>7. אבטחת מידע</h3>
             <p>אנחנו נוקטים במגוון אמצעי אבטחה:</p>
@@ -193,95 +204,167 @@
                 <li>הצפנת כל תעבורת הנתונים (TLS 1.2+)</li>
                 <li>הצפנת נתונים באחסון באמצעות Firebase Security Rules</li>
                 <li>הרשאות גישה מחמירות — כל משתמש ניגש רק לנתוניו</li>
-                <li>אימות דו-שלבי אופציונלי (Face ID / Touch ID)</li>
                 <li>ניטור חריגות ורישום אירועי אבטחה</li>
             </ul>
-            <p>חשוב להבין: אין מערכת דיגיטלית בטוחה לחלוטין. אם יש לך חשד לפרצת אבטחה, הודע לנו מיד בכתובת
-                calminogroup@gmail.com.</p>
+            <p>חשוב להבין: אין מערכת דיגיטלית בטוחה לחלוטין. אם יש לך חשד לפרצת אבטחה, הודע לנו מיד בכתובת <a href="mailto:calminogroup@gmail.com" style="color: var(--accent);">calminogroup@gmail.com</a>.</p>
 
             <h3>8. שמירת מידע</h3>
             <ul>
                 <li>נשמור את נתוניך כל עוד חשבונך פעיל</li>
-                <li>לאחר מחיקת חשבון: מידע אישי יימחק תוך <strong>30 יום</strong></li>
+                <li>לאחר מחיקת חשבון: מידע אישי יימחק <strong>מיידית</strong> עם השלמת תהליך המחיקה</li>
                 <li>גיבויים טכניים עשויים להישמר עד <strong>90 יום</strong> נוספים בלבד</li>
                 <li>מידע הנדרש לשמירה על פי חוק (כגון: עסקאות כספיות) יישמר לתקופה הנדרשת בחוק</li>
             </ul>
 
             <h3>9. פרטיות ילדים</h3>
-            <p>האפליקציה מיועדת להורים ומטפלים בגירים (18+). מידע על ילדים נאסף אך ורק על ידי הוריהם / אפוטרופוסיהם
-                החוקיים למטרות מעקב בריאות אישי בלבד. איננו אוספים מידע ישירות מילדים. אם הגעת למסקנה שילד מתחת לגיל 13
-                יצר חשבון ללא הסכמת הורה, אנא פנה אלינו ונמחק את הנתונים מיד.</p>
+            <p>האפליקציה מיועדת להורים ומטפלים בני 16 ומעלה. מידע על ילדים נאסף אך ורק:</p>
+            <ul>
+                <li>על ידי הוריהם / אפוטרופוסיהם החוקיים</li>
+                <li>למטרות מעקב בריאות אישי בלבד</li>
+                <li>ללא שיתוף עם גורמים מסחריים</li>
+                <li>ללא פרסום ממוקד הקשור לילדים</li>
+            </ul>
+            <p>איננו אוספים מידע ישירות מילדים. אם הגעת למסקנה שילד מתחת לגיל 13 יצר חשבון ללא הסכמת הורה, אנא פנה אלינו ונמחק את הנתונים מיד.</p>
 
             <h3>10. זכויותיך</h3>
-            <p>בהתאם לחוק הגנת הפרטיות הישראלי ול-GDPR, יש לך את הזכות:</p>
+            <p>בהתאם לחוק הגנת הפרטיות הישראלי ול-GDPR, יש לך:</p>
             <ul>
-                <li><strong>לעיין</strong> במידע שאנחנו מחזיקים עליך</li>
-                <li><strong>לתקן</strong> מידע שגוי או לא מעודכן</li>
-                <li><strong>למחוק</strong> ("הזכות להישכח") את כל המידע שלך</li>
-                <li><strong>לנייד</strong> את נתוניך בפורמט קריא-מכונה</li>
-                <li><strong>להתנגד</strong> לעיבוד מסוים של מידע, ולבטל טיפול בכל עת</li>
+                <li><strong>זכות עיון</strong> — לקבל עותק של המידע שאנחנו מחזיקים עליך</li>
+                <li><strong>זכות תיקון</strong> — לתקן מידע שגוי או לא מעודכן</li>
+                <li><strong>זכות מחיקה</strong> — "הזכות להישכח" — למחוק את כל המידע שלך</li>
+                <li><strong>זכות ניוד</strong> — לקבל את נתוניך בפורמט קריא-מכונה</li>
+                <li><strong>זכות התנגדות</strong> — להתנגד לעיבוד מסוים של מידע</li>
+                <li><strong>ביטול הסכמה</strong> — לבטל הסכמה שנתת בכל עת</li>
             </ul>
-            <p>לממש זכויותיך, פנה ל: calminogroup@gmail.com — נגיב תוך 30 יום.</p>
+            <p>לממש זכויותיך: <a href="mailto:calminogroup@gmail.com" style="color: var(--accent);">calminogroup@gmail.com</a> — נגיב תוך <strong>30 יום</strong>.</p>
 
             <h3>11. שינויים במדיניות</h3>
-            <p>נודיע על שינויים מהותיים דרך האפליקציה ו/או בדוא"ל לפחות <strong>30 יום</strong> מראש. המשך שימוש לאחר
-                קבלת ההודעה מהווה הסכמה לשינויים.</p>
+            <p>נודיע על שינויים מהותיים דרך האפליקציה ו/או בדוא"ל לפחות <strong>30 יום</strong> מראש. המשך שימוש לאחר קבלת ההודעה מהווה הסכמה לשינויים.</p>
 
             <h3>12. יצירת קשר</h3>
             <p>לשאלות, בקשות או תלונות בנושא פרטיות:<br>
-                אימייל: <a href="mailto:calminogroup@gmail.com"
-                    style="color: var(--accent);">calminogroup@gmail.com</a><br>
+                אימייל: <a href="mailto:calminogroup@gmail.com" style="color: var(--accent);">calminogroup@gmail.com</a><br>
                 אתר: www.calminogroup.co.il</p>
         </section>
 
         <hr style="margin: 64px 0; border: 0; border-top: 1px solid var(--gray-200);">
 
         <section id="english" style="direction: ltr; text-align: left;">
-            <h1>Privacy Policy — CalmParent</h1>
+            <h1>Privacy Policy — Calmino</h1>
+            <span class="last-updated" style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 48px; display: block;">Version 1.1 | Last Updated: March 15, 2026</span>
 
-            <h3>What We Collect</h3>
-            <p>CalmParent collects:</p>
+            <h3>1. Introduction</h3>
+            <p>Calmino ("we", "us", "the Company") is committed to protecting the privacy of its users. This Privacy Policy ("Policy") explains what personal data we collect, how we use it, and what rights you have over it.</p>
+            <p>This Policy complies with:</p>
             <ul>
-                <li>Account information (name, email) when you sign up</li>
-                <li>Baby profiles (name, birthdate, photos) you create</li>
-                <li>Activity logs (sleep, feeding, diaper changes)</li>
-                <li>Growth measurements you record</li>
-                <li>Family members you invite</li>
+                <li>Israeli Privacy Protection Law, 5741-1981 and Privacy Protection Regulations (Data Security), 5777-2017</li>
+                <li>EU General Data Protection Regulation (GDPR) 2016/679</li>
+                <li>U.S. Children's Online Privacy Protection Act (COPPA)</li>
             </ul>
 
-            <h3>How We Use Your Data</h3>
+            <h3>2. Who We Are</h3>
+            <p>Calmino is a baby and child health tracking application, operated and developed by Calmino Group.<br>
+                For privacy inquiries: <a href="mailto:calminogroup@gmail.com" style="color: var(--accent);">calminogroup@gmail.com</a></p>
+
+            <h3>3. Information We Collect</h3>
+            <p><strong>a. Information you provide directly:</strong></p>
             <ul>
-                <li>To provide baby tracking services</li>
-                <li>To sync data across your family members</li>
-                <li>To generate growth charts and insights</li>
-                <li>To improve our app</li>
+                <li>Account details: full name, email address, encrypted password</li>
+                <li>Child profile: name, date of birth, gender, profile photo</li>
+                <li>Tracking data: feeding (time, amount, type), sleep (start/end times), diaper changes, nutritional supplements, vaccinations, medications, growth measurements (weight, height, head circumference)</li>
+                <li>Location data (GPS) — solely for babysitter discovery services in your area, with your explicit permission</li>
+                <li>Chat messages sent between parents and babysitters through the app</li>
+                <li>Notes and records you enter manually</li>
+                <li>Photos and magic moments you choose to save</li>
             </ul>
 
-            <h3>Data Sharing</h3>
+            <p><strong>b. Information collected automatically:</strong></p>
             <ul>
-                <li>We DO NOT sell your data</li>
-                <li>We DO NOT share with third parties</li>
-                <li>Family data is only shared with family members you invite</li>
-                <li>Babysitter profiles are visible in the marketplace</li>
+                <li>Device type, operating system version, and unique device identifier</li>
+                <li>Push notification token (for sending reminders only)</li>
+                <li>IP address (for security and troubleshooting only — not stored long-term)</li>
+                <li>Anonymous crash reports to improve app stability</li>
             </ul>
 
-            <h3>Security</h3>
+            <p><strong>c. Information from third parties:</strong></p>
             <ul>
-                <li>Data stored on secure Firebase servers</li>
-                <li>Encryption in transit and at rest</li>
-                <li>Only authenticated users can access their data</li>
+                <li>When signing in with Google: full name and email address from your Google account only</li>
+                <li>When signing in with Apple: email address (which may be hidden by Apple)</li>
             </ul>
 
-            <h3>Your Rights</h3>
+            <h3>4. How We Use Your Information</h3>
+            <p>We use your information solely for these purposes:</p>
             <ul>
-                <li>You can delete your account anytime</li>
-                <li>You can export your data</li>
-                <li>You can remove family members</li>
+                <li>Providing, maintaining, and improving the app's services</li>
+                <li>Displaying personal data, charts, and statistics</li>
+                <li>Sharing data with family members and babysitters according to permissions you set</li>
+                <li>Sending notifications and reminders you explicitly requested</li>
+                <li>Providing technical support and complying with legal obligations</li>
+                <li>Improving the service using aggregated and anonymous data only</li>
+            </ul>
+            <p>We do <strong>not</strong> use your information for targeted advertising, and we do not sell data to commercial entities.</p>
+
+            <h3>5. Sharing Information with Third Parties</h3>
+            <p><strong>Essential service providers (authorized data processors):</strong></p>
+            <ul>
+                <li><strong>Google Firebase</strong> (Firestore, Authentication, Cloud Storage, Cloud Functions) — data storage, user authentication, and backend processing. Firebase complies with GDPR and the EU-US Data Privacy Framework. We have signed a Data Processing Agreement (DPA) with Google in accordance with GDPR Article 28. Firebase policy: firebase.google.com/support/privacy</li>
+                <li><strong>Apple</strong> (Sign in with Apple, APNs) — user authentication and sending iOS notifications</li>
+                <li><strong>Expo (Expo Go / EAS)</strong> — development platform and cross-platform push notifications</li>
+                <li><strong>RevenueCat</strong> — subscription and in-app purchase management. Processes user identifier and purchase history only. Policy: revenuecat.com/privacy</li>
+                <li><strong>Apple WeatherKit</strong> — weather data. May use general location data to display forecasts</li>
+            </ul>
+            <p>We do <strong>not</strong> sell, rent, exchange, or commercialize your information in any way. We will disclose information to an external party only if: (1) required by a valid court order; (2) required by law; (3) necessary to protect public safety.</p>
+
+            <h3>6. International Data Transfers</h3>
+            <p>Your data is stored on Google Firebase servers that may be located in the USA and/or Europe. Firebase meets GDPR requirements and provides appropriate safeguards. By using the service, you consent to this transfer.</p>
+
+            <h3>7. Data Security</h3>
+            <p>We employ a variety of security measures:</p>
+            <ul>
+                <li>Encryption of all data in transit (TLS 1.2+)</li>
+                <li>Encryption of data at rest via Firebase Security Rules</li>
+                <li>Strict access controls — each user can only access their own data</li>
+                <li>Anomaly monitoring and security event logging</li>
+            </ul>
+            <p>Important: no digital system is completely secure. If you suspect a security breach, notify us immediately at <a href="mailto:calminogroup@gmail.com" style="color: var(--accent);">calminogroup@gmail.com</a>.</p>
+
+            <h3>8. Data Retention</h3>
+            <ul>
+                <li>We retain your data as long as your account is active</li>
+                <li>Upon account deletion: personal data is <strong>deleted immediately</strong> upon completion of the deletion process</li>
+                <li>Technical backups may be retained for up to <strong>90 days</strong> only</li>
+                <li>Information required by law (such as financial transactions) will be retained for the legally required period</li>
             </ul>
 
-            <h3>Contact</h3>
-            <p>Email: <a href="mailto:support@calmparent.app" style="color: var(--accent);">support@calmparent.app</a>
-            </p>
+            <h3>9. Children's Privacy</h3>
+            <p>The app is intended for parents and caregivers aged 16 and above. Information about children is collected exclusively:</p>
+            <ul>
+                <li>By their parents / legal guardians</li>
+                <li>For personal health tracking purposes only</li>
+                <li>Without sharing with commercial entities</li>
+                <li>Without child-related targeted advertising</li>
+            </ul>
+            <p>We do not collect information directly from children. If you believe a child under 13 has created an account without parental consent, please contact us and we will delete the data immediately.</p>
+
+            <h3>10. Your Rights</h3>
+            <p>Under Israeli Privacy Protection Law and GDPR, you have:</p>
+            <ul>
+                <li><strong>Right of Access</strong> — to receive a copy of the information we hold about you</li>
+                <li><strong>Right to Rectification</strong> — to correct inaccurate or outdated information</li>
+                <li><strong>Right to Erasure</strong> — the "right to be forgotten" — to delete all your data</li>
+                <li><strong>Right to Data Portability</strong> — to receive your data in a machine-readable format</li>
+                <li><strong>Right to Object</strong> — to object to certain processing of your data</li>
+                <li><strong>Withdrawal of Consent</strong> — to withdraw consent you have given at any time</li>
+            </ul>
+            <p>To exercise your rights: <a href="mailto:calminogroup@gmail.com" style="color: var(--accent);">calminogroup@gmail.com</a> — we will respond within <strong>30 days</strong>.</p>
+
+            <h3>11. Changes to This Policy</h3>
+            <p>We will notify you of material changes via the app and/or email at least <strong>30 days</strong> in advance. Continued use after receiving notice constitutes acceptance of the changes.</p>
+
+            <h3>12. Contact Us</h3>
+            <p>For questions, requests, or complaints regarding privacy:<br>
+                Email: <a href="mailto:calminogroup@gmail.com" style="color: var(--accent);">calminogroup@gmail.com</a><br>
+                Website: www.calminogroup.co.il</p>
         </section>
     </main>
 
