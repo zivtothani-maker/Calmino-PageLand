@@ -163,6 +163,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const trigger = document.getElementById('contactTrigger');
     const modal   = document.getElementById('contactModal');
     const closeBtn = document.getElementById('modalClose');
+    const form     = document.getElementById('contactForm');
+    const submitBtn = document.getElementById('contactSubmitBtn');
+    const successMsg = document.getElementById('contactSuccess');
+    const errorMsg   = document.getElementById('contactError');
 
     if (!trigger || !modal) return;
 
@@ -177,6 +181,11 @@ document.addEventListener('DOMContentLoaded', () => {
         modal.style.display = 'none';
         modal.setAttribute('aria-hidden', 'true');
         document.body.style.overflow = '';
+        form.reset();
+        successMsg.style.display = 'none';
+        errorMsg.style.display = 'none';
+        submitBtn.style.display = '';
+        submitBtn.disabled = false;
     }
 
     trigger.addEventListener('click', openModal);
@@ -186,5 +195,42 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape') closeModal();
+    });
+
+    form.addEventListener('submit', async function (e) {
+        e.preventDefault();
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'שולח...';
+        successMsg.style.display = 'none';
+        errorMsg.style.display = 'none';
+
+        const data = {
+            name: document.getElementById('contactName').value,
+            email: document.getElementById('contactEmail').value,
+            message: document.getElementById('contactMessage').value
+        };
+
+        try {
+            const res = await fetch('https://formsubmit.co/ajax/calminogroup@gmail.com', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify(data)
+            });
+            const json = await res.json();
+            if (json.success === 'true' || json.success === true) {
+                submitBtn.style.display = 'none';
+                successMsg.style.display = 'block';
+                form.reset();
+            } else {
+                throw new Error('failed');
+            }
+        } catch (err) {
+            errorMsg.style.display = 'block';
+            submitBtn.disabled = false;
+            submitBtn.textContent = 'שליחה';
+        }
     });
 })();

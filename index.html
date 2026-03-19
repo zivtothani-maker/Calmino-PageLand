@@ -820,7 +820,7 @@
         <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
             <button class="modal-close" id="modalClose" aria-label="סגור">&#x2715;</button>
             <h2 id="modalTitle" class="modal-title">יש לכם שאלה? נשמח לשמוע מכם</h2>
-            <form class="modal-form" id="contactForm" action="mailto:calminogroup@gmail.com" method="get" enctype="text/plain">
+            <form class="modal-form" id="contactForm">
                 <div class="modal-field">
                     <label for="contactName">שם מלא</label>
                     <input type="text" id="contactName" name="name" placeholder="ישראל ישראלי" required autocomplete="name">
@@ -831,9 +831,11 @@
                 </div>
                 <div class="modal-field">
                     <label for="contactMessage">איך נוכל לעזור?</label>
-                    <textarea id="contactMessage" name="body" placeholder="כתבו לנו כאן..." rows="4" required></textarea>
+                    <textarea id="contactMessage" name="message" placeholder="כתבו לנו כאן..." rows="4" required></textarea>
                 </div>
-                <button type="submit" class="modal-submit">שליחה</button>
+                <button type="submit" class="modal-submit" id="contactSubmitBtn">שליחה</button>
+                <p id="contactSuccess" style="display:none; text-align:center; color:#6c63ff; font-weight:600; margin-top:12px;">✓ ההודעה נשלחה בהצלחה! נחזור אליכם בקרוב.</p>
+                <p id="contactError" style="display:none; text-align:center; color:#e53e3e; font-weight:600; margin-top:12px;">שגיאה בשליחה, אנא נסו שוב.</p>
             </form>
         </div>
     </div>
