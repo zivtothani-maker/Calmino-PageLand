@@ -11,82 +11,217 @@
         rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <style>
-        .legal-content {
-            padding: 160px 0 80px;
-            max-width: 800px;
-            margin: 0 auto;
+        /* ── Legal Page Hero ── */
+        .legal-hero {
+            background: linear-gradient(135deg, #f0eaff 0%, #e8e0ff 30%, #ddd5f9 60%, #eae5ff 100%);
+            padding: 160px 24px 64px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .legal-hero::before {
+            content: '';
+            position: absolute;
+            top: -120px;
+            left: -120px;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(139,92,246,0.08) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+        .legal-hero::after {
+            content: '';
+            position: absolute;
+            bottom: -80px;
+            right: -80px;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(139,92,246,0.06) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+        .legal-hero h1 {
+            font-family: 'Heebo', sans-serif;
+            font-size: 2.8rem;
+            font-weight: 800;
+            color: #1a1a2e;
+            margin: 0 0 16px;
+            letter-spacing: -0.5px;
+            position: relative;
+        }
+        .legal-hero .last-updated {
+            font-size: 0.95rem;
+            color: #6b6b8d;
+            font-weight: 500;
+            display: block;
+            margin-bottom: 0;
+            position: relative;
         }
 
-        .legal-content h1 {
-            font-size: 2.5rem;
-            margin-bottom: 40px;
-            color: var(--black);
-        }
-
-        .legal-content h2 {
-            font-size: 1.5rem;
-            margin-top: 48px;
-            margin-bottom: 24px;
-            color: var(--black);
-            font-weight: 700;
-        }
-
-        .legal-content h3 {
-            font-size: 1.25rem;
-            margin-top: 32px;
-            margin-bottom: 16px;
-            color: var(--text-primary);
-        }
-
-        .legal-content p,
-        .legal-content li {
-            font-size: 1rem;
-            color: var(--text-secondary);
-            line-height: 1.8;
-            margin-bottom: 16px;
-        }
-
-        .legal-content ul {
-            padding-right: 24px;
-            margin-bottom: 24px;
-        }
-
+        /* ── Language Switch ── */
         .legal-content .lang-switch {
             display: inline-flex;
-            gap: 16px;
-            margin-bottom: 40px;
-            background: var(--gray-bg);
-            padding: 8px 16px;
+            gap: 4px;
+            margin-bottom: 48px;
+            background: rgba(255,255,255,0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            padding: 6px;
             border-radius: 100px;
+            border: 1px solid rgba(139,92,246,0.12);
+            box-shadow: 0 2px 12px rgba(139,92,246,0.06);
         }
-
         .legal-content .lang-switch a {
             text-decoration: none;
-            color: var(--text-secondary);
+            color: #6b6b8d;
             font-weight: 600;
             font-size: 0.9rem;
+            padding: 8px 20px;
+            border-radius: 100px;
+            transition: all 0.25s ease;
         }
-
         .legal-content .lang-switch a.active {
-            color: var(--accent);
+            background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+            color: #fff;
+            box-shadow: 0 2px 8px rgba(124,58,237,0.25);
+        }
+        .legal-content .lang-switch a:hover:not(.active) {
+            color: #7c3aed;
+            background: rgba(139,92,246,0.06);
         }
 
+        /* ── Content Card ── */
+        .legal-content {
+            padding: 0 24px 80px;
+            max-width: 860px;
+            margin: -32px auto 0;
+            position: relative;
+            z-index: 2;
+        }
+        .legal-card {
+            background: rgba(255,255,255,0.85);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-radius: 24px;
+            border: 1px solid rgba(255,255,255,0.6);
+            box-shadow: 0 4px 40px rgba(0,0,0,0.04), 0 1px 3px rgba(0,0,0,0.03);
+            padding: 56px 48px;
+        }
+
+        /* ── Section Headings ── */
+        .legal-card h3 {
+            font-family: 'Heebo', sans-serif;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #1a1a2e;
+            margin: 48px 0 20px;
+            padding-bottom: 14px;
+            border-bottom: 2px solid rgba(139,92,246,0.12);
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .legal-card h3::before {
+            display: none;
+        }
+
+        /* ── Paragraphs & Lists ── */
+        .legal-card p,
+        .legal-card li {
+            font-family: 'Heebo', sans-serif;
+            font-size: 1rem;
+            color: #4a4a68;
+            line-height: 1.9;
+            margin-bottom: 14px;
+            font-weight: 400;
+        }
+        .legal-card p strong,
+        .legal-card li strong {
+            color: #1a1a2e;
+            font-weight: 600;
+        }
+        .legal-card ul {
+            padding-right: 20px;
+            margin-bottom: 24px;
+            list-style: none;
+        }
+        .legal-card ul li {
+            position: relative;
+            padding-right: 24px;
+        }
+        .legal-card ul li::before {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 11px;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+            opacity: 0.7;
+        }
+
+        /* ── Links ── */
+        .legal-card a {
+            color: #7c3aed;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.2s ease;
+            border-bottom: 1px solid transparent;
+        }
+        .legal-card a:hover {
+            color: #6d28d9;
+            border-bottom-color: rgba(124,58,237,0.3);
+        }
+
+        /* ── Section Divider (HR) ── */
+        .legal-content hr {
+            margin: 64px 0;
+            border: 0;
+            height: 1px;
+            background: linear-gradient(to left, transparent, rgba(139,92,246,0.2), transparent);
+        }
+
+        /* ── English Section ── */
+        .legal-card section[id="english"] ul {
+            padding-right: 0;
+            padding-left: 20px;
+        }
+        .legal-card section[id="english"] ul li {
+            padding-right: 0;
+            padding-left: 24px;
+        }
+        .legal-card section[id="english"] ul li::before {
+            right: auto;
+            left: 0;
+        }
+
+        /* ── Responsive ── */
         @media (max-width: 768px) {
+            .legal-hero {
+                padding: 120px 20px 48px;
+            }
+            .legal-hero h1 {
+                font-size: 2rem;
+            }
             .legal-content {
-                padding: 100px 20px 60px;
+                padding: 0 16px 60px;
+                margin-top: -24px;
             }
-            .legal-content h1 {
-                font-size: 1.75rem;
+            .legal-card {
+                padding: 36px 24px;
+                border-radius: 20px;
             }
-            .legal-content h2 {
-                font-size: 1.2rem;
+            .legal-card h3 {
+                font-size: 1.12rem;
+                margin-top: 36px;
             }
-            .legal-content h3 {
-                font-size: 1.05rem;
-            }
-            .legal-content p,
-            .legal-content li {
-                font-size: 0.92rem;
+            .legal-card p,
+            .legal-card li {
+                font-size: 0.93rem;
+                line-height: 1.85;
             }
         }
     </style>
@@ -122,6 +257,12 @@
         </div>
     </nav>
 
+    <!-- HERO -->
+    <div class="legal-hero">
+        <h1>מדיניות פרטיות — Calmino</h1>
+        <span class="last-updated">גרסה 1.1 | עדכון אחרון: 15 במרץ 2026</span>
+    </div>
+
     <!-- CONTENT -->
     <main class="container legal-content">
         <div class="lang-switch">
@@ -129,11 +270,8 @@
             <a href="#english">English</a>
         </div>
 
+      <div class="legal-card">
         <section id="hebrew">
-            <h1>מדיניות פרטיות — Calmino</h1>
-            <span class="last-updated"
-                style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 48px; display: block;">גרסה 1.1 |
-                עדכון אחרון: 15 במרץ 2026</span>
 
             <h3>1. מבוא</h3>
             <p>Calmino ("אנחנו", "אנו", "החברה") מחויבת להגן על פרטיות המשתמשים שלה. מדיניות פרטיות זו ("המדיניות") מסבירה אילו נתונים אישיים אנחנו אוספים, כיצד אנחנו משתמשים בהם, ואילו זכויות יש לך עליהם.</p>
@@ -244,11 +382,11 @@
                 אתר: www.calminogroup.co.il</p>
         </section>
 
-        <hr style="margin: 64px 0; border: 0; border-top: 1px solid var(--gray-200);">
+        <hr>
 
         <section id="english" style="direction: ltr; text-align: left;">
-            <h1>Privacy Policy — Calmino</h1>
-            <span class="last-updated" style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 48px; display: block;">Version 1.1 | Last Updated: March 15, 2026</span>
+            <h1 style="font-family:'Heebo',sans-serif;font-size:2.2rem;font-weight:800;color:#1a1a2e;margin:0 0 16px;">Privacy Policy — Calmino</h1>
+            <span class="last-updated" style="display: block; margin-bottom: 48px; color: #6b6b8d; font-size: 0.95rem; font-weight:500;">Version 1.1 | Last Updated: March 15, 2026</span>
 
             <h3>1. Introduction</h3>
             <p>Calmino ("we", "us", "the Company") is committed to protecting the privacy of its users. This Privacy Policy ("Policy") explains what personal data we collect, how we use it, and what rights you have over it.</p>
@@ -358,6 +496,7 @@
                 Email: <a href="mailto:calminogroup@gmail.com" style="color: var(--accent);">calminogroup@gmail.com</a><br>
                 Website: www.calminogroup.co.il</p>
         </section>
+      </div>
     </main>
 
     <!-- FOOTER -->
