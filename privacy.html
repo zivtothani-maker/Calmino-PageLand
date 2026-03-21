@@ -154,7 +154,7 @@
                 <li>פרטי חשבון: שם מלא, כתובת אימייל, סיסמה מוצפנת</li>
                 <li>פרופיל ילד: שם, תאריך לידה, מגדר, תמונת פרופיל</li>
                 <li>נתוני מעקב: האכלה (שעה, כמות, סוג), שינה (שעות כניסה ויציאה), החלפת חיתול, תוספי תזונה, חיסונים, תרופות, מדדי גדילה (משקל, גובה, היקף ראש)</li>
-                <li>נתוני מיקום (GPS) — אך ורק לצורך שירותי איתור בייביסיטרים באזורך, עם הסכמתך המפורשת</li>
+                <li>נתוני מיקום (GPS) — כדי לאפשר איתור בייביסיטרים קרובים, האפליקציה אוספת נתוני מיקום כלליים ומדויקים שלך אך ורק באישורך הברור ובזמן השימוש. נתונים אלו אינם נשמרים בהיסטוריה, אינם נסחרים וניתן לבטלם מתי שתרצה דרך ההגדרות</li>
                 <li>הודעות צ'אט שנשלחות בין הורים לבייביסיטרים דרך האפליקציה</li>
                 <li>הערות ותיעוד שתזין ידנית</li>
                 <li>תמונות ורגעים קסומים שתבחר לשמור</li>
@@ -165,7 +165,7 @@
                 <li>סוג מכשיר, גרסת מערכת הפעלה, ומזהה מכשיר ייחודי</li>
                 <li>Token להתראות Push (לצורך שליחת תזכורות בלבד)</li>
                 <li>כתובת IP (לצרכי אבטחה וזיהוי תקלות בלבד — אינה נשמרת לאורך זמן)</li>
-                <li>Crash reports אנונימיים לשיפור יציבות האפליקציה</li>
+                <li>אנו משתמשים בנתוני שימוש אנונימיים ודיווחי קריסה (Crash Reports) דרך שירותים חיצוניים לאיתור באגים מהיר ושיפור יציבות. המידע אינו מכיל נתונים מזהים כלל</li>
             </ul>
 
             <p><strong>ג. מידע מצדדים שלישיים:</strong></p>
@@ -187,13 +187,13 @@
             <p>אנחנו <strong>לא</strong> משתמשים במידע שלך לפרסום ממוקד, ולא מוכרים נתונים לגורמים מסחריים.</p>
 
             <h3>5. שיתוף מידע עם צדדים שלישיים</h3>
-            <p><strong>ספקי שירות חיוניים (מעבדי מידע מאושרים):</strong></p>
+            <p>אנו נעזרים בספקי שירות חיצוניים ומוכרים לתפעול האפליקציה:</p>
             <ul>
-                <li><strong>Google Firebase</strong> (Firestore, Authentication, Cloud Storage, Cloud Functions) — אחסון נתונים, אימות משתמשים ועיבוד בק-אנד. Firebase עומד ב-GDPR ובמסגרת EU-US Data Privacy Framework. חתמנו על הסכם עיבוד נתונים (DPA) עם Google בהתאם ל-GDPR Article 28. מדיניות Firebase: firebase.google.com/support/privacy</li>
-                <li><strong>Apple</strong> (Sign in with Apple, APNs) — אימות משתמשים ושליחת התראות ל-iOS</li>
-                <li><strong>Expo (Expo Go / EAS)</strong> — פלטפורמת פיתוח ושליחת התראות Push חוצות-פלטפורמות</li>
-                <li><strong>RevenueCat</strong> — ניהול מנויים ורכישות In-App. מעבד מזהה משתמש והיסטוריית רכישות בלבד. מדיניות: revenuecat.com/privacy</li>
-                <li><strong>Apple WeatherKit</strong> — נתוני מזג אוויר. עשוי להשתמש בנתוני מיקום כלליים לצורך תצוגת תחזית</li>
+                <li dir="rtl">תשתיות, ניהול משתמשים ואחסון נתונים במסד מאובטח (<strong>Google Firebase</strong>)</li>
+                <li dir="rtl">מערכת התחברות לחשבון ושירותי התראות (<strong>Apple</strong>)</li>
+                <li dir="rtl">פלטפורמת פיתוח ושליחת התראות למכשיר (<strong>Expo / EAS</strong>)</li>
+                <li dir="rtl">ניהול מנויים ורכישות מאובטח מול חנויות האפליקציות (<strong>RevenueCat</strong>)</li>
+                <li dir="rtl">טעינת נתוני מזג אוויר מקומי מבוססי מיקום (<strong>Apple WeatherKit</strong>)</li>
             </ul>
             <p>אנחנו <strong>לא</strong> מוכרים, משכירים, מחליפים, או מסחרים במידע שלך בשום אופן. נחשוף מידע לגורם חיצוני רק אם: (1) נדרשנו לכך בצו שיפוטי תקף; (2) נדרש על פי חוק; (3) נדרש להגנה על בטחון הציבור.</p>
 
@@ -219,13 +219,8 @@
             </ul>
 
             <h3>9. פרטיות ילדים</h3>
-            <p>האפליקציה מיועדת להורים ומטפלים בני 16 ומעלה. מידע על ילדים נאסף אך ורק:</p>
-            <ul>
-                <li>על ידי הוריהם / אפוטרופוסיהם החוקיים</li>
-                <li>למטרות מעקב בריאות אישי בלבד</li>
-                <li>ללא שיתוף עם גורמים מסחריים</li>
-                <li>ללא פרסום ממוקד הקשור לילדים</li>
-            </ul>
+            <p>השירות מיועד להורים ומטפלים בני 16 ומעלה בלבד. המידע הנוגע לילדים נאסף אך ורק מיוזמתם, הזנתם ושליטתם המלאה של הוריהם או אפוטרופוסיהם החוקיים &ndash; ולמטרות מעקב בריאות אישי בלבד. המידע לא ישתף מסחרית ואין בו כל פרסום ממוקד.</p>
+            <p>כהורה, שמורה לך הזכות המוחלטת למחוק את כל נתוני ילדיך מהשרתים שלנו לצמיתות ובאופן מיידי ('הזכות להישכח') דרך האפליקציה.</p>
             <p>איננו אוספים מידע ישירות מילדים. אם הגעת למסקנה שילד מתחת לגיל 13 יצר חשבון ללא הסכמת הורה, אנא פנה אלינו ונמחק את הנתונים מיד.</p>
 
             <h3>10. זכויותיך</h3>
@@ -274,7 +269,7 @@
                 <li>Account details: full name, email address, encrypted password</li>
                 <li>Child profile: name, date of birth, gender, profile photo</li>
                 <li>Tracking data: feeding (time, amount, type), sleep (start/end times), diaper changes, nutritional supplements, vaccinations, medications, growth measurements (weight, height, head circumference)</li>
-                <li>Location data (GPS) — solely for babysitter discovery services in your area, with your explicit permission</li>
+                <li>Location data (GPS) — To enable finding nearby babysitters, the App collects general and precise location data solely with your explicit permission and only during active use. This data is not stored historically, is not commercialized, and can be revoked at any time via settings</li>
                 <li>Chat messages sent between parents and babysitters through the app</li>
                 <li>Notes and records you enter manually</li>
                 <li>Photos and magic moments you choose to save</li>
@@ -285,7 +280,7 @@
                 <li>Device type, operating system version, and unique device identifier</li>
                 <li>Push notification token (for sending reminders only)</li>
                 <li>IP address (for security and troubleshooting only — not stored long-term)</li>
-                <li>Anonymous crash reports to improve app stability</li>
+                <li>We use anonymous usage data and crash reports via external services to quickly identify bugs and improve stability. This information does not contain any identifying data</li>
             </ul>
 
             <p><strong>c. Information from third parties:</strong></p>
@@ -307,13 +302,13 @@
             <p>We do <strong>not</strong> use your information for targeted advertising, and we do not sell data to commercial entities.</p>
 
             <h3>5. Sharing Information with Third Parties</h3>
-            <p><strong>Essential service providers (authorized data processors):</strong></p>
+            <p>We use reputable external service providers to operate the App:</p>
             <ul>
-                <li><strong>Google Firebase</strong> (Firestore, Authentication, Cloud Storage, Cloud Functions) — data storage, user authentication, and backend processing. Firebase complies with GDPR and the EU-US Data Privacy Framework. We have signed a Data Processing Agreement (DPA) with Google in accordance with GDPR Article 28. Firebase policy: firebase.google.com/support/privacy</li>
-                <li><strong>Apple</strong> (Sign in with Apple, APNs) — user authentication and sending iOS notifications</li>
-                <li><strong>Expo (Expo Go / EAS)</strong> — development platform and cross-platform push notifications</li>
-                <li><strong>RevenueCat</strong> — subscription and in-app purchase management. Processes user identifier and purchase history only. Policy: revenuecat.com/privacy</li>
-                <li><strong>Apple WeatherKit</strong> — weather data. May use general location data to display forecasts</li>
+                <li><strong>Google Firebase</strong> - Data storage and user management (complies with international security standards).</li>
+                <li><strong>Apple</strong> - Account sign-in and notification system.</li>
+                <li><strong>Expo / EAS</strong> - App infrastructure and push notifications.</li>
+                <li><strong>RevenueCat</strong> - Secure subscription and purchase management via app stores.</li>
+                <li><strong>Apple WeatherKit</strong> - Local weather data services.</li>
             </ul>
             <p>We do <strong>not</strong> sell, rent, exchange, or commercialize your information in any way. We will disclose information to an external party only if: (1) required by a valid court order; (2) required by law; (3) necessary to protect public safety.</p>
 
@@ -339,13 +334,8 @@
             </ul>
 
             <h3>9. Children's Privacy</h3>
-            <p>The app is intended for parents and caregivers aged 16 and above. Information about children is collected exclusively:</p>
-            <ul>
-                <li>By their parents / legal guardians</li>
-                <li>For personal health tracking purposes only</li>
-                <li>Without sharing with commercial entities</li>
-                <li>Without child-related targeted advertising</li>
-            </ul>
+            <p>The service is intended for parents and caregivers aged 16 and above exclusively. Information about children is collected solely upon the initiative, input, and full control of their parents or legal guardians &ndash; and exclusively for personal health tracking purposes. The information will not be shared commercially and no targeted advertising is involved.</p>
+            <p>As a parent, you retain the absolute right to have all your children's data deleted from our servers permanently and immediately ('Right to be Forgotten') through the App.</p>
             <p>We do not collect information directly from children. If you believe a child under 13 has created an account without parental consent, please contact us and we will delete the data immediately.</p>
 
             <h3>10. Your Rights</h3>
