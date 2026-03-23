@@ -2439,6 +2439,11 @@ footer {
     order: -1; /* Move to the right side in RTL layout */
   }
 
+  /* Move UserWay accessibility widget below navbar on mobile */
+  .uwy > * {
+    top: 80px !important;
+  }
+
   .nav-badges {
     flex: 1;
     justify-content: center !important;

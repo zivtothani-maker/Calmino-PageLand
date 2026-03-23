@@ -877,6 +877,24 @@
 
     <!-- Accessibility Widget (UserWay) — Israeli Standard 5568 / WCAG 2.0 AA -->
     <script src="https://cdn.userway.org/widget.js" data-account="zLOyTPlIrb" defer></script>
+
+    <script>
+    (function() {
+      function fixUwy() {
+        if (window.innerWidth > 768) return;
+        document.querySelectorAll('.uwy > *').forEach(function(child) {
+          child.style.setProperty('top', '80px', 'important');
+        });
+      }
+      var ticks = 0;
+      var timer = setInterval(function() {
+        fixUwy();
+        if (++ticks >= 75) clearInterval(timer);
+      }, 200);
+      window.addEventListener('resize', fixUwy);
+    })();
+    </script>
+
 </body>
 
 </html>
