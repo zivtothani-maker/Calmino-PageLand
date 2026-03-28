@@ -491,6 +491,26 @@ nav.scrolled {
   opacity: 0.9;
 }
 
+.nav-social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.06);
+  color: var(--gray-500);
+  transition: background 0.2s ease, color 0.2s ease, transform 0.3s var(--ease-spring);
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.nav-social-link:hover {
+  background: rgba(0, 0, 0, 0.12);
+  color: var(--gray-900);
+  transform: scale(1.06);
+}
+
 /* Nav Badge (moved from hero) */
 .nav-badge {
   margin-bottom: 0;
@@ -2157,6 +2177,7 @@ footer {
   margin-top: 20px;
   display: flex;
   justify-content: center;
+  gap: 16px;
 }
 
 .footer-social-link {
@@ -2317,6 +2338,30 @@ footer {
   flex-shrink: 0;
 }
 
+.drawer-social {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.drawer-social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--gray-100);
+  color: var(--gray-500);
+  transition: background 0.2s ease, color 0.2s ease;
+  text-decoration: none;
+}
+
+.drawer-social-link:hover {
+  background: var(--gray-200);
+  color: var(--gray-900);
+}
+
 .drawer-close {
   width: 36px;
   height: 36px;
@@ -2451,6 +2496,10 @@ footer {
 
   .nav-badges img {
     height: 24px !important;
+  }
+
+  .nav-social-link {
+    display: none !important;
   }
 
   /* --- HERO --- */
