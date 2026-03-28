@@ -122,6 +122,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     document.querySelectorAll('.app-store-badge, .nav-store-badge, .drawer-badges a').forEach(btn => {
+        if (btn.getAttribute('href') && btn.getAttribute('href') !== '#') return;
         btn.addEventListener('click', showComingSoon);
     });
     comingSoonPopup.querySelector('.cs-overlay').addEventListener('click', hideComingSoon);
