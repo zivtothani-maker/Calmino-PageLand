@@ -2484,9 +2484,22 @@ footer {
     order: -1; /* Move to the right side in RTL layout */
   }
 
-  /* Move UserWay accessibility widget below navbar on mobile */
-  .uwy > * {
+  /* Move UserWay accessibility icon below navbar on mobile */
+  .uwy .userway_buttons_wrapper {
     top: 80px !important;
+    left: 48px !important;
+    right: auto !important;
+  }
+
+  /* Ensure UserWay panel displays properly on mobile */
+  .uwy .userway_font_visible {
+    left: 0 !important;
+    right: 0 !important;
+    top: 0 !important;
+    width: 100vw !important;
+    max-width: 100vw !important;
+    max-height: 100vh !important;
+    z-index: 2147483647 !important;
   }
 
   .nav-badges {
