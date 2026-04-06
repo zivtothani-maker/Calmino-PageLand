@@ -2717,12 +2717,12 @@ footer {
   }
 
   .screenshots-showcase {
-    height: 300px;        /* Fixed height to hold the fan */
+    height: 300px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: row;
-    overflow: visible;    /* Allow cards to fan out */
+    overflow: visible;
     padding: 12px 0 24px;
     perspective: 1000px;
     position: relative;
@@ -2769,39 +2769,15 @@ footer {
     width: 90px !important;
   }
 
-  /* On mobile touch, keep fan positions - do NOT collapse to center */
-  .screenshots-showcase:hover .sc-1 {
-    transform: rotate(-8deg) translateX(-95px) !important;
-    z-index: 1 !important;
-  }
-
-  .screenshots-showcase:hover .sc-2 {
-    transform: rotate(-3deg) translateX(-48px) translateY(-8px) !important;
-    z-index: 3 !important;
-  }
-
-  .screenshots-showcase:hover .sc-3 {
-    transform: rotate(0deg) translateY(-14px) !important;
-    z-index: 5 !important;
-  }
-
-  .screenshots-showcase:hover .sc-4 {
-    transform: rotate(3deg) translateX(48px) translateY(-8px) !important;
-    z-index: 3 !important;
-  }
-
-  .screenshots-showcase:hover .sc-5 {
-    transform: rotate(8deg) translateX(95px) !important;
-    z-index: 1 !important;
-  }
-
-  /* Mobile: freeze all cards — no movement, no scale, no opacity change */
+  /* Mobile: freeze all cards — no movement, no scale, no opacity change, no interaction */
   .screenshots-showcase .screenshot-card,
   .screenshots-showcase .screenshot-card:hover,
   .screenshots-showcase:hover .screenshot-card:not(:hover) {
     transition: none !important;
     scale: 1 !important;
     opacity: 1 !important;
+    pointer-events: none !important;
+    cursor: default !important;
   }
 
   .screenshots-showcase .sc-1,
