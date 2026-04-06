@@ -2724,9 +2724,11 @@ footer {
     flex-direction: row;
     overflow: visible;
     padding: 12px 0 24px;
-    perspective: 1000px;
+    perspective: none;
     position: relative;
     scrollbar-width: none;
+    margin: 0 auto;
+    width: 100%;
   }
 
   .screenshots-showcase::-webkit-scrollbar {
@@ -2738,33 +2740,33 @@ footer {
     flex-shrink: 0;
   }
 
-  /* Scaled-down fan layout for mobile */
+  /* Scaled-down fan layout for mobile — no rotation, symmetric spread */
   .sc-1 {
-    transform: rotate(-8deg) translateX(-95px) !important;
+    transform: translateX(-110px) !important;
     z-index: 1 !important;
     width: 90px !important;
   }
 
   .sc-2 {
-    transform: rotate(-3deg) translateX(-48px) translateY(-8px) !important;
+    transform: translateX(-55px) translateY(-8px) !important;
     z-index: 3 !important;
     width: 100px !important;
   }
 
   .sc-3 {
-    transform: rotate(0deg) translateY(-14px) !important;
+    transform: translateY(-14px) !important;
     z-index: 5 !important;
     width: 110px !important;
   }
 
   .sc-4 {
-    transform: rotate(3deg) translateX(48px) translateY(-8px) !important;
+    transform: translateX(55px) translateY(-8px) !important;
     z-index: 3 !important;
     width: 100px !important;
   }
 
   .sc-5 {
-    transform: rotate(8deg) translateX(95px) !important;
+    transform: translateX(110px) !important;
     z-index: 1 !important;
     width: 90px !important;
   }
@@ -2782,19 +2784,19 @@ footer {
 
   .screenshots-showcase .sc-1,
   .screenshots-showcase .sc-1:hover,
-  .screenshots-showcase:hover .sc-1 { transform: rotate(-8deg) translateX(-95px) !important; }
+  .screenshots-showcase:hover .sc-1 { transform: translateX(-110px) !important; }
   .screenshots-showcase .sc-2,
   .screenshots-showcase .sc-2:hover,
-  .screenshots-showcase:hover .sc-2 { transform: rotate(-3deg) translateX(-48px) translateY(-8px) !important; }
+  .screenshots-showcase:hover .sc-2 { transform: translateX(-55px) translateY(-8px) !important; }
   .screenshots-showcase .sc-3,
   .screenshots-showcase .sc-3:hover,
-  .screenshots-showcase:hover .sc-3 { transform: rotate(0deg) translateY(-14px) !important; }
+  .screenshots-showcase:hover .sc-3 { transform: translateY(-14px) !important; }
   .screenshots-showcase .sc-4,
   .screenshots-showcase .sc-4:hover,
-  .screenshots-showcase:hover .sc-4 { transform: rotate(3deg) translateX(48px) translateY(-8px) !important; }
+  .screenshots-showcase:hover .sc-4 { transform: translateX(55px) translateY(-8px) !important; }
   .screenshots-showcase .sc-5,
   .screenshots-showcase .sc-5:hover,
-  .screenshots-showcase:hover .sc-5 { transform: rotate(8deg) translateX(95px) !important; }
+  .screenshots-showcase:hover .sc-5 { transform: translateX(110px) !important; }
 
   .feature-list li {
     font-size: 0.88rem;
