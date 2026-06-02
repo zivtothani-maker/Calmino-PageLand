@@ -102,7 +102,7 @@ const translations = {
     footer_terms: "תנאי שימוש", footer_privacy: "מדיניות פרטיות", footer_contact: "צרו קשר",
     footer_copy: "© 2026 Calmino. כל הזכויות שמורות.",
     seo_title: "העולם של הילד בכף היד",
-    seo_desc: "הפתרון המלא להורים: ניהול חלונות שינה, מעקב האכלות, אחוזוני גדילה ומציאת בייביסיטר - הכל באפליקציה אחת שמורידה את העומס המנטלי.",
+    seo_desc: "הפתרון המלא להורים: ניהול חלונות שינה, מעקב האכלות ואחוזוני גדילה - הכל באפליקציה אחת שמורידה את העומס המנטלי.",
     seo_locale: "he_IL"
   },
   en: {
@@ -206,8 +206,8 @@ const translations = {
     cta_btn: "Download from App Store",
     footer_terms: "Terms of Service", footer_privacy: "Privacy Policy", footer_contact: "Contact Us",
     footer_copy: "© 2026 Calmino. All rights reserved.",
-    seo_title: "Calmino - Smart Baby Tracker, Sleep Windows & Babysitter Network",
-    seo_desc: "The ultimate parenting app to manage sleep windows, feeding logs, WHO growth charts, and find trusted babysitters. Reduce your mental load today.",
+    seo_title: "Your child's world in the palm of your hand",
+    seo_desc: "The ultimate parenting app to manage sleep windows, feeding logs, and WHO growth charts. Reduce your mental load today.",
     seo_locale: "en_US"
   }
 };
