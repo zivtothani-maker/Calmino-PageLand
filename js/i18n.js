@@ -101,7 +101,7 @@ const translations = {
     cta_btn: "הורדה מ-App Store",
     footer_terms: "תנאי שימוש", footer_privacy: "מדיניות פרטיות", footer_contact: "צרו קשר",
     footer_copy: "© 2026 Calmino. כל הזכויות שמורות.",
-    seo_title: "Calmino - אפליקציה לניהול שגרת התינוק, בייביסיטר ומעקב התפתחות",
+    seo_title: "העולם של הילד בכף היד",
     seo_desc: "הפתרון המלא להורים: ניהול חלונות שינה, מעקב האכלות, אחוזוני גדילה ומציאת בייביסיטר - הכל באפליקציה אחת שמורידה את העומס המנטלי.",
     seo_locale: "he_IL"
   },
